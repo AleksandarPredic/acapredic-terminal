@@ -9,8 +9,13 @@
 // https://github.com/AleksandarPredic/dom-terminal
 import Terminal from "../vendor/terminal/terminal";
 import info from './info';
+import isIOS from './isIos';
 
-const terminal = new Terminal('terminal', {}, {
+const terminal = new Terminal('terminal',
+  {
+    scrollIntoViewAfter: isIOS.isIOS() ? false : true
+  },
+  {
   execute: (cmd, args) => {
 
     let request = cmd.toLowerCase();
