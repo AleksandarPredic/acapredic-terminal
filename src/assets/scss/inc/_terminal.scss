@@ -1,0 +1,125 @@
+.terminal {
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+
+  ::selection {
+    background: #0080ff;
+    text-shadow: none !important;
+  }
+
+  .container {
+    position: relative;
+    text-shadow: 0 0 5px #c8c8c8;
+
+    output {
+      clear: both;
+      width: 100%;
+
+      pre {
+        margin: 0;
+      }
+
+      table {
+        .input-line {
+          border-collapse: collapse;
+          border-spacing: 0;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+
+          td {
+            margin: 0;
+            padding: 0;
+
+            &:last-child {
+              padding-left: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cmdline {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: none;
+    width: 100%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .prompt {
+    line-height: 2rem;
+    margin-right: 7px;
+    white-space: nowrap;
+  }
+
+  &.terminal-interlaced {
+    color: white;
+    font-family: $font__main;
+
+    a {
+      color: $color__main;
+
+      &.external {
+        background: url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9QTFRFzs7OqKio0NDQ////////DlgqrAAAAAV0Uk5T/////wD7tg5TAAAAN0lEQVR42izLyQ0AMAgDQYPpv+b4yD7QEBGcYoI0yN454Sqy9KnfTUufQpB7c/9AM1RlE58AAwBEcAE4zo3mOAAAAABJRU5ErkJggg==") no-repeat scroll right center transparent;
+        padding-right: 13px;
+        outline: none;
+      }
+
+      .background {
+        background: $background__container;
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        .interlace {
+          background: url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAMAAACuX0YVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5T/wDltzBKAAAADklEQVR42mJgYGAECDAAAAUAAoeC334AAAAASUVORK5CYII=") top left repeat, transparent;
+          height: 100%;
+          left: 0;
+          opacity: 0.15;
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 10;
+        }
+      }
+    }
+
+    .container output pre {
+      color: white;
+      font-family: $font__main;
+    }
+
+    .prompt {
+      color: #fc0;
+    }
+  }
+}
+
+#terminal {
+  ul {
+    li {
+      font-weight: 500;
+      word-break: break-word;
+      white-space: normal;
+
+      a {
+        font-weight: 700;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+}

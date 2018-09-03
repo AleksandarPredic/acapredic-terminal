@@ -5,6 +5,6 @@
   ],
   "rules": {
     "no-empty-source": null,
-    "number-leading-zero": "never"
+    "number-leading-zero": "always"
   }
 }

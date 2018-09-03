@@ -33,8 +33,9 @@ mix.webpackConfig( {
         },
     ]
     )
-  ]
+  ],
+  devtool: "source-map"
 } )
   .options( { publicPath: projectPath.public } )
-  .js( projectPath.assets.scripts + '/main.js', projectPath.dist.scripts )
-  .sass( projectPath.assets.styles + '/main.scss', projectPath.dist.styles );
+  .js( projectPath.assets.scripts + '/main.js', projectPath.dist.scripts ).sourceMaps()
+  .sass( projectPath.assets.styles + '/main.scss', projectPath.dist.styles ).sourceMaps();

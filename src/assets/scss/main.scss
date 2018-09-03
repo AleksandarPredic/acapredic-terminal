@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
-@import "../vendor/terminal/terminal-1.0.2.min.css";
-
-body {
-  background-color: black;
-}
+@import "inc/variables";
+@import "inc/normalize";
+@import "inc/typography";
+@import "inc/global";
+@import "inc/header";
+@import "inc/terminal";
+@import "inc/font-media-queries";
