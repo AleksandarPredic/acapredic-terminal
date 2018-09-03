@@ -7,7 +7,8 @@
 			welcome: '',
 			prompt: '',
 			separator: '&gt;',
-			theme: 'interlaced'
+			theme: 'interlaced',
+      scrollIntoViewAfter: true
 		};
 
 		var options = options || defaults;
@@ -15,6 +16,8 @@
 		options.prompt = options.prompt || defaults.prompt;
 		options.separator = options.separator || defaults.separator;
 		options.theme = options.theme || defaults.theme;
+		// Added option to allow disabling scroll for iphone and some devices
+		options.scrollIntoViewAfter = typeof options.scrollIntoViewAfter !== 'undefined' ? options.scrollIntoViewAfter : defaults.scrollIntoViewAfter;
 
 		var extensions = Array.prototype.slice.call(arguments, 2);
 
@@ -44,9 +47,11 @@
 		// Hackery to resize the interlace background image as the container grows.
 		_output.addEventListener('DOMSubtreeModified', function(e) {
 			// Works best with the scroll into view wrapped in a setTimeout.
-			setTimeout(function() {
-				_cmdLine.scrollIntoView();
-			}, 0);
+      if ( options.scrollIntoViewAfter ) {
+        setTimeout(function() {
+          _cmdLine.scrollIntoView();
+        }, 0);
+      }
 		}, false);
 
 		if (options.welcome) {
