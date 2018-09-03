@@ -7,7 +7,7 @@
 
 // https://github.com/sasadjolic/dom-terminal
 // https://github.com/AleksandarPredic/dom-terminal
-import Terminal from "../vendor/terminal/terminal-1.0.2.min";
+import Terminal from "../vendor/terminal/terminal";
 import info from './info';
 
 const terminal = new Terminal('terminal', {}, {
@@ -38,7 +38,7 @@ const terminal = new Terminal('terminal', {}, {
       return info.getProjects();
     }
     else if(-1 !== request.indexOf('project/')) {
-      return info.getProject(parseInt(cmd.replace('project/', '')));
+      return info.getProject(parseInt(request.replace('project/', '')));
     }
     else {
       return '404. Unknown command. Type help for info about available commands';
