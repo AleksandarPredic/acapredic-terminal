@@ -1,3 +1,10 @@
+/**
+ * Api documentation example
+ *
+ * @see https://swapi.co/documentation#root
+ */
+
+
 // https://github.com/sasadjolic/dom-terminal
 // https://github.com/AleksandarPredic/dom-terminal
 import Terminal from "../vendor/terminal/terminal-1.0.2.min";
@@ -17,6 +24,8 @@ const terminal = new Terminal('terminal', {}, {
           <li>help</li>
           <li>clear</li>
           <li>basic (Basic info)</li>
+          <li>projects</li>
+          <li>project/{id} (All details for single project.  Example: project/1)</li>
           <li>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a></li>
         </ul>`;
     }

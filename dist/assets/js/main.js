@@ -80,6 +80,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal_1_0_2_min__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal_1_0_2_min___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal_1_0_2_min__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__info__ = __webpack_require__(3);
+/**
+ * Api documentation example
+ *
+ * @see https://swapi.co/documentation#root
+ */
+
 // https://github.com/sasadjolic/dom-terminal
 // https://github.com/AleksandarPredic/dom-terminal
 
@@ -92,7 +98,7 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal_1_0_2_m
       terminal.clear();
       return '';
     } else if ('help' === cmd) {
-      return '\n        Commands: <br />\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic (Basic info)</li>\n          <li>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a></li>\n        </ul>';
+      return '\n        Commands: <br />\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic (Basic info)</li>\n          <li>projects</li>\n          <li>project/{id} (All details for single project.  Example: project/1)</li>\n          <li>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a></li>\n        </ul>';
     } else if ('basic' === cmd) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === cmd) {
