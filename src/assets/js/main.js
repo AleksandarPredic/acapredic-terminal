@@ -19,14 +19,14 @@ const terminal = new Terminal('terminal', {}, {
     }
     else if('help' === cmd) {
       return `
-        Commands: <br />
+        <h4>Commands:</h4>
         <ul>
           <li>help</li>
           <li>clear</li>
           <li>basic (Basic info)</li>
           <li>projects</li>
           <li>project/{id} (All details for single project.  Example: project/1)</li>
-          <li>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a></li>
+          <li>More help available <a class="external" href="#" target="_blank">here</a></li>
         </ul>`;
     }
     else if('basic' === cmd) {
