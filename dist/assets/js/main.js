@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(4);
+module.exports = __webpack_require__(5);
 
 
 /***/ }),
@@ -85,39 +85,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-// Convert the 'terminal' DOM element into a live terminal.
-// This example defines several custom commands for the terminal.
-var MyInfo = new __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */]();
 var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal_1_0_2_min___default.a('terminal', {}, {
-    execute: function execute(cmd, args) {
-        switch (cmd) {
-            case 'clear':
-                terminal.clear();
-                return '';
+  execute: function execute(cmd, args) {
 
-            case 'name':
-                return MyInfo.getName();
-
-            case 'help':
-                return 'Commands: clear, help, theme, ver or version<br>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a>';
-
-            case 'theme':
-                if (args && args[0]) {
-                    if (args.length > 1) return 'Too many arguments';else if (args[0].match(/^interlaced|modern|white$/)) {
-                        terminal.setTheme(args[0]);return '';
-                    } else return 'Invalid theme';
-                }
-                return terminal.getTheme();
-
-            case 'ver':
-            case 'version':
-                return '1.0.0';
-
-            default:
-                return 'Unknown command. Type help for info about available commands';
-            //return false;
-        };
+    if ('clear' === cmd) {
+      terminal.clear();
+      return '';
+    } else if ('help' === cmd) {
+      return '\n        Commands: <br />\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic (Basic info)</li>\n          <li>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a></li>\n        </ul>';
+    } else if ('basic' === cmd) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
+    } else if ('projects' === cmd) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProjects();
+    } else if (-1 !== cmd.indexOf('project/')) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProject(parseInt(cmd.replace('project/', '')));
+    } else {
+      return '404. Unknown command. Type help for info about available commands';
     }
+  }
 });
 
 /***/ }),
@@ -201,35 +186,187 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal_1_0_2_m
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__crud__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__project__ = __webpack_require__(12);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+
+
+
 var Info = function () {
-    function Info() {
-        _classCallCheck(this, Info);
+      function Info() {
+            _classCallCheck(this, Info);
 
-        this.name = 'Aca';
-        this.lastName = 'Predic';
-    }
+            this.data = new __WEBPACK_IMPORTED_MODULE_0__crud__["a" /* default */]('./data.json').getJson();
 
-    _createClass(Info, [{
-        key: 'getName',
-        value: function getName() {
-            return this.name;
-        }
-    }]);
+            // All data we'll ever need
+            this.name = this.data.basic.name;
+            this.lastName = this.data.basic.lastName;
+            this.email = this.data.basic.email;
+            this.projects = this.data.projects;
+      }
 
-    return Info;
+      _createClass(Info, [{
+            key: 'getBasicInfo',
+            value: function getBasicInfo() {
+                  return '\n        <h2>Basic info</h2>\n        First Name: ' + this.name + ', <br />\n        Last Name: ' + this.lastName + ', <br />\n        Email: ' + this.email + '\n        ';
+            }
+      }, {
+            key: 'getProjects',
+            value: function getProjects() {
+
+                  var list = ['<h2>Projects</h2>'];
+
+                  Object.values(this.projects).forEach(function (project) {
+
+                        var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */](project.id, project.name, '', project.shortDescription);
+
+                        list.push(singleProject.displayShort());
+                  });
+
+                  return list.join('');
+            }
+      }, {
+            key: 'getProject',
+            value: function getProject(id) {
+
+                  var project = this.projects[id];
+
+                  if (typeof project === "undefined") {
+                        return '404. Project with requested id <strong>' + id + '</strong> doesn\'t exists';
+                  }
+
+                  var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */]('', project.name, project.url, '', project.description);
+
+                  return singleProject.displayLong();
+            }
+      }]);
+
+      return Info;
 }();
 
-/* harmony default export */ __webpack_exports__["a"] = (Info);
+var info = new Info();
+
+/* harmony default export */ __webpack_exports__["a"] = (info);
 
 /***/ }),
 /* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data_js__ = __webpack_require__(11);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var Crud = function () {
+  function Crud(filePath) {
+    _classCallCheck(this, Crud);
+
+    this.filePath = filePath;
+  }
+
+  _createClass(Crud, [{
+    key: 'getJson',
+    value: function getJson() {
+
+      return __WEBPACK_IMPORTED_MODULE_0__data_js__["a" /* default */];
+    }
+  }]);
+
+  return Crud;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Crud);
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+  basic: {
+    name: 'Aleksandar',
+    lastName: 'Predic',
+    email: 'info@acapredic.com',
+    position: 'Web development team Lead, lead WP developer at Shindiri Studio | #WCEU organizing team | #WPNis community Co-organizer'
+  },
+  projects: {
+    1: {
+      id: 1,
+      name: 'WordPress custom business solution',
+      url: 'https://www.physicianpartnersofamerica.com',
+      shortDescription: ' Custom WordPress solution heavily relying on Google maps javascript API.',
+      description: '\n      Custom WordPress solution heavily relying on Google maps javascript API. Project included custom WP theme and plugins, integrating various external API\'s. \n\n      My role was a team lead of small dev team consisting of 3 members covering both frontend and backend tasks. Close cooperation with designer was also important for better design implementation. \n      \n      Performance-wise I write a lot of requested features to avoid using plugins that add extra functionalities which are not needed on the site.\n      \n      Used on project: PHP, jQuery, JavaScript, SCSS, Gulp, Composer, WordPress\n      \n      Website description: Doctors and clinics listing using Google maps displaying results by distance from visitor location. Live search on Google maps for locations. Other common website pages are also implemented and designed.\n      '
+    },
+
+    2: {
+      id: 2,
+      name: 'WordPress Widget Builder Framework',
+      url: 'https://github.com/AleksandarPredic/WordPress-Widget-Builder',
+      shortDescription: 'The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.',
+      description: '\n      The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.\n\nYou can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.\n      '
+    }
+  }
+});
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Project = function () {
+  function Project(id, name) {
+    var url = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+    var shortDescription = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
+    var description = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
+
+    _classCallCheck(this, Project);
+
+    this.id = id;
+    this.name = name;
+    this.url = url;
+    this.shortDescription = shortDescription;
+    this.description = description;
+  }
+
+  _createClass(Project, [{
+    key: 'displayShort',
+    value: function displayShort() {
+
+      return '\n    <section>\n    <p>\n      <ul>\n        <li><strong>Id:</strong> ' + this.id + '</li>\n        <li><strong>Project name:</strong> ' + this.name + '</li>\n        <li><strong>Short description:</strong> ' + this.shortDescription + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+    }
+  }, {
+    key: 'displayLong',
+    value: function displayLong() {
+
+      return '\n    <section>\n    <h3>Project name: ' + this.name + '</h3>\n    <p>\n      <ul>\n        <li><strong>Url:</strong> ' + this.url + '</li>\n        <li><strong>Description:</strong> ' + this.description + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+    }
+  }]);
+
+  return Project;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Project);
 
 /***/ })
 /******/ ]);

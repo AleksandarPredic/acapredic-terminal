@@ -1,39 +1,40 @@
 // https://github.com/sasadjolic/dom-terminal
 // https://github.com/AleksandarPredic/dom-terminal
-import Terminal from '../vendor/terminal/terminal-1.0.2.min';
-import Info from './info';
+import Terminal from "../vendor/terminal/terminal-1.0.2.min";
+import info from './info';
 
-// Convert the 'terminal' DOM element into a live terminal.
-// This example defines several custom commands for the terminal.
-const MyInfo = new Info();
 const terminal = new Terminal('terminal', {}, {
-    execute: (cmd, args) => {
-        switch (cmd) {
-            case 'clear':
-                terminal.clear();
-                return '';
+  execute: (cmd, args) => {
 
-            case 'name':
-                return MyInfo.getName();
-
-            case 'help':
-                return 'Commands: clear, help, theme, ver or version<br>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a>';
-
-            case 'theme':
-                if (args && args[0]) {
-                    if (args.length > 1) return 'Too many arguments';
-                    else if (args[0].match(/^interlaced|modern|white$/)) { terminal.setTheme(args[0]); return ''; }
-                    else return 'Invalid theme';
-                }
-                return terminal.getTheme();
-
-            case 'ver':
-            case 'version':
-                return '1.0.0';
-
-            default:
-                return 'Unknown command. Type help for info about available commands';
-            //return false;
-        };
+    if ('clear' === cmd) {
+      terminal.clear();
+      return '';
     }
+    else if('help' === cmd) {
+      return `
+        Commands: <br />
+        <ul>
+          <li>help</li>
+          <li>clear</li>
+          <li>basic (Basic info)</li>
+          <li>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a></li>
+        </ul>`;
+    }
+    else if('basic' === cmd) {
+      return info.getBasicInfo();
+    }
+    else if('projects' === cmd) {
+      return info.getProjects();
+    }
+    else if(-1 !== cmd.indexOf('project/')) {
+      return info.getProject(parseInt(cmd.replace('project/', '')));
+    }
+    else {
+      return '404. Unknown command. Type help for info about available commands';
+    }
+
+  }
 });
+
+
+

@@ -26,6 +26,11 @@ mix.webpackConfig( {
             to: 'dist/index.html',
             toType: 'file'
         },
+        {
+          from: 'src/data.js',
+          to: 'dist/data.js',
+          toType: 'file'
+        },
     ]
     )
   ]
