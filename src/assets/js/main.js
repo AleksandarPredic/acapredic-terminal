@@ -13,11 +13,13 @@ import info from './info';
 const terminal = new Terminal('terminal', {}, {
   execute: (cmd, args) => {
 
-    if ('clear' === cmd) {
+    let request = cmd.toLowerCase();
+
+    if ('clear' === request) {
       terminal.clear();
       return '';
     }
-    else if('help' === cmd) {
+    else if('help' === request) {
       return `
         <h4>Commands:</h4>
         <ul>
@@ -29,13 +31,13 @@ const terminal = new Terminal('terminal', {}, {
           <li>More help available <a class="external" href="#" target="_blank">here</a></li>
         </ul>`;
     }
-    else if('basic' === cmd) {
+    else if('basic' === request) {
       return info.getBasicInfo();
     }
-    else if('projects' === cmd) {
+    else if('projects' === request) {
       return info.getProjects();
     }
-    else if(-1 !== cmd.indexOf('project/')) {
+    else if(-1 !== request.indexOf('project/')) {
       return info.getProject(parseInt(cmd.replace('project/', '')));
     }
     else {

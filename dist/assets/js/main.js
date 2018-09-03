@@ -94,16 +94,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal_1_0_2_min___default.a('terminal', {}, {
   execute: function execute(cmd, args) {
 
-    if ('clear' === cmd) {
+    var request = cmd.toLowerCase();
+
+    if ('clear' === request) {
       terminal.clear();
       return '';
-    } else if ('help' === cmd) {
+    } else if ('help' === request) {
       return '\n        <h4>Commands:</h4>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic (Basic info)</li>\n          <li>projects</li>\n          <li>project/{id} (All details for single project.  Example: project/1)</li>\n          <li>More help available <a class="external" href="#" target="_blank">here</a></li>\n        </ul>';
-    } else if ('basic' === cmd) {
+    } else if ('basic' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
-    } else if ('projects' === cmd) {
+    } else if ('projects' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProjects();
-    } else if (-1 !== cmd.indexOf('project/')) {
+    } else if (-1 !== request.indexOf('project/')) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProject(parseInt(cmd.replace('project/', '')));
     } else {
       return '404. Unknown command. Type help for info about available commands';
