@@ -32,7 +32,7 @@ const terminal = new Terminal('terminal',
           <li>clear</li>
           <li>basic (Basic info)</li>
           <li>projects</li>
-          <li>project/{id} (All details for single project.  Example: project/1)</li>
+          <li>projects/{id} (All details for single project.  Example: projects/1)</li>
           <li>More help available <a class="external" href="#" target="_blank">here</a></li>
         </ul>`;
     }
@@ -42,8 +42,8 @@ const terminal = new Terminal('terminal',
     else if('projects' === request) {
       return info.getProjects();
     }
-    else if(-1 !== request.indexOf('project/')) {
-      return info.getProject(parseInt(request.replace('project/', '')));
+    else if(-1 !== request.indexOf('projects/')) {
+      return info.getProject(parseInt(request.replace('projects/', '')));
     }
     else {
       return '404. Unknown command. Type help for info about available commands';

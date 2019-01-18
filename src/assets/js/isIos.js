@@ -10,7 +10,7 @@ class DetectIOS {
 
   isIOS() {
 
-    var isIos = this.isIphone || this.isIod || this.isIpad;
+    return this.isIphone || this.isIod || this.isIpad;
 
   }
 

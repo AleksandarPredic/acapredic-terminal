@@ -58,7 +58,7 @@ class Info {
         project.url,
         '',
         project.description
-      )
+      );
 
       return singleProject.displayLong();
     }

@@ -8,9 +8,21 @@ export default {
   projects: {
     1: {
       id: 1,
+      name: 'WooCommerce external API integration - products import - custom WP plugin',
+      url: 'https://grafomis.rs',
+      shortDescription: 'WooCommerce was used as a base to import 6000+ products from external API.',
+      description: `
+      WooCommerce was used as a base to import 6000+ products from external API. Custom WordPress plugin was created to handle authentication, 
+      automatic import and synchronization of all data (taxonomies, post types, attributes...) for fully functional online shop. 
+      Additionally, WooCommerce was customized on frontend to fit needs of printing company.
+      `
+    },
+
+    2: {
+      id: 2,
       name: 'WordPress custom business solution',
       url: 'https://www.physicianpartnersofamerica.com',
-      shortDescription: ' Custom WordPress solution heavily relying on Google maps javascript API.',
+      shortDescription: 'Custom WordPress solution heavily relying on Google maps javascript API.',
       description: `
       Custom WordPress solution heavily relying on Google maps javascript API. Project included custom WP theme and plugins, integrating various external API's. 
 
@@ -24,15 +36,15 @@ export default {
       `
     },
 
-    2: {
-      id: 2,
+    3: {
+      id: 3,
       name: 'WordPress Widget Builder Framework',
       url: 'https://github.com/AleksandarPredic/WordPress-Widget-Builder',
       shortDescription: 'The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.',
       description: `
       The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.
 
-You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.
+      You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.
       `
     }
   }

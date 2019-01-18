@@ -19,6 +19,7 @@ class Project {
         <li><strong>Id:</strong> ${this.id}</li>
         <li><strong>Project name:</strong> ${this.name}</li>
         <li><strong>Short description:</strong> ${this.shortDescription}</li>
+        <li><strong>Url:</strong> <a href="${this.url}" target="_blank">${this.url}</a></li>
       </ul>
     </p>
     </section>
