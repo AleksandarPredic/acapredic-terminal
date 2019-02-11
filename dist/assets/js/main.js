@@ -109,7 +109,7 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal___defau
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProjects();
-    } else if (-1 !== request.indexOf('projects/')) {
+    } else if (request.includes('projects/')) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProject(parseInt(request.replace('projects/', '')));
     } else {
       return '404. Unknown command. Type help for info about available commands';

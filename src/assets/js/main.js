@@ -42,7 +42,7 @@ const terminal = new Terminal('terminal',
     else if('projects' === request) {
       return info.getProjects();
     }
-    else if(-1 !== request.indexOf('projects/')) {
+    else if(request.includes('projects/')) {
       return info.getProject(parseInt(request.replace('projects/', '')));
     }
     else {
