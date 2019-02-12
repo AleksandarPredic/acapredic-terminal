@@ -4,6 +4,10 @@
  * @see https://swapi.co/documentation#root
  */
 
+/**
+ * TODO: Add og and twitter and google tags in index.html
+ */
+
 
 // https://github.com/sasadjolic/dom-terminal
 // https://github.com/AleksandarPredic/dom-terminal
@@ -27,13 +31,14 @@ const terminal = new Terminal('terminal',
     else if('help' === request) {
       return `
         <h4>Commands:</h4>
+        <h5>Type command and press enter.</h5>
         <ul>
           <li>help</li>
           <li>clear</li>
-          <li>basic (Basic info)</li>
+          <li>basic</li>
           <li>projects</li>
-          <li>projects/{id} (All details for single project.  Example: projects/1)</li>
-          <li>More help available <a class="external" href="#" target="_blank">here</a></li>
+          <li>projects/{id}</li>
+          <li>Don't like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>
         </ul>`;
     }
     else if('basic' === request) {

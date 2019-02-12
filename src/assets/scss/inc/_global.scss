@@ -2,4 +2,14 @@ body {
   padding: 1.5rem;
   word-break: break-word;
   white-space: normal;
+
+  a {
+    background: url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9QTFRFzs7OqKio0NDQ////////DlgqrAAAAAV0Uk5T/////wD7tg5TAAAAN0lEQVR42izLyQ0AMAgDQYPpv+b4yD7QEBGcYoI0yN454Sqy9KnfTUufQpB7c/9AM1RlE58AAwBEcAE4zo3mOAAAAABJRU5ErkJggg==") no-repeat scroll right center transparent;
+    padding-right: 13px;
+    outline: none;
+    color: $color__white;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 700;
+  }
 }

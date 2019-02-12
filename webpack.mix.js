@@ -31,6 +31,11 @@ mix.webpackConfig( {
           to: 'dist/data.js',
           toType: 'file'
         },
+        {
+          from: 'src/assets/images/',
+          to: 'dist/assets/images/',
+          toType: 'dir'
+        },
     ]
     )
   ],

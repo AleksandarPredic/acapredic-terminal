@@ -77,8 +77,8 @@ module.exports = __webpack_require__(8);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_terminal_1_0_2_min__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_terminal_1_0_2_min___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_terminal_1_0_2_min__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__info__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isIos__ = __webpack_require__(7);
 /**
@@ -87,13 +87,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * @see https://swapi.co/documentation#root
  */
 
+/**
+ * TODO: Add og and twitter and google tags in index.html
+ */
+
 // https://github.com/sasadjolic/dom-terminal
 // https://github.com/AleksandarPredic/dom-terminal
 
 
 
 
-var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal___default.a('terminal', {
+var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_terminal_1_0_2_min___default.a('terminal', {
   scrollIntoViewAfter: __WEBPACK_IMPORTED_MODULE_2__isIos__["a" /* default */].isIOS() ? false : true
 }, {
   execute: function execute(cmd, args) {
@@ -104,7 +108,7 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal___defau
       terminal.clear();
       return '';
     } else if ('help' === request) {
-      return '\n        <h4>Commands:</h4>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic (Basic info)</li>\n          <li>projects</li>\n          <li>projects/{id} (All details for single project.  Example: projects/1)</li>\n          <li>More help available <a class="external" href="#" target="_blank">here</a></li>\n        </ul>';
+      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
     } else if ('basic' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === request) {
@@ -121,218 +125,77 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_terminal_terminal___defau
 /* 2 */
 /***/ (function(module, exports) {
 
-(function (global, undefined) {
-
-	var Terminal = Terminal || function (containerID, options) {
-		if (!containerID) return;
-
-		var defaults = {
-			welcome: '',
-			prompt: '',
-			separator: '&gt;',
-			theme: 'interlaced',
-			scrollIntoViewAfter: true
-		};
-
-		var options = options || defaults;
-		options.welcome = options.welcome || defaults.welcome;
-		options.prompt = options.prompt || defaults.prompt;
-		options.separator = options.separator || defaults.separator;
-		options.theme = options.theme || defaults.theme;
-		// Added option to allow disabling scroll for iphone and some devices
-		options.scrollIntoViewAfter = typeof options.scrollIntoViewAfter !== 'undefined' ? options.scrollIntoViewAfter : defaults.scrollIntoViewAfter;
-
-		var extensions = Array.prototype.slice.call(arguments, 2);
-
-		var _history = localStorage.history ? JSON.parse(localStorage.history) : [];
-		var _histpos = _history.length;
-		var _histtemp = '';
-
-		// Create terminal and cache DOM nodes;
-		var _terminal = document.getElementById(containerID);
-		_terminal.classList.add('terminal');
-		_terminal.classList.add('terminal-' + options.theme);
-		_terminal.insertAdjacentHTML('beforeEnd', ['<div class="background"><div class="interlace"></div></div>', '<div class="container">', '<output></output>', '<table class="input-line">', '<tr><td nowrap><div class="prompt">' + options.prompt + options.separator + '</div></td><td width="100%"><input class="cmdline" spellcheck="false" autofocus /></td></tr>', '</table>', '</div>'].join(''));
-		var _container = _terminal.querySelector('.container');
-		var _inputLine = _container.querySelector('.input-line');
-		var _cmdLine = _container.querySelector('.input-line .cmdline');
-		var _output = _container.querySelector('output');
-		var _prompt = _container.querySelector('.prompt');
-		var _background = document.querySelector('.background');
-
-		// Hackery to resize the interlace background image as the container grows.
-		_output.addEventListener('DOMSubtreeModified', function (e) {
-			// Works best with the scroll into view wrapped in a setTimeout.
-			if (options.scrollIntoViewAfter) {
-				setTimeout(function () {
-					_cmdLine.scrollIntoView();
-				}, 0);
-			}
-		}, false);
-
-		if (options.welcome) {
-			output(options.welcome);
-		}
-
-		window.addEventListener('click', function (e) {
-			_cmdLine.focus();
-		}, false);
-
-		_output.addEventListener('click', function (e) {
-			e.stopPropagation();
-		}, false);
-
-		// Always force text cursor to end of input line.
-		_cmdLine.addEventListener('click', inputTextClick, false);
-		_inputLine.addEventListener('click', function (e) {
-			_cmdLine.focus();
-		}, false);
-
-		// Handle up/down key presses for shell history and enter for new command.
-		_cmdLine.addEventListener('keyup', historyHandler, false);
-		_cmdLine.addEventListener('keydown', processNewCommand, false);
-
-		window.addEventListener('keyup', function (e) {
-			_cmdLine.focus();
-			e.stopPropagation();
-			e.preventDefault();
-		}, false);
-
-		function inputTextClick(e) {
-			this.value = this.value;
-		}
-
-		function historyHandler(e) {
-			// Clear command-line on Escape key.
-			if (e.keyCode == 27) {
-				this.value = '';
-				e.stopPropagation();
-				e.preventDefault();
-			}
-
-			if (_history.length && (e.keyCode == 38 || e.keyCode == 40)) {
-				if (_history[_histpos]) {
-					_history[_histpos] = this.value;
-				} else {
-					_histtemp = this.value;
-				}
-
-				if (e.keyCode == 38) {
-					// Up arrow key.
-					_histpos--;
-					if (_histpos < 0) {
-						_histpos = 0;
-					}
-				} else if (e.keyCode == 40) {
-					// Down arrow key.
-					_histpos++;
-					if (_histpos > _history.length) {
-						_histpos = _history.length;
-					}
-				}
-
-				this.value = _history[_histpos] ? _history[_histpos] : _histtemp;
-
-				// Move cursor to end of input.
-				this.value = this.value;
-			}
-		}
-
-		function processNewCommand(e) {
-			// Only handle the Enter key.
-			if (e.keyCode != 13) return;
-
-			var cmdline = this.value;
-
-			// Save shell history.
-			if (cmdline) {
-				_history[_history.length] = cmdline;
-				localStorage['history'] = JSON.stringify(_history);
-				_histpos = _history.length;
-			}
-
-			// Duplicate current input and append to output section.
-			var line = this.parentNode.parentNode.parentNode.parentNode.cloneNode(true);
-			line.removeAttribute('id');
-			line.classList.add('line');
-			var input = line.querySelector('input.cmdline');
-			input.autofocus = false;
-			input.readOnly = true;
-			input.insertAdjacentHTML('beforebegin', input.value);
-			input.parentNode.removeChild(input);
-			_output.appendChild(line);
-
-			// Hide command line until we're done processing input.
-			_inputLine.classList.add('hidden');
-
-			// Clear/setup line for next input.
-			this.value = '';
-
-			// Parse out command, args, and trim off whitespace.
-			if (cmdline && cmdline.trim()) {
-				var args = cmdline.split(' ').filter(function (val, i) {
-					return val;
-				});
-				var cmd = args[0];
-				args = args.splice(1); // Remove cmd from arg list.
-			}
-
-			if (cmd) {
-				var response = false;
-				for (var index in extensions) {
-					var ext = extensions[index];
-					if (ext.execute) response = ext.execute(cmd, args);
-					if (response !== false) break;
-				}
-				if (response === false) response = cmd + ': command not found';
-				output(response);
-			}
-
-			// Show the command line.
-			_inputLine.classList.remove('hidden');
-		}
-
-		function clear() {
-			_output.innerHTML = '';
-			_cmdLine.value = '';
-			_background.style.minHeight = '';
-		}
-
-		function output(html) {
-			_output.insertAdjacentHTML('beforeEnd', html);
-			_cmdLine.scrollIntoView();
-		}
-
-		return {
-			clear: clear,
-			setPrompt: function setPrompt(prompt) {
-				_prompt.innerHTML = prompt + options.separator;
-			},
-			getPrompt: function getPrompt() {
-				return _prompt.innerHTML.replace(new RegExp(options.separator + '$'), '');
-			},
-			setTheme: function setTheme(theme) {
-				_terminal.classList.remove('terminal-' + options.theme);options.theme = theme;_terminal.classList.add('terminal-' + options.theme);
-			},
-			getTheme: function getTheme() {
-				return options.theme;
-			}
-		};
-	};
-
-	// node.js
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = Terminal;
-
-		// web browsers
-	} else {
-		var oldTerminal = global.Terminal;
-		Terminal.noConflict = function () {
-			global.Terminal = oldTerminal;
-			return Terminal;
-		};
-		global.Terminal = Terminal;
-	}
+(function (i) {
+  var d = d || function (d, a) {
+    if (d) {
+      var c = { welcome: "", prompt: "", separator: "&gt;", theme: "interlaced", scrollIntoViewAfter: !0 },
+          a = a || c;a.welcome = a.welcome || c.welcome;a.prompt = a.prompt || c.prompt;a.separator = a.separator || c.separator;a.theme = a.theme || c.theme;a.scrollIntoViewAfter = "undefined" !== typeof a.scrollIntoViewAfter ? a.scrollIntoViewAfter : c.scrollIntoViewAfter;var i = Array.prototype.slice.call(arguments, 2),
+          e = localStorage.history ? JSON.parse(localStorage.history) : [],
+          f = e.length,
+          m = "",
+          g = document.getElementById(d);
+      g.classList.add("terminal");g.classList.add("terminal-" + a.theme);g.insertAdjacentHTML("beforeEnd", ['<div class="background"><div class="interlace"></div></div><div class="container"><output></output><table class="input-line">', '<tr><td nowrap><div class="prompt">' + a.prompt + a.separator + '</div></td><td width="100%"><input class="cmdline" spellcheck="false" autofocus /></td></tr>', "</table></div>"].join(""));var c = g.querySelector(".container"),
+          l = c.querySelector(".input-line"),
+          h = c.querySelector(".input-line .cmdline"),
+          j = c.querySelector("output"),
+          n = c.querySelector(".prompt"),
+          k = document.querySelector(".background");j.addEventListener("DOMSubtreeModified", function () {
+        a.scrollIntoViewAfter && setTimeout(function () {
+          h.scrollIntoView();
+        }, 0);
+      }, !1);a.welcome && (j.insertAdjacentHTML("beforeEnd", a.welcome), h.scrollIntoView());window.addEventListener("click", function () {
+        h.focus();
+      }, !1);j.addEventListener("click", function (b) {
+        b.stopPropagation();
+      }, !1);h.addEventListener("click", function () {
+        this.value = this.value;
+      }, !1);l.addEventListener("click", function () {
+        h.focus();
+      }, !1);h.addEventListener("keyup", function (b) {
+        if (b.keyCode == 27) {
+          this.value = "";b.stopPropagation();b.preventDefault();
+        }if (e.length && (b.keyCode == 38 || b.keyCode == 40)) {
+          e[f] ? e[f] = this.value : m = this.value;if (b.keyCode == 38) {
+            f--;f < 0 && (f = 0);
+          } else if (b.keyCode == 40) {
+            f++;if (f > e.length) f = e.length;
+          }this.value = this.value = e[f] ? e[f] : m;
+        }
+      }, !1);h.addEventListener("keydown", function (b) {
+        if (b.keyCode == 13) {
+          if (b = this.value) {
+            e[e.length] = b;localStorage.history = JSON.stringify(e);f = e.length;
+          }var a = this.parentNode.parentNode.parentNode.parentNode.cloneNode(true);
+          a.removeAttribute("id");a.classList.add("line");var c = a.querySelector("input.cmdline");c.autofocus = false;c.readOnly = true;c.insertAdjacentHTML("beforebegin", c.value);c.parentNode.removeChild(c);j.appendChild(a);l.classList.add("hidden");this.value = "";if (b && b.trim()) var d = b.split(" ").filter(function (a) {
+            return a;
+          }),
+              g = d[0],
+              d = d.splice(1);if (g) {
+            var b = false,
+                k;for (k in i) {
+              a = i[k];a.execute && (b = a.execute(g, d));if (b !== false) break;
+            }b === false && (b = g + ": command not found");j.insertAdjacentHTML("beforeEnd", b);h.scrollIntoView();
+          }l.classList.remove("hidden");
+        }
+      }, !1);window.addEventListener("keyup", function (a) {
+        h.focus();a.stopPropagation();a.preventDefault();
+      }, !1);return { clear: function clear() {
+          j.innerHTML = "";h.value = "";k.style.minHeight = "";
+        }, setPrompt: function setPrompt(b) {
+          n.innerHTML = b + a.separator;
+        }, getPrompt: function getPrompt() {
+          return n.innerHTML.replace(RegExp(a.separator + "$"), "");
+        }, setTheme: function setTheme(b) {
+          g.classList.remove("terminal-" + a.theme);a.theme = b;g.classList.add("terminal-" + a.theme);
+        }, getTheme: function getTheme() {
+          return a.theme;
+        } };
+    }
+  };if ("undefined" !== typeof module && module.exports) module.exports = d;else {
+    var k = i.Terminal;d.noConflict = function () {
+      i.Terminal = k;return d;
+    };i.Terminal = d;
+  }
 })(this);
 
 /***/ }),
