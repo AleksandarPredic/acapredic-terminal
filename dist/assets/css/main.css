@@ -284,6 +284,10 @@ body a:not(.link--no-suffix) {
   font-weight: 700;
 }
 
+header > div section > p {
+  margin: 0.5rem 0;
+}
+
 header > div aside ul {
   list-style-type: none;
   display: -webkit-box;
@@ -333,14 +337,6 @@ header hr {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-
-  header > div section details p {
-    margin: 2rem 0 0.5rem 0;
-  }
-
-  header > div section details p:not(:first-of-type) {
-    margin: 0 0 0.5rem 0;
-  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -360,8 +356,8 @@ header hr {
             flex-direction: column;
   }
 
-  header > div section {
-    margin-bottom: 2.5rem;
+  header > div aside {
+    margin-top: 4rem;
   }
 }
 
@@ -490,6 +486,26 @@ header hr {
 @media (max-width: 991px) {
   html {
     font-size: 12px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
   }
 }
 

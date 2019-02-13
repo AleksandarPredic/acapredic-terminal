@@ -1,5 +1,11 @@
 header {
   > div {
+    section {
+      > p {
+        margin: 0.5rem 0;
+      }
+    }
+
     aside {
       ul {
         list-style-type: none;
@@ -41,18 +47,6 @@ header {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-
-      section {
-        details {
-          p {
-            margin: 2rem 0 0.5rem 0;
-
-            &:not(:first-of-type) {
-              margin: 0 0 0.5rem 0;
-            }
-          }
-        }
-      }
     }
   }
 
@@ -63,8 +57,8 @@ header {
       justify-content: flex-start;
       flex-direction: column;
 
-      section {
-        margin-bottom: 2.5rem;
+      aside {
+        margin-top: 4rem;
       }
     }
   }
