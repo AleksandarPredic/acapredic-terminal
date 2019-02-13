@@ -238,7 +238,7 @@ var Info = function () {
 
                   Object.values(this.projects).forEach(function (project) {
 
-                        var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */](project.id, project.name, '', project.shortDescription);
+                        var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */](project.id, project.name, project.url, project.shortDescription);
 
                         list.push(singleProject.displayShort());
                   });
@@ -255,7 +255,7 @@ var Info = function () {
                         return '404. Project with requested id <strong>' + id + '</strong> doesn\'t exists';
                   }
 
-                  var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */]('', project.name, project.url, '', project.description);
+                  var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */]('', project.name, project.url, '', project.description, project.stack);
 
                   return singleProject.displayLong();
             }
@@ -316,6 +316,7 @@ var Crud = function () {
     1: {
       id: 1,
       name: 'WooCommerce external API integration - products import - custom WP plugin',
+      stack: 'PHP, HTML, CSS, JS, REST API, WooCommerce, WordPress',
       url: 'https://grafomis.rs',
       shortDescription: 'WooCommerce was used as a base to import 6000+ products from external API.',
       description: '\n      WooCommerce was used as a base to import 6000+ products from external API. Custom WordPress plugin was created to handle authentication, \n      automatic import and synchronization of all data (taxonomies, post types, attributes...) for fully functional online shop. \n      Additionally, WooCommerce was customized on frontend to fit needs of printing company.\n      '
@@ -324,6 +325,7 @@ var Crud = function () {
     2: {
       id: 2,
       name: 'WordPress custom business solution',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
       url: 'https://www.physicianpartnersofamerica.com',
       shortDescription: 'Custom WordPress solution heavily relying on Google maps javascript API.',
       description: '\n      Custom WordPress solution heavily relying on Google maps javascript API. Project included custom WP theme and plugins, integrating various external API\'s. \n\n      My role was a team lead of small dev team consisting of 3 members covering both frontend and backend tasks. Close cooperation with designer was also important for better design implementation. \n      \n      Performance-wise I write a lot of requested features to avoid using plugins that add extra functionalities which are not needed on the site.\n      \n      Used on project: PHP, jQuery, JavaScript, SCSS, Gulp, Composer, WordPress\n      \n      Website description: Doctors and clinics listing using Google maps displaying results by distance from visitor location. Live search on Google maps for locations. Other common website pages are also implemented and designed.\n      '
@@ -332,6 +334,7 @@ var Crud = function () {
     3: {
       id: 3,
       name: 'WordPress Widget Builder Framework',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
       url: 'https://github.com/AleksandarPredic/WordPress-Widget-Builder',
       shortDescription: 'The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.',
       description: '\n      The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.\n\n      You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.\n      '
@@ -353,11 +356,13 @@ var Project = function () {
     var url = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
     var shortDescription = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
     var description = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
+    var stack = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : '';
 
     _classCallCheck(this, Project);
 
     this.id = id;
     this.name = name;
+    this.stack = stack;
     this.url = url;
     this.shortDescription = shortDescription;
     this.description = description;
@@ -373,7 +378,7 @@ var Project = function () {
     key: 'displayLong',
     value: function displayLong() {
 
-      return '\n    <section>\n    <h3>Project name: ' + this.name + '</h3>\n    <p>\n      <ul>\n        <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n        <li><strong>Description:</strong> ' + this.description + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+      return '\n    <section>\n    <h3>Project name: ' + this.name + '</h3>\n    <h5>Stack: ' + this.stack + '</h5>\n    <p>\n      <ul>\n        <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n        <li><strong>Description:</strong> ' + this.description + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
     }
   }]);
 

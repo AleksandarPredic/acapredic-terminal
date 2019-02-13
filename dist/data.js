@@ -9,6 +9,7 @@ export default {
     1: {
       id: 1,
       name: 'WooCommerce external API integration - products import - custom WP plugin',
+      stack: 'PHP, HTML, CSS, JS, REST API, WooCommerce, WordPress',
       url: 'https://grafomis.rs',
       shortDescription: 'WooCommerce was used as a base to import 6000+ products from external API.',
       description: `
@@ -21,6 +22,7 @@ export default {
     2: {
       id: 2,
       name: 'WordPress custom business solution',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
       url: 'https://www.physicianpartnersofamerica.com',
       shortDescription: 'Custom WordPress solution heavily relying on Google maps javascript API.',
       description: `
@@ -39,6 +41,7 @@ export default {
     3: {
       id: 3,
       name: 'WordPress Widget Builder Framework',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
       url: 'https://github.com/AleksandarPredic/WordPress-Widget-Builder',
       shortDescription: 'The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.',
       description: `

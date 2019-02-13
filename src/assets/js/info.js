@@ -33,7 +33,7 @@ class Info {
         let singleProject = new Project(
           project.id,
           project.name,
-          '',
+          project.url,
           project.shortDescription
         );
 
@@ -57,7 +57,8 @@ class Info {
         project.name,
         project.url,
         '',
-        project.description
+        project.description,
+        project.stack
       );
 
       return singleProject.displayLong();

@@ -1,9 +1,10 @@
 class Project {
 
-  constructor(id, name, url = '', shortDescription = '', description = '') {
+  constructor(id, name, url = '', shortDescription = '', description = '', stack = '') {
 
     this.id = id;
     this.name = name;
+    this.stack = stack;
     this.url = url;
     this.shortDescription = shortDescription;
     this.description = description;
@@ -32,6 +33,7 @@ class Project {
     return `
     <section>
     <h3>Project name: ${this.name}</h3>
+    <h5>Stack: ${this.stack}</h5>
     <p>
       <ul>
         <li><strong>Url:</strong> <a href="${this.url}" target="_blank">${this.url}</a></li>
