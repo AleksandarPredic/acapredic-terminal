@@ -274,7 +274,7 @@ body {
   white-space: normal;
 }
 
-body a {
+body a:not(.link--no-suffix) {
   background: url("data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9QTFRFzs7OqKio0NDQ////////DlgqrAAAAAV0Uk5T/////wD7tg5TAAAAN0lEQVR42izLyQ0AMAgDQYPpv+b4yD7QEBGcYoI0yN454Sqy9KnfTUufQpB7c/9AM1RlE58AAwBEcAE4zo3mOAAAAABJRU5ErkJggg==") no-repeat scroll right center transparent;
   padding-right: 13px;
   outline: none;
@@ -284,8 +284,85 @@ body a {
   font-weight: 700;
 }
 
+header > div aside ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+header > div aside li a {
+  display: block;
+}
+
+header > div aside li:not(:last-child) a {
+  margin-right: 1.5rem;
+}
+
+header > div aside li svg {
+  height: 3rem;
+  width: auto;
+  fill: #fff;
+}
+
 header hr {
   margin: 3rem 0;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+  header > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  header > div section details p {
+    margin: 2rem 0 0.5rem 0;
+  }
+
+  header > div section details p:not(:first-of-type) {
+    margin: 0 0 0.5rem 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  header > div section {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .terminal {
@@ -412,7 +489,7 @@ header hr {
 
 @media (max-width: 991px) {
   html {
-    font-size: 26px;
+    font-size: 12px;
   }
 }
 

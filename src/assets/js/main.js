@@ -2,6 +2,8 @@
  * Api documentation example
  *
  * @see https://swapi.co/documentation#root
+ *
+ * icons: https://simpleicons.org/
  */
 
 /**

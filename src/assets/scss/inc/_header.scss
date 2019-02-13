@@ -1,5 +1,71 @@
 header {
+  > div {
+    aside {
+      ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        a {
+          display: block;
+        }
+
+        &:not(:last-child) {
+          a {
+            margin-right: 1.5rem;
+          }
+        }
+
+        svg {
+          height: 3rem;
+          width: auto;
+          fill: $color__white;
+        }
+      }
+    }
+  }
+
   hr {
     margin: 3rem 0;
+    flex: none;
+    clear: both;
+  }
+
+  @media only screen and (min-width: $brakepoint__sm-min) {
+    > div {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      section {
+        details {
+          p {
+            margin: 2rem 0 0.5rem 0;
+
+            &:not(:first-of-type) {
+              margin: 0 0 0.5rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $brakepoint__sm-max) {
+    > div {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      section {
+        margin-bottom: 2.5rem;
+      }
+    }
   }
 }

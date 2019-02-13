@@ -85,6 +85,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * Api documentation example
  *
  * @see https://swapi.co/documentation#root
+ *
+ * icons: https://simpleicons.org/
  */
 
 /**
