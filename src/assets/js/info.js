@@ -44,6 +44,7 @@ class Info {
         let singleProject = new Project(
           project.id,
           project.name,
+          '',
           project.url,
           project.shortDescription
         );
@@ -66,6 +67,7 @@ class Info {
       let singleProject = new Project(
         '',
         project.name,
+        project.dates,
         project.url,
         '',
         project.description,

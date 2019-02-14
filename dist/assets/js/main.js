@@ -261,7 +261,7 @@ var Info = function () {
 
                   Object.values(this.projects).forEach(function (project) {
 
-                        var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */](project.id, project.name, project.url, project.shortDescription);
+                        var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */](project.id, project.name, '', project.url, project.shortDescription);
 
                         list.push(singleProject.displayShort());
                   });
@@ -278,7 +278,7 @@ var Info = function () {
                         return '404. Project with requested id <strong>' + id + '</strong> doesn\'t exists';
                   }
 
-                  var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */]('', project.name, project.url, '', project.description, project.stack);
+                  var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */]('', project.name, project.dates, project.url, '', project.description, project.stack);
 
                   return singleProject.displayLong();
             }
@@ -412,6 +412,7 @@ var Crud = function () {
     1: {
       id: 1,
       name: 'WooCommerce external API integration - products import - custom WP plugin',
+      dates: 'Oct 2018 – Dec 2018',
       stack: 'PHP, HTML, CSS, JS, REST API, WooCommerce, WordPress',
       url: 'https://grafomis.rs',
       shortDescription: 'WooCommerce was used as a base to import 6000+ products from external API.',
@@ -421,19 +422,102 @@ var Crud = function () {
     2: {
       id: 2,
       name: 'WordPress custom business solution',
+      dates: 'Dec 2017 – Feb 2018',
       stack: 'PHP, HTML, CSS, JS, WordPress',
       url: 'https://www.physicianpartnersofamerica.com',
       shortDescription: 'Custom WordPress solution heavily relying on Google maps javascript API.',
-      description: '\n      Custom WordPress solution heavily relying on Google maps javascript API. Project included custom WP theme and plugins, integrating various external API\'s. \n\n      My role was a team lead of small dev team consisting of 3 members covering both frontend and backend tasks. Close cooperation with designer was also important for better design implementation. \n      \n      Performance-wise I write a lot of requested features to avoid using plugins that add extra functionalities which are not needed on the site.\n      \n      Used on project: PHP, jQuery, JavaScript, SCSS, Gulp, Composer, WordPress\n      \n      Website description: Doctors and clinics listing using Google maps displaying results by distance from visitor location. Live search on Google maps for locations. Other common website pages are also implemented and designed.\n      '
+      description: '\n      Custom WordPress solution heavily relying on Google maps javascript API. Project included custom WP theme and plugins, integrating various external API\'s. \n      My role was a team lead of small dev team consisting of 3 members covering both frontend and backend tasks. Close cooperation with designer was also important for better design implementation. \n      Performance-wise I write a lot of requested features to avoid using plugins that add extra functionalities which are not needed on the site.\n      Used on project: PHP, jQuery, JavaScript, SCSS, Gulp, Composer, WordPress.\n      Website description: Doctors and clinics listing using Google maps displaying results by distance from visitor location. Live search on Google maps for locations. Other common website pages are also implemented and designed.\n      '
     },
 
     3: {
       id: 3,
       name: 'WordPress Widget Builder Framework',
+      dates: 'Mar 2017',
       stack: 'PHP, HTML, CSS, JS, WordPress',
       url: 'https://github.com/AleksandarPredic/WordPress-Widget-Builder',
       shortDescription: 'The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.',
-      description: '\n      The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.\n\n      You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.\n      '
+      description: '\n      The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.\n      You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.\n      '
+    },
+    4: {
+      id: 4,
+      name: 'Woo Shop Slider - WordPress plugin',
+      dates: 'Feb 2016',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'http://codecanyon.net/item/woo-shop-slider-woocommerce-slider-for-products-single-product-and-categories/14840747',
+      shortDescription: 'With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles.',
+      description: '\n      With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles. Woo Shop Slider is slider for products, single product and categories from Your WooCommerce shop.\n      In this project I was in charge of both frontend and backend development following Marjan Tosic designs.\n      Free lite version of the plugin can be downloaded here: https://wordpress.org/plugins/woo-shop-slider-lite/\n      '
+    },
+    5: {
+      id: 5,
+      name: 'WordPress Test HQ service',
+      dates: 'Feb 2016',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: '',
+      shortDescription: 'WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase.',
+      description: '\n      Project descriptionWordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase. \n      It is built for premium theme and plugin developers and offer instant creation of demo site for limited time.\n      '
+    },
+    6: {
+      id: 6,
+      name: 'FashionPress - WordPress Theme for Fashion Bloggers',
+      dates: 'Oct 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'http://themeforest.net/item/fashionpress-wordpress-theme-for-fashion-bloggers-responsive-and-creative-blog-template/13026365',
+      shortDescription: 'FashionPress is a stylish and creative WordPress fashion blog template.',
+      description: '\n      FashionPress is a stylish and creative WordPress fashion blog template packed with everything that you need to create a perfect personal fashion blog for you. \n      <br />\n      I was responsible for backend development and fulfilling Themeforest\'s WordPress theme submission requirements. WordPress theme supports WooCommerce and shop frontend coding was also my task. \n      Nikola Randjelovic worked on backend, while Milos Ristic was responsible for frontend and some backend development. Design was done by Vladimir Devic and Marjan Tosic who was also a team leader.\n      '
+    },
+    7: {
+      id: 7,
+      name: 'HotMag – WordPress News And Magazine Responsive Theme',
+      dates: 'Jun 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'http://themeforest.net/item/hotmag-wordpress-news-magazine-responsive-theme/11657078',
+      shortDescription: 'Hotmag is a responsive and retina ready news and magazine WordPress template.',
+      description: '\n      Hotmag is a responsive and retina ready news and magazine WordPress template. \n      It is intuitive and friendly for beginners but it also allows professional users to create some amazing stuff.\n      '
+    },
+    8: {
+      id: 8,
+      name: 'Alfa - Responsive Parallax WordPress Theme',
+      dates: 'Apr 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'http://themeforest.net/item/alfa-responsive-parallax-wordpress-theme/10764656',
+      shortDescription: 'Alfa is a clean and professional, responsive one-page portfolio WordPress theme.',
+      description: '\n      As a part of backend development team I contributed publishing this project. Alfa is a clean and professional, responsive one-page portfolio \n      WordPress theme made for freelance web designers, freelancers, web agencies, artists and other creatives and entrepreneurs.\n      '
+    },
+    9: {
+      id: 9,
+      name: 'Glyph - Responsive News, Blog & Magazine WP Theme',
+      dates: 'Apr 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'http://themeforest.net/item/glyph-responsive-news-blog-magazine-wp-theme/11156144',
+      shortDescription: 'Glyph is a clean WordPress premium theme perfect for news, blog or magazine.',
+      description: '\n      Thanks to Shindiri development team Glyph WordPress premium theme was created. I was in charge of backend development, colleague (Aleksandar Blagotic) took care of frontend part of the project. \n      Thanks to our Designer, Glyph look so great and clean perfect for news, blog or magazine theme.\n      '
+    },
+    10: {
+      id: 10,
+      name: 'Online shop',
+      dates: 'Jan 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'http://greencentar.com',
+      shortDescription: 'Online WooCommerce shop development.',
+      description: '\n      Online shop development. Shop is based on WooCommerce and WordPress. I was responsible for backend development and some frontend adjustments, \n      while collaborator (Nikola Mladenovic) was in charge for products pages design and site promotion.\n      '
+    },
+    11: {
+      id: 11,
+      name: 'Sierra - One Page Responsive WordPress Theme',
+      dates: 'Jan 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'http://themeforest.net/item/sierra-one-page-responsive-wordpress-theme/10302986',
+      shortDescription: 'One Page Responsive WordPress agency theme.',
+      description: '\n      My first WP template published on themeforest.net. In Sierra project I developed whole backend of the WordPress theme. Our designer created theme design, colleague \n      frontend developer, created html theme and my task was converting the html theme into WordPress premium theme. Sierra One-Page Portfolio WordPress Theme is easy to use \n      one page wp template. With very little modification, this flexible, responsive WordPress theme can be used to create Agency website, Freelancer, Photography, Creative, Fashion, \n      Magazine or Blog website. Sierra WP theme uses Visual Composer packed with custom shortcodes designed for Sierra template.\n      '
+    },
+    12: {
+      id: 12,
+      name: 'Backend development of an online shop',
+      dates: 'Jan 2015',
+      stack: 'PHP, HTML, CSS',
+      url: 'http://www.jezdicrakija.com',
+      shortDescription: 'Custom MVC framework development for an online shop.',
+      description: '\n      In cooperation with company designer, who was responsible for fronted design, I developed an online shop site www.jezdicrakija.com using custom made MVC framework.\n      '
     }
   },
   experiences: {
@@ -443,7 +527,7 @@ var Crud = function () {
       dates: 'Oct 2017 – Present',
       companyName: 'Shindiri Studio',
       companyUrl: 'https://www.shindiristudio.com',
-      description: '\n      <ul>\n        <li>PHP, HTML, CSS, JavaScript, WordPress themes and plugin development.</li>\n        <li>Clients custom solutions development.</li>\n        <li>Create, coordinate, estimate and support all tasks within the development team.</li>\n        <li>Work together with product management, business and design teams to ensure fluent development workflow.</li>\n        <li>Lead the day to day coding.</li>\n      </ul>'
+      description: ['PHP, HTML, CSS, JavaScript, WordPress themes and plugin development.', 'Clients custom solutions development.', 'Create, coordinate, estimate and support all tasks within the development team.', 'Work together with product management, business and design teams to ensure fluent development workflow.', 'Lead the day to day coding.']
     },
     2: {
       id: 2,
@@ -451,7 +535,7 @@ var Crud = function () {
       dates: 'Oct 2014 – Oct 2017',
       companyName: 'Shindiri Studio',
       companyUrl: 'https://www.shindiristudio.com',
-      description: '\n      <ul>\n        <li>HTML, CSS, JavaScript.</li>\n        <li>PHP, WordPress themes and plugin development.</li>\n        <li>WordPress design patterns.</li>\n        <li>Isolate and resolve current issues.</li>\n      </ul>'
+      description: ['HTML, CSS, JavaScript.', 'PHP, WordPress themes and plugin development.', 'WordPress design patterns.', 'Isolate and resolve current issues.']
     },
     3: {
       id: 3,
@@ -459,7 +543,7 @@ var Crud = function () {
       dates: 'Mar 2017 – Oct 2017',
       companyName: 'IT Centar',
       companyUrl: 'https://itcentar.rs',
-      description: '\n      <ul>\n        <li>WordPress course. Development of WordPress themes and plugins. PSD to WP conversion.</li>\n      </ul>'
+      description: ['WordPress course. Development of WordPress themes and plugins. PSD to WP conversion.']
     },
     4: {
       id: 4,
@@ -467,7 +551,7 @@ var Crud = function () {
       dates: 'Jul 2014 – Oct 2014',
       companyName: 'ApexSQL',
       companyUrl: 'https://www.apexsql.com',
-      description: '\n      <ul>\n        <li>Work within a small local team using Scrum software development methodologies.</li>\n        <li>Update and improve company website and internal web applications.</li>\n        <li>Maintain WordPress websites</li>\n      </ul>'
+      description: ['Work within a small local team using Scrum software development methodologies.', 'Update and improve company website and internal web applications.', 'Maintain WordPress websites.']
     },
     5: {
       id: 5,
@@ -475,7 +559,7 @@ var Crud = function () {
       dates: 'May 2014 – Jul 2014',
       companyName: 'Freelancer',
       companyUrl: '',
-      description: '\n      <ul>\n        <li>Frontend Development - HTML, CSS, jQuery</li>\n        <li>Backend Development PHP, MySQL</li>\n        <li>Development of Magento 1 theme</li>\n      </ul>'
+      description: ['Frontend Development - HTML, CSS, jQuery.', 'Backend Development PHP, MySQL.', 'Development of Magento 1 theme.']
     },
     6: {
       id: 6,
@@ -483,7 +567,7 @@ var Crud = function () {
       dates: 'Jul 2012 – May 2014',
       companyName: 'Inter Casa Ambienta',
       companyUrl: 'http://www.adriatiko.com/o-nama.htm',
-      description: '\n      <ul>\n        <li>\n          Administration of high ranked web sites:\n          <ul>\n            <li><a href="https://www.tvarenasport.com" target="_blank">Arena sport</a></li>\n            <li><a href="https://www.aerogaga.com" target="_blank">Aerogaga</a></li>\n            <li><a href="https://www.stetoskop.info" target="_blank">Stetoskop</a></li>\n          </ul>\n        </li>\n        <li>Brand development, web site traffic growth, web site and advertising revenue.</li>\n      </ul>'
+      description: ['Administration of high ranked web sites:\n        <ul>\n          <li><a href="https://www.tvarenasport.com" target="_blank" rel="nofollow">Arena sport</a></li>\n          <li><a href="https://www.aerogaga.com" target="_blank" rel="nofollow">Aerogaga</a></li>\n          <li><a href="https://www.stetoskop.info" target="_blank" rel="nofollow">Stetoskop</a></li>\n        </ul>', 'Brand development, web site traffic growth, web site and advertising revenue.']
     }
   },
   education: {
@@ -555,16 +639,17 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Project = function () {
-  function Project(id, name) {
-    var url = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
-    var shortDescription = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
-    var description = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
-    var stack = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : '';
+  function Project(id, name, dates) {
+    var url = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
+    var shortDescription = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
+    var description = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : '';
+    var stack = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : '';
 
     _classCallCheck(this, Project);
 
     this.id = id;
     this.name = name;
+    this.dates = dates;
     this.stack = stack;
     this.url = url;
     this.shortDescription = shortDescription;
@@ -575,13 +660,17 @@ var Project = function () {
     key: 'displayShort',
     value: function displayShort() {
 
-      return '\n    <section>\n    <ul>\n      <li><strong>Id:</strong> ' + this.id + '</li>\n      <li><strong>Project name:</strong> ' + this.name + '</li>\n      <li><strong>Short description:</strong> ' + this.shortDescription + '</li>\n      <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n    </ul>\n    </section>\n    ';
+      var url = this.url ? '<li><strong>Url:</strong> <a href="' + this.url + '" target="_blank" rel="nofollow">' + this.url + '</a></li>' : '';
+
+      return '\n    <section>\n    <ul>\n      <li><strong>Id:</strong> ' + this.id + '</li>\n      <li><strong>Project name:</strong> ' + this.name + '</li>\n      <li><strong>Short description:</strong> ' + this.shortDescription + '</li>\n      ' + url + '\n    </ul>\n    </section>\n    ';
     }
   }, {
     key: 'displayLong',
     value: function displayLong() {
 
-      return '\n    <section>\n    <h4>Project name: ' + this.name + '</h4>\n    <p><strong>Stack:</strong> ' + this.stack + '</p>\n    <ul>\n      <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank" rel="nofollow">' + this.url + '</a></li>\n      <li><strong>Description:</strong> ' + this.description + '</li>\n    </ul>\n    </section>\n    ';
+      var url = this.url ? '<li><strong>Url:</strong> <a href="' + this.url + '" target="_blank" rel="nofollow">' + this.url + '</a></li>' : '';
+
+      return '\n    <section>\n    <h4>Project name: ' + this.name + '</h4>\n    <p><strong>Dates:</strong> ' + this.dates + '</p>\n    <ul>\n      ' + url + '\n      <li><strong>Stack:</strong> ' + this.stack + '</li>\n      <li><strong>Description:</strong> ' + this.description + '</li>\n    </ul>\n    </section>\n    ';
     }
   }]);
 
@@ -667,7 +756,11 @@ var Experience = function () {
     key: 'displayLong',
     value: function displayLong() {
 
-      return '\n    <section>\n    <h4>Position: ' + this.position + '</h4>\n    <p><strong>Company:</strong> ' + this.companyName + '</p>\n    <p><strong>Dates:</strong> ' + this.dates + '</p>\n    <p><strong>Company website:</strong> <a href="' + this.companyUrl + '" target="_blank" rel="nofollow">' + this.companyUrl + '</a></p>\n    <ul>\n      <li><strong>Description:</strong> ' + this.description + '</li>\n    </ul>\n    </section>\n    ';
+      var list = this.description.map(function (description) {
+        return '<li>' + description + '</li>';
+      }).join('');
+
+      return '\n    <section>\n    <h4>Position: ' + this.position + '</h4>\n    <p><strong>Company:</strong> ' + this.companyName + '</p>\n    <p><strong>Dates:</strong> ' + this.dates + '</p>\n    <p><strong>Company website:</strong> <a href="' + this.companyUrl + '" target="_blank" rel="nofollow">' + this.companyUrl + '</a></p>\n    <ul>\n      <li><strong>Description:</strong> <ul>' + list + '</ul></li>\n    </ul>\n    </section>\n    ';
     }
   }]);
 

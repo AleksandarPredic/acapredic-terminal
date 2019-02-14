@@ -27,6 +27,8 @@ class Experience {
 
   displayLong() {
 
+    let list = this.description.map(description => `<li>${description}</li>`).join('');
+
     return `
     <section>
     <h4>Position: ${this.position}</h4>
@@ -34,7 +36,7 @@ class Experience {
     <p><strong>Dates:</strong> ${this.dates}</p>
     <p><strong>Company website:</strong> <a href="${this.companyUrl}" target="_blank" rel="nofollow">${this.companyUrl}</a></p>
     <ul>
-      <li><strong>Description:</strong> ${this.description}</li>
+      <li><strong>Description:</strong> <ul>${list}</ul></li>
     </ul>
     </section>
     `;
