@@ -110,7 +110,7 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       terminal.clear();
       return '';
     } else if ('help' === request) {
-      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>skills</li>\n          <li>volonteer</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank" rel="nofollow">visit my LinkedIn profile</a></li>\n        </ul>';
+      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>skills</li>\n          <li>volunteer</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank" rel="nofollow">visit my LinkedIn profile</a></li>\n        </ul>';
     } else if ('basic' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === request) {
@@ -125,8 +125,8 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getEducation();
     } else if ('skills' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getSkills();
-    } else if ('volonteer' === request) {
-      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getVolonteer();
+    } else if ('volunteer' === request) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getVolunteer();
     } else {
       return '404. Unknown command. Type help for info about available commands';
     }
@@ -219,7 +219,7 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__project__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__experience__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__education__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__volonteer__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__volunteer__ = __webpack_require__(16);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -244,7 +244,7 @@ var Info = function () {
             this.experiences = this.data.experiences;
             this.education = this.data.education;
             this.skills = this.data.skills;
-            this.volonteer = this.data.volonteer;
+            this.volunteer = this.data.volunteer;
       }
 
       _createClass(Info, [{
@@ -341,16 +341,16 @@ var Info = function () {
                   return '<h3>Skills</h3><ul>' + list.join('') + '</ul>';
             }
       }, {
-            key: 'getVolonteer',
-            value: function getVolonteer() {
+            key: 'getVolunteer',
+            value: function getVolunteer() {
 
                   var list = ['<h3>Volunteer Experience</h3>'];
 
-                  Object.values(this.volonteer).forEach(function (volonteer) {
+                  Object.values(this.volunteer).forEach(function (volunteer) {
 
-                        var singleVolonteer = new __WEBPACK_IMPORTED_MODULE_4__volonteer__["a" /* default */](volonteer.id, volonteer.name, volonteer.company, volonteer.description);
+                        var singleVolunteer = new __WEBPACK_IMPORTED_MODULE_4__volunteer__["a" /* default */](volunteer.id, volunteer.name, volunteer.company, volunteer.description);
 
-                        list.push(singleVolonteer.display());
+                        list.push(singleVolunteer.display());
                   });
 
                   return list.join('');
@@ -509,7 +509,7 @@ var Crud = function () {
   skills: {
     list: ['PHP', 'OOP', 'MySQl', 'HTML', 'CSS', 'SCSS', 'LESS', 'JS', 'ECMAScript', 'jQuery', 'Webpack', 'Gulp', 'WordPress', 'Basic Laravel', 'Web development', 'Backend development', 'Frontend development', 'JIRA', 'Basic photoshop']
   },
-  volonteer: {
+  volunteer: {
     1: {
       id: 1,
       name: 'Community - meetup organizer',
@@ -529,7 +529,7 @@ var Crud = function () {
         name: 'WordCamp Belgrade, Serbia - #WCBDG 2017',
         dates: 'May 2017',
         url: 'https://2017.belgrade.wordcamp.org/speaker/aleksandar-predic',
-        description: 'Volonteer and speaker'
+        description: 'Volunteer and speaker'
       }, {
         name: 'WordCamp Europe, Belgrade, Serbia - #WCEU 2018',
         dates: 'June 2018',
@@ -709,7 +709,8 @@ var Education = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Education);
 
 /***/ }),
-/* 15 */
+/* 15 */,
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -717,11 +718,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Volonteer = function () {
-  function Volonteer(id, name, company) {
+var Volunteer = function () {
+  function Volunteer(id, name, company) {
     var description = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
 
-    _classCallCheck(this, Volonteer);
+    _classCallCheck(this, Volunteer);
 
     this.id = id;
     this.name = name;
@@ -729,7 +730,7 @@ var Volonteer = function () {
     this.description = description;
   }
 
-  _createClass(Volonteer, [{
+  _createClass(Volunteer, [{
     key: 'display',
     value: function display() {
 
@@ -765,10 +766,10 @@ var Volonteer = function () {
     }
   }]);
 
-  return Volonteer;
+  return Volunteer;
 }();
 
-/* harmony default export */ __webpack_exports__["a"] = (Volonteer);
+/* harmony default export */ __webpack_exports__["a"] = (Volunteer);
 
 /***/ })
 /******/ ]);

@@ -1,4 +1,4 @@
-class Volonteer {
+class Volunteer {
 
   constructor(id, name, company, description = '') {
 
@@ -40,4 +40,4 @@ class Volonteer {
 
 }
 
-export default Volonteer;
+export default Volunteer;

@@ -181,7 +181,7 @@ export default {
       'Basic photoshop'
     ]
   },
-  volonteer: {
+  volunteer: {
     1: {
       id: 1,
       name: 'Community - meetup organizer',
@@ -204,7 +204,7 @@ export default {
           name: 'WordCamp Belgrade, Serbia - #WCBDG 2017',
           dates: 'May 2017',
           url: 'https://2017.belgrade.wordcamp.org/speaker/aleksandar-predic',
-          description: 'Volonteer and speaker'
+          description: 'Volunteer and speaker'
         },
         {
           name: 'WordCamp Europe, Belgrade, Serbia - #WCEU 2018',
