@@ -45,7 +45,7 @@ const terminal = new Terminal('terminal',
           <li>education</li>
           <li>skills</li>
           <li>volonteer</li>
-          <li>Don't like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>
+          <li>Don't like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank" rel="nofollow">visit my LinkedIn profile</a></li>
         </ul>`;
     }
     else if('basic' === request) {

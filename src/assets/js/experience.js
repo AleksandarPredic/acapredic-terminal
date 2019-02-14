@@ -32,7 +32,7 @@ class Experience {
     <h4>Position: ${this.position}</h4>
     <p><strong>Company:</strong> ${this.companyName}</p>
     <p><strong>Dates:</strong> ${this.dates}</p>
-    <p><strong>Company website:</strong> <a href="${this.companyUrl}" target="_blank">${this.companyUrl}</a></p>
+    <p><strong>Company website:</strong> <a href="${this.companyUrl}" target="_blank" rel="nofollow">${this.companyUrl}</a></p>
     <ul>
       <li><strong>Description:</strong> ${this.description}</li>
     </ul>

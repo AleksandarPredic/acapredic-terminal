@@ -110,7 +110,7 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       terminal.clear();
       return '';
     } else if ('help' === request) {
-      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>skills</li>\n          <li>volonteer</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
+      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>skills</li>\n          <li>volonteer</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank" rel="nofollow">visit my LinkedIn profile</a></li>\n        </ul>';
     } else if ('basic' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === request) {
@@ -581,7 +581,7 @@ var Project = function () {
     key: 'displayLong',
     value: function displayLong() {
 
-      return '\n    <section>\n    <h4>Project name: ' + this.name + '</h4>\n    <p><strong>Stack:</strong> ' + this.stack + '</p>\n    <ul>\n      <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n      <li><strong>Description:</strong> ' + this.description + '</li>\n    </ul>\n    </section>\n    ';
+      return '\n    <section>\n    <h4>Project name: ' + this.name + '</h4>\n    <p><strong>Stack:</strong> ' + this.stack + '</p>\n    <ul>\n      <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank" rel="nofollow">' + this.url + '</a></li>\n      <li><strong>Description:</strong> ' + this.description + '</li>\n    </ul>\n    </section>\n    ';
     }
   }]);
 
@@ -667,7 +667,7 @@ var Experience = function () {
     key: 'displayLong',
     value: function displayLong() {
 
-      return '\n    <section>\n    <h4>Position: ' + this.position + '</h4>\n    <p><strong>Company:</strong> ' + this.companyName + '</p>\n    <p><strong>Dates:</strong> ' + this.dates + '</p>\n    <p><strong>Company website:</strong> <a href="' + this.companyUrl + '" target="_blank">' + this.companyUrl + '</a></p>\n    <ul>\n      <li><strong>Description:</strong> ' + this.description + '</li>\n    </ul>\n    </section>\n    ';
+      return '\n    <section>\n    <h4>Position: ' + this.position + '</h4>\n    <p><strong>Company:</strong> ' + this.companyName + '</p>\n    <p><strong>Dates:</strong> ' + this.dates + '</p>\n    <p><strong>Company website:</strong> <a href="' + this.companyUrl + '" target="_blank" rel="nofollow">' + this.companyUrl + '</a></p>\n    <ul>\n      <li><strong>Description:</strong> ' + this.description + '</li>\n    </ul>\n    </section>\n    ';
     }
   }]);
 

@@ -33,7 +33,7 @@ class Project {
     <h4>Project name: ${this.name}</h4>
     <p><strong>Stack:</strong> ${this.stack}</p>
     <ul>
-      <li><strong>Url:</strong> <a href="${this.url}" target="_blank">${this.url}</a></li>
+      <li><strong>Url:</strong> <a href="${this.url}" target="_blank" rel="nofollow">${this.url}</a></li>
       <li><strong>Description:</strong> ${this.description}</li>
     </ul>
     </section>
