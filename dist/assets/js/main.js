@@ -504,7 +504,7 @@ var Crud = function () {
     11: {
       id: 11,
       name: 'Sierra - One Page Responsive WordPress Theme',
-      dates: 'Jan 2015',
+      dates: 'Dec 2014',
       stack: 'PHP, HTML, CSS, JS, WordPress',
       url: 'http://themeforest.net/item/sierra-one-page-responsive-wordpress-theme/10302986',
       shortDescription: 'One Page Responsive WordPress agency theme.',
@@ -513,7 +513,7 @@ var Crud = function () {
     12: {
       id: 12,
       name: 'Backend development of an online shop',
-      dates: 'Jan 2015',
+      dates: 'Dec 2013',
       stack: 'PHP, HTML, CSS',
       url: 'http://www.jezdicrakija.com',
       shortDescription: 'Custom MVC framework development for an online shop.',
