@@ -157,5 +157,28 @@ export default {
       institution: 'Business School of Management “Megatrend”, Belgrade, Serbia',
       dates: '2002 – 2004'
     }
+  },
+  skills: {
+    list: [
+      'PHP',
+      'OOP',
+      'MySQl',
+      'HTML',
+      'CSS',
+      'SCSS',
+      'LESS',
+      'JS',
+      'ECMAScript',
+      'jQuery',
+      'Webpack',
+      'Gulp',
+      'WordPress',
+      'Basic Laravel',
+      'Web development',
+      'Backend development',
+      'Frontend development',
+      'JIRA',
+      'Basic photoshop',
+    ]
   }
 };

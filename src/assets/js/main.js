@@ -43,6 +43,7 @@ const terminal = new Terminal('terminal',
           <li>experiences</li>
           <li>experiences/{id}</li>
           <li>education</li>
+          <li>skills</li>
           <li>Don't like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>
         </ul>`;
     }
@@ -63,6 +64,9 @@ const terminal = new Terminal('terminal',
     }
     else if('education' === request) {
       return info.getEducation();
+    }
+    else if('skills' === request) {
+      return info.getSkills();
     }
     else {
       return '404. Unknown command. Type help for info about available commands';

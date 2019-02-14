@@ -16,23 +16,26 @@ class Info {
       this.projects = this.data.projects;
       this.experiences = this.data.experiences;
       this.education = this.data.education;
+      this.skills = this.data.skills;
 
     }
 
     getBasicInfo() {
 
-        return `
-        <h2>Basic info</h2>
-        First Name: ${this.name}, <br />
-        Last Name: ${this.lastName}, <br />
-        Email: ${this.email}
-        `;
+      return `
+      <section>
+        <h3>Basic info</h3>
+        <p><strong>First Name:</strong> ${this.name}</p>
+        <p><strong>Last Name:</strong> ${this.lastName}</p>
+        <p><strong>Email:</strong> ${this.email}</p>
+      </section>
+      `;
 
     }
 
     getProjects() {
 
-      let list = ['<h2>Projects</h2>'];
+      let list = ['<h3>Projects</h3>'];
 
       Object.values(this.projects).forEach( project => {
 
@@ -72,7 +75,7 @@ class Info {
 
     getExperiences() {
 
-      let list = ['<h2>Experiences</h2>'];
+      let list = ['<h3>Experiences</h3>'];
 
       Object.values(this.experiences).forEach( experience => {
 
@@ -115,7 +118,7 @@ class Info {
 
     getEducation() {
 
-      let list = ['<h2>Education</h2>'];
+      let list = ['<h3>Education</h3>'];
 
       Object.values(this.education).forEach( education => {
 
@@ -133,6 +136,16 @@ class Info {
       return list.join('');
 
     }
+
+  getSkills() {
+
+    let list = [];
+
+    Object.values(this.skills.list).forEach( skill => list.push(`<li>${skill}</li>`));
+
+    return `<h3>Skills</h3><ul>${list.join('')}</ul>`
+
+  }
 
 }
 

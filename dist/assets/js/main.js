@@ -110,7 +110,7 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       terminal.clear();
       return '';
     } else if ('help' === request) {
-      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
+      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>skills</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
     } else if ('basic' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === request) {
@@ -123,6 +123,8 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getExperience(parseInt(request.replace('experiences/', '')));
     } else if ('education' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getEducation();
+    } else if ('skills' === request) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getSkills();
     } else {
       return '404. Unknown command. Type help for info about available commands';
     }
@@ -237,19 +239,20 @@ var Info = function () {
             this.projects = this.data.projects;
             this.experiences = this.data.experiences;
             this.education = this.data.education;
+            this.skills = this.data.skills;
       }
 
       _createClass(Info, [{
             key: 'getBasicInfo',
             value: function getBasicInfo() {
 
-                  return '\n        <h2>Basic info</h2>\n        First Name: ' + this.name + ', <br />\n        Last Name: ' + this.lastName + ', <br />\n        Email: ' + this.email + '\n        ';
+                  return '\n      <section>\n        <h3>Basic info</h3>\n        <p><strong>First Name:</strong> ' + this.name + '</p>\n        <p><strong>Last Name:</strong> ' + this.lastName + '</p>\n        <p><strong>Email:</strong> ' + this.email + '</p>\n      </section>\n      ';
             }
       }, {
             key: 'getProjects',
             value: function getProjects() {
 
-                  var list = ['<h2>Projects</h2>'];
+                  var list = ['<h3>Projects</h3>'];
 
                   Object.values(this.projects).forEach(function (project) {
 
@@ -278,7 +281,7 @@ var Info = function () {
             key: 'getExperiences',
             value: function getExperiences() {
 
-                  var list = ['<h2>Experiences</h2>'];
+                  var list = ['<h3>Experiences</h3>'];
 
                   Object.values(this.experiences).forEach(function (experience) {
 
@@ -309,7 +312,7 @@ var Info = function () {
             key: 'getEducation',
             value: function getEducation() {
 
-                  var list = ['<h2>Education</h2>'];
+                  var list = ['<h3>Education</h3>'];
 
                   Object.values(this.education).forEach(function (education) {
 
@@ -319,6 +322,18 @@ var Info = function () {
                   });
 
                   return list.join('');
+            }
+      }, {
+            key: 'getSkills',
+            value: function getSkills() {
+
+                  var list = [];
+
+                  Object.values(this.skills.list).forEach(function (skill) {
+                        return list.push('<li>' + skill + '</li>');
+                  });
+
+                  return '<h3>Skills</h3><ul>' + list.join('') + '</ul>';
             }
       }]);
 
@@ -470,6 +485,9 @@ var Crud = function () {
       institution: 'Business School of Management “Megatrend”, Belgrade, Serbia',
       dates: '2002 – 2004'
     }
+  },
+  skills: {
+    list: ['PHP', 'OOP', 'MySQl', 'HTML', 'CSS', 'SCSS', 'LESS', 'JS', 'ECMAScript', 'jQuery', 'Webpack', 'Gulp', 'WordPress', 'Basic Laravel', 'Web development', 'Backend development', 'Frontend development', 'JIRA', 'Basic photoshop']
   }
 });
 
