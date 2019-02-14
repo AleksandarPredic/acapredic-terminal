@@ -110,13 +110,17 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       terminal.clear();
       return '';
     } else if ('help' === request) {
-      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
+      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
     } else if ('basic' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProjects();
     } else if (request.includes('projects/')) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProject(parseInt(request.replace('projects/', '')));
+    } else if ('experiences' === request) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getExperiences();
+    } else if (request.includes('experiences/')) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getExperience(parseInt(request.replace('experiences/', '')));
     } else {
       return '404. Unknown command. Type help for info about available commands';
     }
@@ -207,9 +211,11 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__crud__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__project__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__experience__ = __webpack_require__(13);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 
@@ -225,11 +231,13 @@ var Info = function () {
             this.lastName = this.data.basic.lastName;
             this.email = this.data.basic.email;
             this.projects = this.data.projects;
+            this.experiences = this.data.experiences;
       }
 
       _createClass(Info, [{
             key: 'getBasicInfo',
             value: function getBasicInfo() {
+
                   return '\n        <h2>Basic info</h2>\n        First Name: ' + this.name + ', <br />\n        Last Name: ' + this.lastName + ', <br />\n        Email: ' + this.email + '\n        ';
             }
       }, {
@@ -260,6 +268,37 @@ var Info = function () {
                   var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */]('', project.name, project.url, '', project.description, project.stack);
 
                   return singleProject.displayLong();
+            }
+      }, {
+            key: 'getExperiences',
+            value: function getExperiences() {
+
+                  var list = ['<h2>Experiences</h2>'];
+
+                  Object.values(this.experiences).forEach(function (experience) {
+
+                        var singleExperience = new __WEBPACK_IMPORTED_MODULE_2__experience__["a" /* default */](experience.id, experience.position, '', experience.companyName);
+
+                        list.push(singleExperience.displayShort());
+                  });
+
+                  return list.join('');
+            }
+      }, {
+            key: 'getExperience',
+            value: function getExperience(id) {
+
+                  var experience = this.experiences[id];
+
+                  if (typeof experience === "undefined") {
+                        return '404. Experience with requested id <strong>' + id + '</strong> doesn\'t exists';
+                  }
+
+                  var singleExperience = new __WEBPACK_IMPORTED_MODULE_2__experience__["a" /* default */](experience.id, experience.position, experience.dates, experience.companyName, experience.companyUrl, experience.description);
+
+                  console.log(singleExperience);
+
+                  return singleExperience.displayLong();
             }
       }]);
 
@@ -341,6 +380,56 @@ var Crud = function () {
       shortDescription: 'The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.',
       description: '\n      The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.\n\n      You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.\n      '
     }
+  },
+  experiences: {
+    1: {
+      id: 1,
+      position: 'Web development team lead, lead WordPress developer',
+      dates: 'Oct 2017 – Present',
+      companyName: 'Shindiri Studio',
+      companyUrl: 'https://www.shindiristudio.com',
+      description: '\n      <ul>\n        <li>PHP, HTML, CSS, JavaScript, WordPress themes and plugin development.</li>\n        <li>Clients custom solutions development.</li>\n        <li>Create, coordinate, estimate and support all tasks within the development team.</li>\n        <li>Work together with product management, business and design teams to ensure fluent development workflow.</li>\n        <li>Lead the day to day coding.</li>\n      </ul>'
+    },
+    2: {
+      id: 2,
+      position: 'PHP Web Developer, WordPress Developer',
+      dates: 'Oct 2014 – Oct 2017',
+      companyName: 'Shindiri Studio',
+      companyUrl: 'https://www.shindiristudio.com',
+      description: '\n      <ul>\n        <li>HTML, CSS, JavaScript.</li>\n        <li>PHP, WordPress themes and plugin development.</li>\n        <li>WordPress design patterns.</li>\n        <li>Isolate and resolve current issues.</li>\n      </ul>'
+    },
+    3: {
+      id: 1,
+      position: 'WordPress course lecturer. Development of WordPress themes and plugins. PSD to WP.',
+      dates: 'Mar 2017 – Oct 2017',
+      companyName: 'IT Centar',
+      companyUrl: 'https://itcentar.rs',
+      description: '\n      <ul>\n        <li>WordPress course. Development of WordPress themes and plugins. PSD to WP conversion.</li>\n      </ul>'
+    },
+    4: {
+      id: 1,
+      position: 'Web developer',
+      dates: 'Jul 2014 – Oct 2014',
+      companyName: 'ApexSQL',
+      companyUrl: 'https://www.apexsql.com',
+      description: '\n      <ul>\n        <li>Work within a small local team using Scrum software development methodologies.</li>\n        <li>Update and improve company website and internal web applications.</li>\n        <li>Maintain WordPress websites</li>\n      </ul>'
+    },
+    5: {
+      id: 1,
+      position: 'PHP / Web developer',
+      dates: 'May 2014 – Jul 2014',
+      companyName: 'Freelancer',
+      companyUrl: '',
+      description: '\n      <ul>\n        <li>Frontend Development - HTML, CSS, jQuery</li>\n        <li>Backend Development PHP, MySQL</li>\n        <li>Development of Magento 1 theme</li>\n      </ul>'
+    },
+    6: {
+      id: 1,
+      position: 'Administrator and content manager',
+      dates: 'Jul 2012 – May 2014',
+      companyName: 'Inter Casa Ambienta',
+      companyUrl: 'http://www.adriatiko.com/o-nama.htm',
+      description: '\n      <ul>\n        <li>\n          Administration of high ranked web sites:\n          <ul>\n            <li><a href="https://www.tvarenasport.com" target="_blank">Arena sport</a></li>\n            <li><a href="https://www.aerogaga.com" target="_blank">Aerogaga</a></li>\n            <li><a href="https://www.stetoskop.info" target="_blank">Stetoskop</a></li>\n          </ul>\n        </li>\n        <li>Brand development, web site traffic growth, web site and advertising revenue.</li>\n      </ul>'
+    }
   }
 });
 
@@ -380,7 +469,7 @@ var Project = function () {
     key: 'displayLong',
     value: function displayLong() {
 
-      return '\n    <section>\n    <h3>Project name: ' + this.name + '</h3>\n    <h5>Stack: ' + this.stack + '</h5>\n    <p>\n      <ul>\n        <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n        <li><strong>Description:</strong> ' + this.description + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+      return '\n    <section>\n    <h4>Project name: ' + this.name + '</h4>\n    <p><strong>Stack:</strong> ' + this.stack + '</p>\n    <p>\n      <ul>\n        <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n        <li><strong>Description:</strong> ' + this.description + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
     }
   }]);
 
@@ -427,6 +516,53 @@ var isIOS = new DetectIOS();
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Experience = function () {
+  function Experience(id, position, dates, companyName) {
+    var companyUrl = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
+    var description = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : '';
+
+    _classCallCheck(this, Experience);
+
+    this.id = id;
+    this.position = position;
+    this.dates = dates;
+    this.companyName = companyName;
+    this.companyUrl = companyUrl;
+    this.description = description;
+  }
+
+  _createClass(Experience, [{
+    key: 'displayShort',
+    value: function displayShort() {
+
+      return '\n    <section>\n    <p>\n      <ul>\n        <li><strong>Id:</strong> ' + this.id + '</li>\n        <li><strong>Position:</strong> ' + this.position + '</li>\n        <li><strong>Company name:</strong> ' + this.companyName + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+    }
+  }, {
+    key: 'displayLong',
+    value: function displayLong() {
+
+      return '\n    <section>\n    <h4>Position: ' + this.position + '</h4>\n    <p><strong>Company:</strong> ' + this.companyName + '</p>\n    <p><strong>Dates:</strong> ' + this.dates + '</p>\n    <p><strong>Company website:</strong> <a href="' + this.companyUrl + '" target="_blank">' + this.companyUrl + '</a></p>\n    <p>\n      <ul>\n        <li><strong>Description:</strong> ' + this.description + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+    }
+  }]);
+
+  return Experience;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Experience);
 
 /***/ })
 /******/ ]);

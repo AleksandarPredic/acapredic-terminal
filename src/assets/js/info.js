@@ -1,5 +1,6 @@
 import Crud from './crud';
 import Project from './project';
+import Experience from './experience';
 
 class Info {
 
@@ -12,16 +13,19 @@ class Info {
       this.lastName = this.data.basic.lastName;
       this.email = this.data.basic.email;
       this.projects = this.data.projects;
+      this.experiences = this.data.experiences;
 
     }
 
     getBasicInfo() {
+
         return `
         <h2>Basic info</h2>
         First Name: ${this.name}, <br />
         Last Name: ${this.lastName}, <br />
         Email: ${this.email}
         `;
+
     }
 
     getProjects() {
@@ -62,6 +66,49 @@ class Info {
       );
 
       return singleProject.displayLong();
+    }
+
+    getExperiences() {
+
+      let list = ['<h2>Experiences</h2>'];
+
+      Object.values(this.experiences).forEach( experience => {
+
+        let singleExperience = new Experience(
+          experience.id,
+          experience.position,
+          '',
+          experience.companyName
+        );
+
+        list.push(singleExperience.displayShort());
+      } );
+
+      return list.join('');
+
+    }
+
+    getExperience(id) {
+
+      let experience = this.experiences[id];
+
+      if (typeof experience === "undefined") {
+        return `404. Experience with requested id <strong>${id}</strong> doesn't exists`;
+      }
+
+      let singleExperience = new Experience(
+        experience.id,
+        experience.position,
+        experience.dates,
+        experience.companyName,
+        experience.companyUrl,
+        experience.description,
+      );
+
+      console.log(singleExperience);
+
+      return singleExperience.displayLong();
+
     }
 
 }

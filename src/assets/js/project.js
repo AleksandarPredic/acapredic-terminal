@@ -32,8 +32,8 @@ class Project {
 
     return `
     <section>
-    <h3>Project name: ${this.name}</h3>
-    <h5>Stack: ${this.stack}</h5>
+    <h4>Project name: ${this.name}</h4>
+    <p><strong>Stack:</strong> ${this.stack}</p>
     <p>
       <ul>
         <li><strong>Url:</strong> <a href="${this.url}" target="_blank">${this.url}</a></li>

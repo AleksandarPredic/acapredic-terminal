@@ -50,5 +50,92 @@ export default {
       You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.
       `
     }
+  },
+  experiences: {
+    1: {
+      id: 1,
+      position: 'Web development team lead, lead WordPress developer',
+      dates: 'Oct 2017 – Present',
+      companyName: 'Shindiri Studio',
+      companyUrl: 'https://www.shindiristudio.com',
+      description: `
+      <ul>
+        <li>PHP, HTML, CSS, JavaScript, WordPress themes and plugin development.</li>
+        <li>Clients custom solutions development.</li>
+        <li>Create, coordinate, estimate and support all tasks within the development team.</li>
+        <li>Work together with product management, business and design teams to ensure fluent development workflow.</li>
+        <li>Lead the day to day coding.</li>
+      </ul>`
+    },
+    2: {
+      id: 2,
+      position: 'PHP Web Developer, WordPress Developer',
+      dates: 'Oct 2014 – Oct 2017',
+      companyName: 'Shindiri Studio',
+      companyUrl: 'https://www.shindiristudio.com',
+      description: `
+      <ul>
+        <li>HTML, CSS, JavaScript.</li>
+        <li>PHP, WordPress themes and plugin development.</li>
+        <li>WordPress design patterns.</li>
+        <li>Isolate and resolve current issues.</li>
+      </ul>`
+    },
+    3: {
+      id: 1,
+      position: 'WordPress course lecturer. Development of WordPress themes and plugins. PSD to WP.',
+      dates: 'Mar 2017 – Oct 2017',
+      companyName: 'IT Centar',
+      companyUrl: 'https://itcentar.rs',
+      description: `
+      <ul>
+        <li>WordPress course. Development of WordPress themes and plugins. PSD to WP conversion.</li>
+      </ul>`
+    },
+    4: {
+      id: 1,
+      position: 'Web developer',
+      dates: 'Jul 2014 – Oct 2014',
+      companyName: 'ApexSQL',
+      companyUrl: 'https://www.apexsql.com',
+      description: `
+      <ul>
+        <li>Work within a small local team using Scrum software development methodologies.</li>
+        <li>Update and improve company website and internal web applications.</li>
+        <li>Maintain WordPress websites</li>
+      </ul>`
+    },
+    5: {
+      id: 1,
+      position: 'PHP / Web developer',
+      dates: 'May 2014 – Jul 2014',
+      companyName: 'Freelancer',
+      companyUrl: '',
+      description: `
+      <ul>
+        <li>Frontend Development - HTML, CSS, jQuery</li>
+        <li>Backend Development PHP, MySQL</li>
+        <li>Development of Magento 1 theme</li>
+      </ul>`
+    },
+    6: {
+      id: 1,
+      position: 'Administrator and content manager',
+      dates: 'Jul 2012 – May 2014',
+      companyName: 'Inter Casa Ambienta',
+      companyUrl: 'http://www.adriatiko.com/o-nama.htm',
+      description: `
+      <ul>
+        <li>
+          Administration of high ranked web sites:
+          <ul>
+            <li><a href="https://www.tvarenasport.com" target="_blank">Arena sport</a></li>
+            <li><a href="https://www.aerogaga.com" target="_blank">Aerogaga</a></li>
+            <li><a href="https://www.stetoskop.info" target="_blank">Stetoskop</a></li>
+          </ul>
+        </li>
+        <li>Brand development, web site traffic growth, web site and advertising revenue.</li>
+      </ul>`
+    }
   }
 };

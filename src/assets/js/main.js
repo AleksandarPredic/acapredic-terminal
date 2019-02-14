@@ -40,6 +40,8 @@ const terminal = new Terminal('terminal',
           <li>basic</li>
           <li>projects</li>
           <li>projects/{id}</li>
+          <li>experiences</li>
+          <li>experiences/{id}</li>
           <li>Don't like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>
         </ul>`;
     }
@@ -51,6 +53,12 @@ const terminal = new Terminal('terminal',
     }
     else if(request.includes('projects/')) {
       return info.getProject(parseInt(request.replace('projects/', '')));
+    }
+    else if('experiences' === request) {
+      return info.getExperiences();
+    }
+    else if(request.includes('experiences/')) {
+      return info.getExperience(parseInt(request.replace('experiences/', '')));
     }
     else {
       return '404. Unknown command. Type help for info about available commands';

@@ -268,6 +268,15 @@ h6 {
   line-height: 2rem;
 }
 
+#terminal h1,
+#terminal h2,
+#terminal h3,
+#terminal h4,
+#terminal h5,
+#terminal h6 {
+  margin: 0.5rem 0;
+}
+
 body,
 body .a {
   word-break: break-word;
@@ -439,6 +448,7 @@ header > div aside li svg {
 
 .terminal.terminal-interlaced a {
   color: #fff;
+  font-weight: 500;
 }
 
 .terminal.terminal-interlaced a.external {
@@ -484,10 +494,8 @@ header > div aside li svg {
   white-space: normal;
 }
 
-#terminal ul li a {
-  font-weight: 700;
-  font-size: inherit;
-  line-height: inherit;
+#terminal section p {
+  margin: 0.5rem 0;
 }
 
 @media (max-width: 991px) {
