@@ -110,7 +110,7 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       terminal.clear();
       return '';
     } else if ('help' === request) {
-      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
+      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
     } else if ('basic' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === request) {
@@ -121,6 +121,8 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getExperiences();
     } else if (request.includes('experiences/')) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getExperience(parseInt(request.replace('experiences/', '')));
+    } else if ('education' === request) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getEducation();
     } else {
       return '404. Unknown command. Type help for info about available commands';
     }
@@ -212,9 +214,11 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__crud__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__project__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__experience__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__education__ = __webpack_require__(14);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 
@@ -232,6 +236,7 @@ var Info = function () {
             this.email = this.data.basic.email;
             this.projects = this.data.projects;
             this.experiences = this.data.experiences;
+            this.education = this.data.education;
       }
 
       _createClass(Info, [{
@@ -299,6 +304,21 @@ var Info = function () {
                   console.log(singleExperience);
 
                   return singleExperience.displayLong();
+            }
+      }, {
+            key: 'getEducation',
+            value: function getEducation() {
+
+                  var list = ['<h2>Education</h2>'];
+
+                  Object.values(this.education).forEach(function (education) {
+
+                        var singleEducation = new __WEBPACK_IMPORTED_MODULE_3__education__["a" /* default */](education.id, education.name, education.institution, education.dates, education.description);
+
+                        list.push(singleEducation.display());
+                  });
+
+                  return list.join('');
             }
       }]);
 
@@ -399,7 +419,7 @@ var Crud = function () {
       description: '\n      <ul>\n        <li>HTML, CSS, JavaScript.</li>\n        <li>PHP, WordPress themes and plugin development.</li>\n        <li>WordPress design patterns.</li>\n        <li>Isolate and resolve current issues.</li>\n      </ul>'
     },
     3: {
-      id: 1,
+      id: 3,
       position: 'WordPress course lecturer. Development of WordPress themes and plugins. PSD to WP.',
       dates: 'Mar 2017 – Oct 2017',
       companyName: 'IT Centar',
@@ -407,7 +427,7 @@ var Crud = function () {
       description: '\n      <ul>\n        <li>WordPress course. Development of WordPress themes and plugins. PSD to WP conversion.</li>\n      </ul>'
     },
     4: {
-      id: 1,
+      id: 4,
       position: 'Web developer',
       dates: 'Jul 2014 – Oct 2014',
       companyName: 'ApexSQL',
@@ -415,7 +435,7 @@ var Crud = function () {
       description: '\n      <ul>\n        <li>Work within a small local team using Scrum software development methodologies.</li>\n        <li>Update and improve company website and internal web applications.</li>\n        <li>Maintain WordPress websites</li>\n      </ul>'
     },
     5: {
-      id: 1,
+      id: 5,
       position: 'PHP / Web developer',
       dates: 'May 2014 – Jul 2014',
       companyName: 'Freelancer',
@@ -423,12 +443,32 @@ var Crud = function () {
       description: '\n      <ul>\n        <li>Frontend Development - HTML, CSS, jQuery</li>\n        <li>Backend Development PHP, MySQL</li>\n        <li>Development of Magento 1 theme</li>\n      </ul>'
     },
     6: {
-      id: 1,
+      id: 6,
       position: 'Administrator and content manager',
       dates: 'Jul 2012 – May 2014',
       companyName: 'Inter Casa Ambienta',
       companyUrl: 'http://www.adriatiko.com/o-nama.htm',
       description: '\n      <ul>\n        <li>\n          Administration of high ranked web sites:\n          <ul>\n            <li><a href="https://www.tvarenasport.com" target="_blank">Arena sport</a></li>\n            <li><a href="https://www.aerogaga.com" target="_blank">Aerogaga</a></li>\n            <li><a href="https://www.stetoskop.info" target="_blank">Stetoskop</a></li>\n          </ul>\n        </li>\n        <li>Brand development, web site traffic growth, web site and advertising revenue.</li>\n      </ul>'
+    }
+  },
+  education: {
+    1: {
+      id: 1,
+      name: 'Php web programming Field Of StudyPHP, MySql, OOP',
+      institution: 'IT centar Niš',
+      dates: 'year 2013'
+    },
+    2: {
+      id: 2,
+      name: 'Banking and Finance Field Of StudyEconomics',
+      institution: 'Management Faculty ”Megatrend”, Zajecar, Serbia',
+      dates: '2013'
+    },
+    3: {
+      id: 3,
+      name: 'Management',
+      institution: 'Business School of Management “Megatrend”, Belgrade, Serbia',
+      dates: '2002 – 2004'
     }
   }
 });
@@ -563,6 +603,40 @@ var Experience = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["a"] = (Experience);
+
+/***/ }),
+/* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Education = function () {
+  function Education(id, name, institution, dates) {
+    var description = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
+
+    _classCallCheck(this, Education);
+
+    this.id = id;
+    this.name = name;
+    this.institution = institution;
+    this.dates = dates;
+  }
+
+  _createClass(Education, [{
+    key: 'display',
+    value: function display() {
+
+      return '\n    <section>\n    <p>\n      <ul>\n        <li><strong>Name:</strong> ' + this.name + '</li>\n        <li><strong>Institution:</strong> ' + this.institution + '</li>\n        <li><strong>Dates:</strong> ' + this.dates + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+    }
+  }]);
+
+  return Education;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Education);
 
 /***/ })
 /******/ ]);

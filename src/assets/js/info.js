@@ -1,6 +1,7 @@
 import Crud from './crud';
 import Project from './project';
 import Experience from './experience';
+import Education from './education';
 
 class Info {
 
@@ -14,6 +15,7 @@ class Info {
       this.email = this.data.basic.email;
       this.projects = this.data.projects;
       this.experiences = this.data.experiences;
+      this.education = this.data.education;
 
     }
 
@@ -108,6 +110,27 @@ class Info {
       console.log(singleExperience);
 
       return singleExperience.displayLong();
+
+    }
+
+    getEducation() {
+
+      let list = ['<h2>Education</h2>'];
+
+      Object.values(this.education).forEach( education => {
+
+        let singleEducation = new Education(
+          education.id,
+          education.name,
+          education.institution,
+          education.dates,
+          education.description
+        );
+
+        list.push(singleEducation.display());
+      } );
+
+      return list.join('');
 
     }
 

@@ -82,7 +82,7 @@ export default {
       </ul>`
     },
     3: {
-      id: 1,
+      id: 3,
       position: 'WordPress course lecturer. Development of WordPress themes and plugins. PSD to WP.',
       dates: 'Mar 2017 – Oct 2017',
       companyName: 'IT Centar',
@@ -93,7 +93,7 @@ export default {
       </ul>`
     },
     4: {
-      id: 1,
+      id: 4,
       position: 'Web developer',
       dates: 'Jul 2014 – Oct 2014',
       companyName: 'ApexSQL',
@@ -106,7 +106,7 @@ export default {
       </ul>`
     },
     5: {
-      id: 1,
+      id: 5,
       position: 'PHP / Web developer',
       dates: 'May 2014 – Jul 2014',
       companyName: 'Freelancer',
@@ -119,7 +119,7 @@ export default {
       </ul>`
     },
     6: {
-      id: 1,
+      id: 6,
       position: 'Administrator and content manager',
       dates: 'Jul 2012 – May 2014',
       companyName: 'Inter Casa Ambienta',
@@ -136,6 +136,26 @@ export default {
         </li>
         <li>Brand development, web site traffic growth, web site and advertising revenue.</li>
       </ul>`
+    }
+  },
+  education: {
+    1: {
+      id: 1,
+      name: 'Php web programming Field Of StudyPHP, MySql, OOP',
+      institution: 'IT centar Niš',
+      dates: 'year 2013'
+    },
+    2: {
+      id: 2,
+      name: 'Banking and Finance Field Of StudyEconomics',
+      institution: 'Management Faculty ”Megatrend”, Zajecar, Serbia',
+      dates: '2013'
+    },
+    3: {
+      id: 3,
+      name: 'Management',
+      institution: 'Business School of Management “Megatrend”, Belgrade, Serbia',
+      dates: '2002 – 2004'
     }
   }
 };
