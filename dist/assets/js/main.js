@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(8);
+module.exports = __webpack_require__(11);
 
 
 /***/ }),
@@ -80,7 +80,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_terminal_1_0_2_min__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_terminal_1_0_2_min___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_terminal_1_0_2_min__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__info__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isIos__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isIos__ = __webpack_require__(10);
 /**
  * Api documentation example
  *
@@ -217,9 +217,9 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__crud__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__project__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__experience__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__education__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__volunteer__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__experience__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__education__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__volunteer__ = __webpack_require__(9);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -591,7 +591,7 @@ var Crud = function () {
     }
   },
   skills: {
-    list: ['PHP', 'OOP', 'MySQl', 'HTML', 'CSS', 'SCSS', 'LESS', 'JS', 'ECMAScript', 'jQuery', 'Webpack', 'Gulp', 'WordPress', 'Basic Laravel', 'Web development', 'Backend development', 'Frontend development', 'JIRA', 'Basic photoshop']
+    list: ['PHP', 'OOP', 'MySQl', 'HTML', 'CSS', 'SCSS', 'LESS', 'JS', 'ECMAScript', 'jQuery', 'Webpack', 'Gulp', 'WordPress', 'Composer', 'Vagrant', 'Docker', 'Basic Laravel', 'Web development', 'Backend development', 'Frontend development', 'JIRA', 'Basic photoshop']
   },
   volunteer: {
     1: {
@@ -688,49 +688,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var DetectIOS = function () {
-  function DetectIOS() {
-    _classCallCheck(this, DetectIOS);
-
-    this.isIphone = navigator.userAgent.indexOf("iPhone") != -1;
-    this.isIod = navigator.userAgent.indexOf("iPod") != -1;
-    this.isIpad = navigator.userAgent.indexOf("iPad") != -1;
-  }
-
-  _createClass(DetectIOS, [{
-    key: "isIOS",
-    value: function isIOS() {
-
-      return this.isIphone || this.isIod || this.isIpad;
-    }
-  }]);
-
-  return DetectIOS;
-}();
-
-var isIOS = new DetectIOS();
-
-/* harmony default export */ __webpack_exports__["a"] = (isIOS);
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 var Experience = function () {
   function Experience(id, position, dates, companyName) {
     var companyUrl = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
@@ -770,7 +727,7 @@ var Experience = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Experience);
 
 /***/ }),
-/* 14 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -802,8 +759,7 @@ var Education = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Education);
 
 /***/ }),
-/* 15 */,
-/* 16 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -863,6 +819,45 @@ var Volunteer = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["a"] = (Volunteer);
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var DetectIOS = function () {
+  function DetectIOS() {
+    _classCallCheck(this, DetectIOS);
+
+    this.isIphone = navigator.userAgent.indexOf("iPhone") != -1;
+    this.isIod = navigator.userAgent.indexOf("iPod") != -1;
+    this.isIpad = navigator.userAgent.indexOf("iPad") != -1;
+  }
+
+  _createClass(DetectIOS, [{
+    key: "isIOS",
+    value: function isIOS() {
+
+      return this.isIphone || this.isIod || this.isIpad;
+    }
+  }]);
+
+  return DetectIOS;
+}();
+
+var isIOS = new DetectIOS();
+
+/* harmony default export */ __webpack_exports__["a"] = (isIOS);
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
