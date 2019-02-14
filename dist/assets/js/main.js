@@ -110,7 +110,7 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       terminal.clear();
       return '';
     } else if ('help' === request) {
-      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>skills</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
+      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>skills</li>\n          <li>volonteer</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank">visit my LinkedIn profile</a></li>\n        </ul>';
     } else if ('basic' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === request) {
@@ -125,6 +125,8 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getEducation();
     } else if ('skills' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getSkills();
+    } else if ('volonteer' === request) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getVolonteer();
     } else {
       return '404. Unknown command. Type help for info about available commands';
     }
@@ -217,9 +219,11 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__project__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__experience__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__education__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__volonteer__ = __webpack_require__(15);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 
 
 
@@ -240,6 +244,7 @@ var Info = function () {
             this.experiences = this.data.experiences;
             this.education = this.data.education;
             this.skills = this.data.skills;
+            this.volonteer = this.data.volonteer;
       }
 
       _createClass(Info, [{
@@ -334,6 +339,21 @@ var Info = function () {
                   });
 
                   return '<h3>Skills</h3><ul>' + list.join('') + '</ul>';
+            }
+      }, {
+            key: 'getVolonteer',
+            value: function getVolonteer() {
+
+                  var list = ['<h3>Volunteer Experience</h3>'];
+
+                  Object.values(this.volonteer).forEach(function (volonteer) {
+
+                        var singleVolonteer = new __WEBPACK_IMPORTED_MODULE_4__volonteer__["a" /* default */](volonteer.id, volonteer.name, volonteer.company, volonteer.description);
+
+                        list.push(singleVolonteer.display());
+                  });
+
+                  return list.join('');
             }
       }]);
 
@@ -488,6 +508,40 @@ var Crud = function () {
   },
   skills: {
     list: ['PHP', 'OOP', 'MySQl', 'HTML', 'CSS', 'SCSS', 'LESS', 'JS', 'ECMAScript', 'jQuery', 'Webpack', 'Gulp', 'WordPress', 'Basic Laravel', 'Web development', 'Backend development', 'Frontend development', 'JIRA', 'Basic photoshop']
+  },
+  volonteer: {
+    1: {
+      id: 1,
+      name: 'Community - meetup organizer',
+      company: 'WordPress',
+      description: [{
+        name: '#WPNis',
+        dates: 'May 2016 – Present.',
+        url: 'https://www.meetup.com/wordpress-nis',
+        description: 'Founder of Nis WordPress community as part of WPSerbia community. With help of colleague Milan Djordjevic we started #WPNis to promote WordPress in our town.'
+      }]
+    },
+    2: {
+      id: 3,
+      name: 'WordCamps and community',
+      company: 'WordPress',
+      description: [{
+        name: 'WordCamp Belgrade, Serbia - #WCBDG 2017',
+        dates: 'May 2017',
+        url: 'https://2017.belgrade.wordcamp.org/speaker/aleksandar-predic',
+        description: 'Volonteer and speaker'
+      }, {
+        name: 'WordCamp Europe, Belgrade, Serbia - #WCEU 2018',
+        dates: 'June 2018',
+        url: 'https://2018.europe.wordcamp.org/organizers',
+        description: 'Organizer - local team'
+      }, {
+        name: 'WordCamp Europe, Berlin, Germany - #WCEU 2019',
+        dates: 'June 2019',
+        url: 'https://2019.europe.wordcamp.org/organisers',
+        description: 'Organizer - community team'
+      }]
+    }
   }
 });
 
@@ -521,13 +575,13 @@ var Project = function () {
     key: 'displayShort',
     value: function displayShort() {
 
-      return '\n    <section>\n    <p>\n      <ul>\n        <li><strong>Id:</strong> ' + this.id + '</li>\n        <li><strong>Project name:</strong> ' + this.name + '</li>\n        <li><strong>Short description:</strong> ' + this.shortDescription + '</li>\n        <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n      </ul>\n    </p>\n    </section>\n    ';
+      return '\n    <section>\n    <ul>\n      <li><strong>Id:</strong> ' + this.id + '</li>\n      <li><strong>Project name:</strong> ' + this.name + '</li>\n      <li><strong>Short description:</strong> ' + this.shortDescription + '</li>\n      <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n    </ul>\n    </section>\n    ';
     }
   }, {
     key: 'displayLong',
     value: function displayLong() {
 
-      return '\n    <section>\n    <h4>Project name: ' + this.name + '</h4>\n    <p><strong>Stack:</strong> ' + this.stack + '</p>\n    <p>\n      <ul>\n        <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n        <li><strong>Description:</strong> ' + this.description + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+      return '\n    <section>\n    <h4>Project name: ' + this.name + '</h4>\n    <p><strong>Stack:</strong> ' + this.stack + '</p>\n    <ul>\n      <li><strong>Url:</strong> <a href="' + this.url + '" target="_blank">' + this.url + '</a></li>\n      <li><strong>Description:</strong> ' + this.description + '</li>\n    </ul>\n    </section>\n    ';
     }
   }]);
 
@@ -607,13 +661,13 @@ var Experience = function () {
     key: 'displayShort',
     value: function displayShort() {
 
-      return '\n    <section>\n    <p>\n      <ul>\n        <li><strong>Id:</strong> ' + this.id + '</li>\n        <li><strong>Position:</strong> ' + this.position + '</li>\n        <li><strong>Company name:</strong> ' + this.companyName + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+      return '\n    <section>\n    <ul>\n      <li><strong>Id:</strong> ' + this.id + '</li>\n      <li><strong>Position:</strong> ' + this.position + '</li>\n      <li><strong>Company name:</strong> ' + this.companyName + '</li>\n    </ul>\n    </section>\n    ';
     }
   }, {
     key: 'displayLong',
     value: function displayLong() {
 
-      return '\n    <section>\n    <h4>Position: ' + this.position + '</h4>\n    <p><strong>Company:</strong> ' + this.companyName + '</p>\n    <p><strong>Dates:</strong> ' + this.dates + '</p>\n    <p><strong>Company website:</strong> <a href="' + this.companyUrl + '" target="_blank">' + this.companyUrl + '</a></p>\n    <p>\n      <ul>\n        <li><strong>Description:</strong> ' + this.description + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+      return '\n    <section>\n    <h4>Position: ' + this.position + '</h4>\n    <p><strong>Company:</strong> ' + this.companyName + '</p>\n    <p><strong>Dates:</strong> ' + this.dates + '</p>\n    <p><strong>Company website:</strong> <a href="' + this.companyUrl + '" target="_blank">' + this.companyUrl + '</a></p>\n    <ul>\n      <li><strong>Description:</strong> ' + this.description + '</li>\n    </ul>\n    </section>\n    ';
     }
   }]);
 
@@ -633,8 +687,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var Education = function () {
   function Education(id, name, institution, dates) {
-    var description = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
-
     _classCallCheck(this, Education);
 
     this.id = id;
@@ -644,10 +696,10 @@ var Education = function () {
   }
 
   _createClass(Education, [{
-    key: 'display',
+    key: "display",
     value: function display() {
 
-      return '\n    <section>\n    <p>\n      <ul>\n        <li><strong>Name:</strong> ' + this.name + '</li>\n        <li><strong>Institution:</strong> ' + this.institution + '</li>\n        <li><strong>Dates:</strong> ' + this.dates + '</li>\n      </ul>\n    </p>\n    </section>\n    ';
+      return "\n    <section>\n    <ul>\n      <li><strong>Name:</strong> " + this.name + "</li>\n      <li><strong>Institution:</strong> " + this.institution + "</li>\n      <li><strong>Dates:</strong> " + this.dates + "</li>\n    </ul>\n    </section>\n    ";
     }
   }]);
 
@@ -655,6 +707,68 @@ var Education = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["a"] = (Education);
+
+/***/ }),
+/* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Volonteer = function () {
+  function Volonteer(id, name, company) {
+    var description = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
+
+    _classCallCheck(this, Volonteer);
+
+    this.id = id;
+    this.name = name;
+    this.company = company;
+    this.description = description;
+  }
+
+  _createClass(Volonteer, [{
+    key: 'display',
+    value: function display() {
+
+      var list = [];
+
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = this.description[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var description = _step.value;
+
+
+          list.push('<ul>\n          <li><strong>Name:</strong>' + description.name + '</li>\n          <li><strong>Dates:</strong>' + description.dates + '</li>\n          <li><strong>Url:</strong>' + description.url + '</li>\n          <li><strong>Description:</strong>' + description.description + '</li>\n        </ul>');
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+
+      return '\n    <section>\n      <ul>\n        <li><strong>Name:</strong> ' + this.name + '</li>\n        <li><strong>Company:</strong> ' + this.company + '</li>\n        <li><strong>Causes:</strong> ' + list.join('') + '</li>\n      </ul>\n    </section>\n    ';
+    }
+  }]);
+
+  return Volonteer;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Volonteer);
 
 /***/ })
 /******/ ]);

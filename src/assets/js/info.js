@@ -2,6 +2,7 @@ import Crud from './crud';
 import Project from './project';
 import Experience from './experience';
 import Education from './education';
+import Volonteer from './volonteer';
 
 class Info {
 
@@ -17,6 +18,7 @@ class Info {
       this.experiences = this.data.experiences;
       this.education = this.data.education;
       this.skills = this.data.skills;
+      this.volonteer = this.data.volonteer;
 
     }
 
@@ -144,6 +146,26 @@ class Info {
     Object.values(this.skills.list).forEach( skill => list.push(`<li>${skill}</li>`));
 
     return `<h3>Skills</h3><ul>${list.join('')}</ul>`
+
+  }
+
+  getVolonteer() {
+
+    let list = ['<h3>Volunteer Experience</h3>'];
+
+    Object.values(this.volonteer).forEach( volonteer => {
+
+      let singleVolonteer = new Volonteer(
+        volonteer.id,
+        volonteer.name,
+        volonteer.company,
+        volonteer.description
+      );
+
+      list.push(singleVolonteer.display());
+    } );
+
+    return list.join('');
 
   }
 

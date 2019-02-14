@@ -1,6 +1,6 @@
 class Education {
 
-  constructor(id, name, institution, dates, description = '') {
+  constructor(id, name, institution, dates) {
 
     this.id = id;
     this.name = name;
@@ -13,13 +13,11 @@ class Education {
 
     return `
     <section>
-    <p>
-      <ul>
-        <li><strong>Name:</strong> ${this.name}</li>
-        <li><strong>Institution:</strong> ${this.institution}</li>
-        <li><strong>Dates:</strong> ${this.dates}</li>
-      </ul>
-    </p>
+    <ul>
+      <li><strong>Name:</strong> ${this.name}</li>
+      <li><strong>Institution:</strong> ${this.institution}</li>
+      <li><strong>Dates:</strong> ${this.dates}</li>
+    </ul>
     </section>
     `;
 

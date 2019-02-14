@@ -494,6 +494,10 @@ header > div aside li svg {
   white-space: normal;
 }
 
+#terminal ul li ul {
+  margin-bottom: 1rem;
+}
+
 #terminal section p {
   margin: 0.5rem 0;
 }

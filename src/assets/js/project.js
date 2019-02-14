@@ -15,14 +15,12 @@ class Project {
 
     return `
     <section>
-    <p>
-      <ul>
-        <li><strong>Id:</strong> ${this.id}</li>
-        <li><strong>Project name:</strong> ${this.name}</li>
-        <li><strong>Short description:</strong> ${this.shortDescription}</li>
-        <li><strong>Url:</strong> <a href="${this.url}" target="_blank">${this.url}</a></li>
-      </ul>
-    </p>
+    <ul>
+      <li><strong>Id:</strong> ${this.id}</li>
+      <li><strong>Project name:</strong> ${this.name}</li>
+      <li><strong>Short description:</strong> ${this.shortDescription}</li>
+      <li><strong>Url:</strong> <a href="${this.url}" target="_blank">${this.url}</a></li>
+    </ul>
     </section>
     `;
 
@@ -34,12 +32,10 @@ class Project {
     <section>
     <h4>Project name: ${this.name}</h4>
     <p><strong>Stack:</strong> ${this.stack}</p>
-    <p>
-      <ul>
-        <li><strong>Url:</strong> <a href="${this.url}" target="_blank">${this.url}</a></li>
-        <li><strong>Description:</strong> ${this.description}</li>
-      </ul>
-    </p>
+    <ul>
+      <li><strong>Url:</strong> <a href="${this.url}" target="_blank">${this.url}</a></li>
+      <li><strong>Description:</strong> ${this.description}</li>
+    </ul>
     </section>
     `;
 

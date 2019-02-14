@@ -178,7 +178,47 @@ export default {
       'Backend development',
       'Frontend development',
       'JIRA',
-      'Basic photoshop',
+      'Basic photoshop'
     ]
+  },
+  volonteer: {
+    1: {
+      id: 1,
+      name: 'Community - meetup organizer',
+      company: 'WordPress',
+      description: [
+        {
+          name: '#WPNis',
+          dates: 'May 2016 – Present.',
+          url: 'https://www.meetup.com/wordpress-nis',
+          description: 'Founder of Nis WordPress community as part of WPSerbia community. With help of colleague Milan Djordjevic we started #WPNis to promote WordPress in our town.'
+        }
+      ]
+    },
+    2: {
+      id: 3,
+      name: 'WordCamps and community',
+      company: 'WordPress',
+      description: [
+        {
+          name: 'WordCamp Belgrade, Serbia - #WCBDG 2017',
+          dates: 'May 2017',
+          url: 'https://2017.belgrade.wordcamp.org/speaker/aleksandar-predic',
+          description: 'Volonteer and speaker'
+        },
+        {
+          name: 'WordCamp Europe, Belgrade, Serbia - #WCEU 2018',
+          dates: 'June 2018',
+          url: 'https://2018.europe.wordcamp.org/organizers',
+          description: 'Organizer - local team'
+        },
+        {
+          name: 'WordCamp Europe, Berlin, Germany - #WCEU 2019',
+          dates: 'June 2019',
+          url: 'https://2019.europe.wordcamp.org/organisers',
+          description: 'Organizer - community team'
+        }
+      ]
+    }
   }
 };
