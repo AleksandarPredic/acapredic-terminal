@@ -15,7 +15,7 @@ class Info {
       this.lastName = this.data.basic.lastName;
       this.email = this.data.basic.email;
       this.projects = this.data.projects;
-      this.experiences = this.data.experiences;
+      this.experience = this.data.experience;
       this.education = this.data.education;
       this.skills = this.data.skills;
       this.volunteer = this.data.volunteer;
@@ -79,9 +79,9 @@ class Info {
 
     getExperiences() {
 
-      let list = ['<h3>Experiences</h3>'];
+      let list = ['<h3>Experience</h3>'];
 
-      Object.values(this.experiences).forEach( experience => {
+      Object.values(this.experience).forEach( experience => {
 
         let singleExperience = new Experience(
           experience.id,
@@ -99,7 +99,7 @@ class Info {
 
     getExperience(id) {
 
-      let experience = this.experiences[id];
+      let experience = this.experience[id];
 
       if (typeof experience === "undefined") {
         return `404. Experience with requested id <strong>${id}</strong> doesn't exists`;
@@ -113,8 +113,6 @@ class Info {
         experience.companyUrl,
         experience.description,
       );
-
-      console.log(singleExperience);
 
       return singleExperience.displayLong();
 

@@ -40,8 +40,8 @@ const terminal = new Terminal('terminal',
           <li>basic</li>
           <li>projects</li>
           <li>projects/{id}</li>
-          <li>experiences</li>
-          <li>experiences/{id}</li>
+          <li>experience</li>
+          <li>experience/{id}</li>
           <li>education</li>
           <li>skills</li>
           <li>volunteer</li>
@@ -54,14 +54,14 @@ const terminal = new Terminal('terminal',
     else if('projects' === request) {
       return info.getProjects();
     }
-    else if(request.includes('projects/')) {
+    else if(request.startsWith('projects/')) {
       return info.getProject(parseInt(request.replace('projects/', '')));
     }
-    else if('experiences' === request) {
+    else if('experience' === request) {
       return info.getExperiences();
     }
-    else if(request.includes('experiences/')) {
-      return info.getExperience(parseInt(request.replace('experiences/', '')));
+    else if(request.startsWith('experience/')) {
+      return info.getExperience(parseInt(request.replace('experience/', '')));
     }
     else if('education' === request) {
       return info.getEducation();

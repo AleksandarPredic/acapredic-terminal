@@ -16,6 +16,12 @@ body {
     font-weight: 700;
   }
 
+  svg {
+    height: 3rem;
+    width: auto;
+    fill: $color__white;
+  }
+
   hr {
     margin: 0;
     clear: both;

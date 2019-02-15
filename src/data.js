@@ -161,7 +161,7 @@ export default {
       `
     },
   },
-  experiences: {
+  experience: {
     1: {
       id: 1,
       position: 'Web development team lead, lead WordPress developer',

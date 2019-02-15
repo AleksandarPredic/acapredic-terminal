@@ -294,6 +294,12 @@ body a:not(.link--no-suffix) {
   font-weight: 700;
 }
 
+body svg {
+  height: 3rem;
+  width: auto;
+  fill: #fff;
+}
+
 body hr {
   margin: 0;
   clear: both;
@@ -333,12 +339,6 @@ header > div aside li a {
 
 header > div aside li:not(:last-child) a {
   margin-right: 1.5rem;
-}
-
-header > div aside li svg {
-  height: 3rem;
-  width: auto;
-  fill: #fff;
 }
 
 @media only screen and (min-width: 768px) {

@@ -110,17 +110,17 @@ var terminal = new __WEBPACK_IMPORTED_MODULE_0__vendor_dom_terminal_dist_termina
       terminal.clear();
       return '';
     } else if ('help' === request) {
-      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experiences</li>\n          <li>experiences/{id}</li>\n          <li>education</li>\n          <li>skills</li>\n          <li>volunteer</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank" rel="nofollow">visit my LinkedIn profile</a></li>\n        </ul>';
+      return '\n        <h4>Commands:</h4>\n        <h5>Type command and press enter.</h5>\n        <ul>\n          <li>help</li>\n          <li>clear</li>\n          <li>basic</li>\n          <li>projects</li>\n          <li>projects/{id}</li>\n          <li>experience</li>\n          <li>experience/{id}</li>\n          <li>education</li>\n          <li>skills</li>\n          <li>volunteer</li>\n          <li>Don\'t like command prompts? <a class="external" href="https://www.linkedin.com/in/aleksandarpredic" target="_blank" rel="nofollow">visit my LinkedIn profile</a></li>\n        </ul>';
     } else if ('basic' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getBasicInfo();
     } else if ('projects' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProjects();
-    } else if (request.includes('projects/')) {
+    } else if (request.startsWith('projects/')) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getProject(parseInt(request.replace('projects/', '')));
-    } else if ('experiences' === request) {
+    } else if ('experience' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getExperiences();
-    } else if (request.includes('experiences/')) {
-      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getExperience(parseInt(request.replace('experiences/', '')));
+    } else if (request.startsWith('experience/')) {
+      return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getExperience(parseInt(request.replace('experience/', '')));
     } else if ('education' === request) {
       return __WEBPACK_IMPORTED_MODULE_1__info__["a" /* default */].getEducation();
     } else if ('skills' === request) {
@@ -231,133 +231,131 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 var Info = function () {
-      function Info() {
-            _classCallCheck(this, Info);
+  function Info() {
+    _classCallCheck(this, Info);
 
-            this.data = new __WEBPACK_IMPORTED_MODULE_0__crud__["a" /* default */]('./data.json').getJson();
+    this.data = new __WEBPACK_IMPORTED_MODULE_0__crud__["a" /* default */]('./data.json').getJson();
 
-            // All data we'll ever need
-            this.name = this.data.basic.name;
-            this.lastName = this.data.basic.lastName;
-            this.email = this.data.basic.email;
-            this.projects = this.data.projects;
-            this.experiences = this.data.experiences;
-            this.education = this.data.education;
-            this.skills = this.data.skills;
-            this.volunteer = this.data.volunteer;
+    // All data we'll ever need
+    this.name = this.data.basic.name;
+    this.lastName = this.data.basic.lastName;
+    this.email = this.data.basic.email;
+    this.projects = this.data.projects;
+    this.experience = this.data.experience;
+    this.education = this.data.education;
+    this.skills = this.data.skills;
+    this.volunteer = this.data.volunteer;
+  }
+
+  _createClass(Info, [{
+    key: 'getBasicInfo',
+    value: function getBasicInfo() {
+
+      return '\n      <section>\n        <h3>Basic info</h3>\n        <p><strong>First Name:</strong> ' + this.name + '</p>\n        <p><strong>Last Name:</strong> ' + this.lastName + '</p>\n        <p><strong>Email:</strong> ' + this.email + '</p>\n      </section>\n      ';
+    }
+  }, {
+    key: 'getProjects',
+    value: function getProjects() {
+
+      var list = ['<h3>Projects</h3>'];
+
+      Object.values(this.projects).forEach(function (project) {
+
+        var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */](project.id, project.name, '', project.url, project.shortDescription);
+
+        list.push(singleProject.displayShort());
+      });
+
+      return list.join('');
+    }
+  }, {
+    key: 'getProject',
+    value: function getProject(id) {
+
+      var project = this.projects[id];
+
+      if (typeof project === "undefined") {
+        return '404. Project with requested id <strong>' + id + '</strong> doesn\'t exists';
       }
 
-      _createClass(Info, [{
-            key: 'getBasicInfo',
-            value: function getBasicInfo() {
+      var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */]('', project.name, project.dates, project.url, '', project.description, project.stack);
 
-                  return '\n      <section>\n        <h3>Basic info</h3>\n        <p><strong>First Name:</strong> ' + this.name + '</p>\n        <p><strong>Last Name:</strong> ' + this.lastName + '</p>\n        <p><strong>Email:</strong> ' + this.email + '</p>\n      </section>\n      ';
-            }
-      }, {
-            key: 'getProjects',
-            value: function getProjects() {
+      return singleProject.displayLong();
+    }
+  }, {
+    key: 'getExperiences',
+    value: function getExperiences() {
 
-                  var list = ['<h3>Projects</h3>'];
+      var list = ['<h3>Experience</h3>'];
 
-                  Object.values(this.projects).forEach(function (project) {
+      Object.values(this.experience).forEach(function (experience) {
 
-                        var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */](project.id, project.name, '', project.url, project.shortDescription);
+        var singleExperience = new __WEBPACK_IMPORTED_MODULE_2__experience__["a" /* default */](experience.id, experience.position, '', experience.companyName);
 
-                        list.push(singleProject.displayShort());
-                  });
+        list.push(singleExperience.displayShort());
+      });
 
-                  return list.join('');
-            }
-      }, {
-            key: 'getProject',
-            value: function getProject(id) {
+      return list.join('');
+    }
+  }, {
+    key: 'getExperience',
+    value: function getExperience(id) {
 
-                  var project = this.projects[id];
+      var experience = this.experience[id];
 
-                  if (typeof project === "undefined") {
-                        return '404. Project with requested id <strong>' + id + '</strong> doesn\'t exists';
-                  }
+      if (typeof experience === "undefined") {
+        return '404. Experience with requested id <strong>' + id + '</strong> doesn\'t exists';
+      }
 
-                  var singleProject = new __WEBPACK_IMPORTED_MODULE_1__project__["a" /* default */]('', project.name, project.dates, project.url, '', project.description, project.stack);
+      var singleExperience = new __WEBPACK_IMPORTED_MODULE_2__experience__["a" /* default */](experience.id, experience.position, experience.dates, experience.companyName, experience.companyUrl, experience.description);
 
-                  return singleProject.displayLong();
-            }
-      }, {
-            key: 'getExperiences',
-            value: function getExperiences() {
+      return singleExperience.displayLong();
+    }
+  }, {
+    key: 'getEducation',
+    value: function getEducation() {
 
-                  var list = ['<h3>Experiences</h3>'];
+      var list = ['<h3>Education</h3>'];
 
-                  Object.values(this.experiences).forEach(function (experience) {
+      Object.values(this.education).forEach(function (education) {
 
-                        var singleExperience = new __WEBPACK_IMPORTED_MODULE_2__experience__["a" /* default */](experience.id, experience.position, '', experience.companyName);
+        var singleEducation = new __WEBPACK_IMPORTED_MODULE_3__education__["a" /* default */](education.id, education.name, education.institution, education.dates, education.description);
 
-                        list.push(singleExperience.displayShort());
-                  });
+        list.push(singleEducation.display());
+      });
 
-                  return list.join('');
-            }
-      }, {
-            key: 'getExperience',
-            value: function getExperience(id) {
+      return list.join('');
+    }
+  }, {
+    key: 'getSkills',
+    value: function getSkills() {
 
-                  var experience = this.experiences[id];
+      var list = [];
 
-                  if (typeof experience === "undefined") {
-                        return '404. Experience with requested id <strong>' + id + '</strong> doesn\'t exists';
-                  }
+      Object.values(this.skills.list).forEach(function (skill) {
+        return list.push('<li>' + skill + '</li>');
+      });
 
-                  var singleExperience = new __WEBPACK_IMPORTED_MODULE_2__experience__["a" /* default */](experience.id, experience.position, experience.dates, experience.companyName, experience.companyUrl, experience.description);
+      return '<h3>Skills</h3><ul>' + list.join('') + '</ul>';
+    }
+  }, {
+    key: 'getVolunteer',
+    value: function getVolunteer() {
 
-                  console.log(singleExperience);
+      var list = ['<h3>Volunteer Experience</h3>'];
 
-                  return singleExperience.displayLong();
-            }
-      }, {
-            key: 'getEducation',
-            value: function getEducation() {
+      Object.values(this.volunteer).forEach(function (volunteer) {
 
-                  var list = ['<h3>Education</h3>'];
+        var singleVolunteer = new __WEBPACK_IMPORTED_MODULE_4__volunteer__["a" /* default */](volunteer.id, volunteer.name, volunteer.company, volunteer.description);
 
-                  Object.values(this.education).forEach(function (education) {
+        list.push(singleVolunteer.display());
+      });
 
-                        var singleEducation = new __WEBPACK_IMPORTED_MODULE_3__education__["a" /* default */](education.id, education.name, education.institution, education.dates, education.description);
+      return list.join('');
+    }
+  }]);
 
-                        list.push(singleEducation.display());
-                  });
-
-                  return list.join('');
-            }
-      }, {
-            key: 'getSkills',
-            value: function getSkills() {
-
-                  var list = [];
-
-                  Object.values(this.skills.list).forEach(function (skill) {
-                        return list.push('<li>' + skill + '</li>');
-                  });
-
-                  return '<h3>Skills</h3><ul>' + list.join('') + '</ul>';
-            }
-      }, {
-            key: 'getVolunteer',
-            value: function getVolunteer() {
-
-                  var list = ['<h3>Volunteer Experience</h3>'];
-
-                  Object.values(this.volunteer).forEach(function (volunteer) {
-
-                        var singleVolunteer = new __WEBPACK_IMPORTED_MODULE_4__volunteer__["a" /* default */](volunteer.id, volunteer.name, volunteer.company, volunteer.description);
-
-                        list.push(singleVolunteer.display());
-                  });
-
-                  return list.join('');
-            }
-      }]);
-
-      return Info;
+  return Info;
 }();
 
 var info = new Info();
@@ -520,7 +518,7 @@ var Crud = function () {
       description: '\n      In cooperation with company designer, who was responsible for fronted design, I developed an online shop site www.jezdicrakija.com using custom made MVC framework.\n      '
     }
   },
-  experiences: {
+  experience: {
     1: {
       id: 1,
       position: 'Web development team lead, lead WordPress developer',
