@@ -13,7 +13,7 @@
 
 // https://github.com/sasadjolic/dom-terminal
 // https://github.com/AleksandarPredic/dom-terminal
-import Terminal from "../vendor/dom-terminal/dist/terminal-1.0.2.min";
+import Terminal from "../vendor/dom-terminal/terminal-1.0.2.min";
 import info from './info';
 import isIOS from './isIos';
 
