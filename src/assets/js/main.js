@@ -6,14 +6,10 @@
  * icons: https://simpleicons.org/
  */
 
-/**
- * TODO: Add og and twitter and google tags in index.html
- */
-
 
 // https://github.com/sasadjolic/dom-terminal
 // https://github.com/AleksandarPredic/dom-terminal
-import Terminal from "../vendor/dom-terminal/terminal-1.0.2.min";
+import Terminal from 'dom-terminal/dist/terminal-1.0.2.min.js';
 import info from './info';
 import isIOS from './isIos';
 
