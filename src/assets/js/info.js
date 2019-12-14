@@ -86,7 +86,7 @@ class Info {
         let singleExperience = new Experience(
           experience.id,
           experience.position,
-          '',
+          experience.dates,
           experience.companyName
         );
 

@@ -19,6 +19,7 @@ class Experience {
       <li><strong>Id:</strong> ${this.id}</li>
       <li><strong>Position:</strong> ${this.position}</li>
       <li><strong>Company name:</strong> ${this.companyName}</li>
+      <li><strong>Dates:</strong> ${this.dates}</li>
     </ul>
     </section>
     `;
