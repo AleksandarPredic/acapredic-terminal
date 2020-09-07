@@ -3,7 +3,7 @@ export default {
     name: 'Aleksandar',
     lastName: 'Predic',
     email: 'info@acapredic.com',
-    position: 'Web development team Lead, lead WP developer at Shindiri Studio | #WCEU organizing team | #WPNis community Co-organizer',
+    position: 'PHP/ Web / WordPress Developer in WebPigment company. Co-founder of Nis WordPress community #WPNis, co-lead organizer of WordCamp Nis #WCNis.',
   },
   projects: {
     1: {
@@ -25,9 +25,9 @@ export default {
       url: 'http://themeforest.net/item/sierra-one-page-responsive-wordpress-theme/10302986',
       shortDescription: 'One Page Responsive WordPress agency theme.',
       description: `
-      My first WP template published on themeforest.net. In Sierra project I developed whole backend of the WordPress theme. Our designer created theme design, colleague 
-      frontend developer, created html theme and my task was converting the html theme into WordPress premium theme. Sierra One-Page Portfolio WordPress Theme is easy to use 
-      one page wp template. With very little modification, this flexible, responsive WordPress theme can be used to create Agency website, Freelancer, Photography, Creative, Fashion, 
+      My first WP template published on themeforest.net. In Sierra project I developed whole backend of the WordPress theme. Our designer created theme design, colleague
+      frontend developer, created html theme and my task was converting the html theme into WordPress premium theme. Sierra One-Page Portfolio WordPress Theme is easy to use
+      one page wp template. With very little modification, this flexible, responsive WordPress theme can be used to create Agency website, Freelancer, Photography, Creative, Fashion,
       Magazine or Blog website. Sierra WP theme uses Visual Composer packed with custom shortcodes designed for Sierra template.
       `,
     },
@@ -39,7 +39,7 @@ export default {
       url: 'http://greencentar.com',
       shortDescription: 'Online WooCommerce shop development.',
       description: `
-      Online shop development. Shop is based on WooCommerce and WordPress. I was responsible for backend development and some frontend adjustments, 
+      Online shop development. Shop is based on WooCommerce and WordPress. I was responsible for backend development and some frontend adjustments,
       while collaborator (Nikola Mladenovic) was in charge for products pages design and site promotion.
       `,
     },
@@ -51,7 +51,7 @@ export default {
       url: 'http://themeforest.net/item/glyph-responsive-news-blog-magazine-wp-theme/11156144',
       shortDescription: 'Glyph is a clean WordPress premium theme perfect for news, blog or magazine.',
       description: `
-      Thanks to Shindiri development team Glyph WordPress premium theme was created. I was in charge of backend development, colleague (Aleksandar Blagotic) took care of frontend part of the project. 
+      Thanks to Shindiri development team Glyph WordPress premium theme was created. I was in charge of backend development, colleague (Aleksandar Blagotic) took care of frontend part of the project.
       Thanks to our Designer, Glyph look so great and clean perfect for news, blog or magazine theme.
       `,
     },
@@ -63,7 +63,7 @@ export default {
       url: 'http://themeforest.net/item/alfa-responsive-parallax-wordpress-theme/10764656',
       shortDescription: 'Alfa is a clean and professional, responsive one-page portfolio WordPress theme.',
       description: `
-      As a part of backend development team I contributed publishing this project. Alfa is a clean and professional, responsive one-page portfolio 
+      As a part of backend development team I contributed publishing this project. Alfa is a clean and professional, responsive one-page portfolio
       WordPress theme made for freelance web designers, freelancers, web agencies, artists and other creative entrepreneurs.
       `,
     },
@@ -75,7 +75,7 @@ export default {
       url: 'http://themeforest.net/item/hotmag-wordpress-news-magazine-responsive-theme/11657078',
       shortDescription: 'Hotmag is a responsive and retina ready news and magazine WordPress template.',
       description: `
-      Hotmag is a responsive and retina ready news and magazine WordPress template. 
+      Hotmag is a responsive and retina ready news and magazine WordPress template.
       It is intuitive and friendly for beginners but it also allows professional users to create some amazing stuff.
       `,
     },
@@ -87,9 +87,9 @@ export default {
       url: 'http://themeforest.net/item/fashionpress-wordpress-theme-for-fashion-bloggers-responsive-and-creative-blog-template/13026365',
       shortDescription: 'FashionPress is a stylish and creative WordPress fashion blog template.',
       description: `
-      FashionPress is a stylish and creative WordPress fashion blog template packed with everything that you need to create a perfect personal fashion blog for you. 
+      FashionPress is a stylish and creative WordPress fashion blog template packed with everything that you need to create a perfect personal fashion blog for you.
       <br />
-      I was responsible for backend development and fulfilling Themeforest's WordPress theme submission requirements. WordPress theme supports WooCommerce and shop frontend coding was also my task. 
+      I was responsible for backend development and fulfilling Themeforest's WordPress theme submission requirements. WordPress theme supports WooCommerce and shop frontend coding was also my task.
       Nikola Randjelovic worked on backend, while Milos Ristic was responsible for frontend and some backend development. Design was done by Vladimir Devic and Marjan Tosic who was also a team leader.
       `,
     },
@@ -101,7 +101,7 @@ export default {
       url: '',
       shortDescription: 'WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase.',
       description: `
-      WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase. 
+      WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase.
       It is built for premium theme and plugin developers and offer instant creation of demo site for limited time.
       `,
     },
@@ -138,8 +138,8 @@ export default {
       url: 'https://www.physicianpartnersofamerica.com',
       shortDescription: 'Custom WordPress solution heavily relying on Google maps javascript API.',
       description: `
-      Custom WordPress solution heavily relying on Google maps javascript API. Project included custom WP theme and plugins, integrating various external API's. 
-      My role was a team lead of small dev team consisting of 3 members covering both frontend and backend tasks. Close cooperation with designer was also important for better design implementation. 
+      Custom WordPress solution heavily relying on Google maps javascript API. Project included custom WP theme and plugins, integrating various external API's.
+      My role was a team lead of small dev team consisting of 3 members covering both frontend and backend tasks. Close cooperation with designer was also important for better design implementation.
       Performance-wise I write a lot of requested features to avoid using plugins that add extra functionality which are not needed on the site.
       Used on project: PHP, jQuery, JavaScript, SCSS, Gulp, Composer, WordPress.
       Website description: Doctors and clinics listing using Google maps displaying results by distance from visitor location. Live search on Google maps for locations. Other common website pages are also implemented and designed.
@@ -153,8 +153,8 @@ export default {
       url: 'https://grafomis.rs',
       shortDescription: 'WooCommerce was used as a base to import 6000+ products from external API.',
       description: `
-      WooCommerce was used as a base to import 6000+ products from external API. Custom WordPress plugin was created to handle authentication, 
-      automatic import and synchronization of all data (taxonomies, post types, attributes...) for fully functional online shop. 
+      WooCommerce was used as a base to import 6000+ products from external API. Custom WordPress plugin was created to handle authentication,
+      automatic import and synchronization of all data (taxonomies, post types, attributes...) for fully functional online shop.
       Additionally, WooCommerce was customized on frontend to fit needs of printing company.
       `,
     },
@@ -264,7 +264,7 @@ export default {
     7: {
       id: 7,
       position: 'Senior Web Developer',
-      dates: 'Dec 2019 – Current',
+      dates: 'Dec 2019 – September 2020',
       companyName: 'Better Collective',
       companyUrl: 'https://bettercollective.com',
       description: [
@@ -274,6 +274,27 @@ export default {
         'Optimization of existing websites.',
         'Plan and lead development on sets of related stories.',
         'Responsibility for teaching the lower leveled web developers.',
+      ],
+    },
+    8: {
+      id: 8,
+      position: 'Senior WordPress Developer',
+      dates: 'September 2020 – Current',
+      companyName: 'WebPigment',
+      companyUrl: 'https://www.webpigment.com/',
+      description: [
+        'CDevelop complex WordPress plugins and/or themes primarily using PHP.',
+        'Mentor engineers and provide code reviews.',
+        'Drive strategy and lead back end technical vision for large projects.',
+        'Leverage WordPress APIs and extend the WordPress admin experience.',
+        'Solve complex problems in simple ways.',
+        'Solve bugs and address client issues in a fast-paced environment.',
+        'Juggle current projects with incoming tasks.',
+        'Respond directly to clients courteously and clearly.',
+        'Solve client challenges with understanding and empathy.',
+        'Test solutions across multiple browsers and platforms in a local testing environment.',
+        'Deploy changes to live servers.',
+        'Assist in the remediation, enhancement, and maintenance of client sites.',
       ],
     },
   },
