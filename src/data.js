@@ -279,7 +279,7 @@ export default {
     8: {
       id: 8,
       position: 'Senior WordPress Developer',
-      dates: 'September 2020 – Current',
+      dates: 'September 2020 – January 2021',
       companyName: 'WebPigment',
       companyUrl: 'https://www.webpigment.com/',
       description: [
@@ -295,6 +295,22 @@ export default {
         'Test solutions across multiple browsers and platforms in a local testing environment.',
         'Deploy changes to live servers.',
         'Assist in the remediation, enhancement, and maintenance of client sites.',
+      ],
+    },
+    9: {
+      id: 9,
+      position: 'WordPress Development Lead',
+      dates: 'January 2021 – Current',
+      companyName: 'Blexr',
+      companyUrl: 'https://www.blexr.com/',
+      description: [
+        'CDevelop complex WordPress plugins and/or themes primarily using PHP.Owns the WordPress architecture.',
+        'Acts as a design authority for the WordPress architecture through the entire lifecycle, driving technical decisions in collaboration with other developers and peer technology leaders.',
+        'Drives an architecture and long-term strategic approach which lend themselves to best agile and engineering practices, maintain technical debt at sustainable levels and enable test automation.',
+        'Actively contributes to and oversees implementation of the architecture, assists in the evaluation and establishment of team standards for software engineering processes and procedures.',
+        'Liaises with Product Owners and other stakeholders, negotiating requirements and outlining proposals for new system behavior, including benefits, limitations and risks, as well as mitigations for the latter.',
+        'Ensures that technical decisions related to our WordPress sites are aligned with the requirements of the business.',
+        'Leads the developers working on our WordPress websites, handling people management responsibilities such as recruitment for the teams, holding regular 1-1’s with individual team members, providing continuous performance feedback, and enabling team and individual growth from onboarding to ongoing learning and development.',
       ],
     },
   },
