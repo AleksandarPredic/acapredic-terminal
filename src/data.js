@@ -22,7 +22,7 @@ export default {
       name: 'Sierra - One Page Responsive WordPress Theme',
       dates: 'Dec 2014',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/sierra-one-page-responsive-wordpress-theme/10302986',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/sierra-wordpress/',
       shortDescription: 'One Page Responsive WordPress agency theme.',
       description: `
       My first WP template published on themeforest.net. In Sierra project I developed whole backend of the WordPress theme. Our designer created theme design, colleague
@@ -48,7 +48,7 @@ export default {
       name: 'Glyph - Responsive News, Blog & Magazine WP Theme',
       dates: 'Apr 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/glyph-responsive-news-blog-magazine-wp-theme/11156144',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/glyph/',
       shortDescription: 'Glyph is a clean WordPress premium theme perfect for news, blog or magazine.',
       description: `
       Thanks to Shindiri development team Glyph WordPress premium theme was created. I was in charge of backend development, colleague (Aleksandar Blagotic) took care of frontend part of the project.
@@ -60,7 +60,7 @@ export default {
       name: 'Alfa - Responsive Parallax WordPress Theme',
       dates: 'Apr 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/alfa-responsive-parallax-wordpress-theme/10764656',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/alfa-wp/',
       shortDescription: 'Alfa is a clean and professional, responsive one-page portfolio WordPress theme.',
       description: `
       As a part of backend development team I contributed publishing this project. Alfa is a clean and professional, responsive one-page portfolio
@@ -72,7 +72,7 @@ export default {
       name: 'HotMag – WordPress News And Magazine Responsive Theme',
       dates: 'Jun 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/hotmag-wordpress-news-magazine-responsive-theme/11657078',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/hotmag-wp/',
       shortDescription: 'Hotmag is a responsive and retina ready news and magazine WordPress template.',
       description: `
       Hotmag is a responsive and retina ready news and magazine WordPress template.
@@ -84,7 +84,7 @@ export default {
       name: 'FashionPress - WordPress Theme for Fashion Bloggers',
       dates: 'Oct 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/fashionpress-wordpress-theme-for-fashion-bloggers-responsive-and-creative-blog-template/13026365',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/fashionpress-wp/',
       shortDescription: 'FashionPress is a stylish and creative WordPress fashion blog template.',
       description: `
       FashionPress is a stylish and creative WordPress fashion blog template packed with everything that you need to create a perfect personal fashion blog for you.
@@ -110,7 +110,7 @@ export default {
       name: 'Woo Shop Slider - WordPress plugin',
       dates: 'Feb 2016',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://codecanyon.net/item/woo-shop-slider-woocommerce-slider-for-products-single-product-and-categories/14840747',
+      url: 'https://www.shindiristudio.com/plugins/wordpress-plugins/wooslider/',
       shortDescription: 'With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles.',
       description: `
       With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles. Woo Shop Slider is slider for products, single product and categories from Your WooCommerce shop.
@@ -300,7 +300,7 @@ export default {
     9: {
       id: 9,
       position: 'WordPress Development Lead',
-      dates: 'January 2021 – Current',
+      dates: 'January 2021 – November 2021',
       companyName: 'Blexr',
       companyUrl: 'https://www.blexr.com/',
       description: [
@@ -311,6 +311,19 @@ export default {
         'Liaises with Product Owners and other stakeholders, negotiating requirements and outlining proposals for new system behavior, including benefits, limitations and risks, as well as mitigations for the latter.',
         'Ensures that technical decisions related to our WordPress sites are aligned with the requirements of the business.',
         'Leads the developers working on our WordPress websites, handling people management responsibilities such as recruitment for the teams, holding regular 1-1’s with individual team members, providing continuous performance feedback, and enabling team and individual growth from onboarding to ongoing learning and development.',
+      ],
+    },
+    10: {
+      id: 10,
+      position: 'Technical Consultant',
+      dates: 'November 2021 – Current',
+      companyName: 'Blexr',
+      companyUrl: 'https://www.blexr.com/',
+      description: [
+        'WordPress development lead position recruitment:',
+        'Screening applicants CVs.',
+        'Handle the technical interview.',
+        'Handle the test task code review.',
       ],
     },
   },
@@ -414,6 +427,12 @@ export default {
           dates: 'June 2020',
           url: 'https://2020.europe.wordcamp.org/organisers',
           description: 'Organizer - contributing team',
+        },
+        {
+          name: 'WordCamp Europe, Porto, Portugal - #WCEU 2022',
+          dates: 'June 2022',
+          url: 'https://europe.wordcamp.org/2022/organisers',
+          description: 'Organizer - attendee services team',
         },
       ],
     },
