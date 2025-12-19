@@ -8,47 +8,47 @@ export default {
   projects: {
     1: {
       id: 1,
-      name: 'Crowdfunding Platform Automation & Secondary Market',
-      dates: '2021 – Present',
-      stack: 'WordPress, PHP, REST API',
+      name: 'Mulberrys',
+      dates: 'Nov 2021 - Present',
+      stack: 'PHP, HTML, CSS, JS, WordPress, REST API',
       url: '',
-      shortDescription: 'Automation, reporting tools, and a secondary market module for a crowdfunding platform.',
+      shortDescription: 'Full-stack development for a premium dry-cleaning and laundry platform (Associated with AlmaCore).',
       description: `
-      Built automation and reporting tools for a crowdfunding platform, increasing operational efficiency by 20%. Developed a secondary market module for share trading among investors within the same platform.
-      `
+    Work as a full-stack developer on Mulberrys, a premium dry-cleaning and laundry platform operating in the San Francisco Bay Area, Minneapolis, and Washington D.C. Support the platform’s continuous growth while executing significant backend refactors to improve performance, stability, and maintainability. Refactored, enhanced with new endpoints, and optimized the WordPress REST API powering native mobile apps, unlocking higher speed and scalability. Develop and maintain frontend features to elevate the user experience across web and mobile. Build POS integrations, REST APIs for mobile platforms, and third-party service integrations to ensure seamless workflow across pickup, delivery, and customer management.
+    `,
     },
     2: {
       id: 2,
-      name: 'Laravel School Management Platform',
-      dates: '2021 – Present',
-      stack: 'Laravel, PHP, HTML, CSS',
+      name: 'CapitalCell',
+      dates: 'Nov 2021 - Sep 2025',
+      stack: 'PHP, HTML, CSS, JS, WordPress, WooCommerce',
       url: '',
-      shortDescription: 'Custom Laravel-based school management platform for a learning center.',
+      shortDescription: 'Maintenance and enhancement of the leading health crowdfunding platform in Spain (Associated with AlmaCore).',
       description: `
-      Developed a custom Laravel-based school management platform for a learning center, streamlining scheduling, student tracking, and daily operations.
-      `
+    Work on enhancing and maintaining the Capitalcell crowdfunding platform, the leading health crowdfunding platform in Spain. Using WordPress and WooCommerce to support the platform’s growth, enabling it to handle over €15 million in investments per year. Developed several internal tools to streamline and speed up daily operations, improving efficiency for both the team and investors. Contributed to a complete site makeover with a new, modern design, enhancing usability and user experience. Also played a key role in scaling the platform internationally by implementing multilingual solutions and ensuring high performance and reliability across markets.
+    `,
     },
     3: {
       id: 3,
-      name: 'Reusable Gutenberg-based Component Platform',
-      dates: '2021',
-      stack: 'WordPress, React, JS, Gutenberg, PHP',
+      name: 'Custom school management platform',
+      dates: 'Jan 2022 - May 2025',
+      stack: 'PHP, HTML, CSS, JS, Laravel',
       url: '',
-      shortDescription: 'A unified library of custom blocks ensuring consistent UI and UX across multiple sites.',
+      shortDescription: 'Custom school management platform built for a private learning center (Associated with AlmaCore).',
       description: `
-      Led the WordPress development team in building a reusable Gutenberg-based component platform, collaborating closely with designers and product owners to create a unified library of custom blocks, ensuring consistent UI and UX across multiple sites.
-      `
+    Worked as the sole full-stack developer on a custom school management platform built for a private learning center, supporting daily operations across scheduling, student management, and internal communication. Designed and implemented the full Laravel backend architecture to ensure reliability and maintainability. Developed intuitive frontend interfaces that help administrators manage classes, attendance, student progress, and reporting with ease. Created automated workflows that reduce manual work, improve accuracy, and streamline processes for teachers and staff. No longer involved in day-to-day development, but continue to handle occasional feature requests and code improvements as needed.
+    `,
     },
     4: {
       id: 4,
-      name: 'Flagship Multi-regional Affiliate Website Rebuild',
-      dates: '2021',
-      stack: 'WordPress, PHP, REST API',
+      name: 'Online Gambling Portal revamp',
+      dates: 'Jun 2022 - Nov 2022',
+      stack: 'PHP, HTML, CSS, JS, WordPress, Gutenberg',
       url: '',
-      shortDescription: 'Complete rebuild of the company flagship multi-regional affiliate website.',
+      shortDescription: 'Complete revamp of a flagship WordPress affiliate website using custom Gutenberg blocks.',
       description: `
-      Led the team through the complete rebuild of the company's flagship multi-regional affiliate website, achieving major improvements in performance, user experience, and editorial workflow. Also built the WordPress plugin API integration for affiliate data, enabling up-to-date product information.
-      `
+    As the Lead Software Engineer, I had the privilege of leading a talented team in the complete revamp of a flagship WordPress affiliate website for a prominent company (Associated with Blexr). Our collective efforts resulted in a remarkable transformation that significantly enhanced performance and user experience. With a diverse audience spanning 17 regions and languages, the website attracted significant traffic. Working closely with a skilled team comprising a Designer, a QA specialist, four developers, a Scrum Master, and a Product Owner, we fostered seamless collaboration. Our approach focused on leveraging Gutenberg as the foundation, augmenting its capabilities with custom Gutenberg blocks tailored to our specific needs. The successful launch of the revamped website marked a significant leap forward in performance and user-friendliness, empowering company employees and resulting in increased user conversions.
+    `,
     },
     5: {
       id: 5,
@@ -58,10 +58,8 @@ export default {
       url: 'https://orientation.wp-europe.org',
       shortDescription: 'An online tool, WordPress plugin, has been created by WordCamp Europe Organizers to help new contributors take part in building the WordPress platform.',
       description: `
-      An online tool, WordPress plugin, has been created by WordCamp Europe Organizers to help new contributors take part in building the WordPress platform.<br />
-      GitHub: https://github.com/wceu/contributor-orientation-tool<br />
-      Read more: https://make.wordpress.org/community/2019/06/17/contributor-orientation-tool
-      `,
+    An online tool, WordPress plugin, has been created by WordCamp Europe Organizers to help new contributors take part in building the WordPress platform.<br />GitHub: https://github.com/wceu/contributor-orientation-tool<br />Read more: https://make.wordpress.org/community/2019/06/17/contributor-orientation-tool
+    `,
     },
     6: {
       id: 6,
@@ -71,10 +69,8 @@ export default {
       url: '',
       shortDescription: 'The custom reservation system, based on the Laravel framework, for managing events, reservations, users, email notifications, etc...',
       description: `
-      The custom reservation system, based on the Laravel framework, for managing events, reservations, users, email notifications, etc... The project was done while I was working in Shindiri Studio company. The system was designed to solve all requirements for Serbian National Driving Academy, NAVAK.
-      Development and wireframing were assigned to me and coleague developer Milan Arandjelović, design to our company designer Marjan Tosic, while the project management was done inside company by Milan Đorđević and Nemanja Djokić.
-      At the moment I'm not allowed to share the URL of the project.
-      `,
+    The custom reservation system, based on the Laravel framework, for managing events, reservations, users, email notifications, etc... The project was done while I was working in Shindiri Studio company. The system was designed to solve all requirements for Serbian National Driving Academy, NAVAK. Development and wireframing were assigned to me and coleague developer Milan Arandjelović, design to our company designer Marjan Tosic, while the project management was done inside company by Milan Đorđević and Nemanja Djokić. At the moment I'm not allowed to share the URL of the project.
+    `,
     },
     7: {
       id: 7,
@@ -84,10 +80,8 @@ export default {
       url: 'https://grafomis.rs',
       shortDescription: 'WooCommerce was used as a base to import 6000+ products from external API.',
       description: `
-      WooCommerce was used as a base to import 6000+ products from external API. Custom WordPress plugin was created to handle authentication,
-      automatic import and synchronization of all data (taxonomies, post types, attributes...) for fully functional online shop.
-      Additionally, WooCommerce was customized on frontend to fit needs of printing company.
-      `,
+    WooCommerce was used as a base to import 6000+ products from external API. Custom WordPress plugin was created to handle authentication, automatic import and synchronization of all data (taxonomies, post types, attributes...) for fully functional online shop. Additionally, WooCommerce was customized on frontend to fit needs of printing company.
+    `,
     },
     8: {
       id: 8,
@@ -97,12 +91,8 @@ export default {
       url: 'https://www.physicianpartnersofamerica.com',
       shortDescription: 'Custom WordPress solution heavily relying on Google maps javascript API.',
       description: `
-      Custom WordPress solution heavily relying on Google maps javascript API. Project included custom WP theme and plugins, integrating various external API's.
-      My role was a team lead of small dev team consisting of 3 members covering both frontend and backend tasks. Close cooperation with designer was also important for better design implementation.
-      Performance-wise I write a lot of requested features to avoid using plugins that add extra functionality which are not needed on the site.
-      Used on project: PHP, jQuery, JavaScript, SCSS, Gulp, Composer, WordPress.
-      Website description: Doctors and clinics listing using Google maps displaying results by distance from visitor location. Live search on Google maps for locations. Other common website pages are also implemented and designed.
-      `,
+    Custom WordPress solution heavily relying on Google maps javascript API. Project included custom WP theme and plugins, integrating various external API's. My role was a team lead of small dev team consisting of 3 members covering both frontend and backend tasks. Close cooperation with designer was also important for better design implementation. Performance-wise I write a lot of requested features to avoid using plugins that add extra functionality which are not needed on the site. Used on project: PHP, jQuery, JavaScript, SCSS, Gulp, Composer, WordPress. Website description: Doctors and clinics listing using Google maps displaying results by distance from visitor location. Live search on Google maps for locations. Other common website pages are also implemented and designed.
+    `,
     },
     9: {
       id: 9,
@@ -112,22 +102,19 @@ export default {
       url: 'https://github.com/AleksandarPredic/WordPress-Widget-Builder',
       shortDescription: 'The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.',
       description: `
-      The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.
-      You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.
-      `,
+    The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets. You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.
+    `,
     },
     10: {
       id: 10,
       name: 'Woo Shop Slider - WordPress plugin',
       dates: 'Feb 2016',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/plugins/wordpress-plugins/wooslider/',
+      url: 'http://codecanyon.net/item/woo-shop-slider-woocommerce-slider-for-products-single-product-and-categories/14840747',
       shortDescription: 'With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles.',
       description: `
-      With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles. Woo Shop Slider is slider for products, single product and categories from Your WooCommerce shop.
-      In this project I was in charge of both frontend and backend development following Marjan Tosic designs.
-      Free lite version of the plugin can be downloaded here: https://wordpress.org/plugins/woo-shop-slider-lite/
-      `,
+    With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles. Woo Shop Slider is slider for products, single product and categories from Your WooCommerce shop. In this project I was in charge of both frontend and backend development following Marjan Tosic designs. Free lite version of the plugin can be downloaded here: https://wordpress.org/plugins/woo-shop-slider-lite/
+    `,
     },
     11: {
       id: 11,
@@ -137,59 +124,52 @@ export default {
       url: '',
       shortDescription: 'WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase.',
       description: `
-      WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase.
-      It is built for premium theme and plugin developers and offer instant creation of demo site for limited time.
-      `,
+    WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase. It is built for premium theme and plugin developers and offer instant creation of demo site for limited time.
+    `,
     },
     12: {
       id: 12,
       name: 'FashionPress - WordPress Theme for Fashion Bloggers',
       dates: 'Oct 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/fashionpress-wp/',
+      url: 'http://themeforest.net/item/fashionpress-wordpress-theme-for-fashion-bloggers-responsive-and-creative-blog-template/13026365',
       shortDescription: 'FashionPress is a stylish and creative WordPress fashion blog template.',
       description: `
-      FashionPress is a stylish and creative WordPress fashion blog template packed with everything that you need to create a perfect personal fashion blog for you.
-      <br />
-      I was responsible for backend development and fulfilling Themeforest's WordPress theme submission requirements. WordPress theme supports WooCommerce and shop frontend coding was also my task.
-      Nikola Randjelovic worked on backend, while Milos Ristic was responsible for frontend and some backend development. Design was done by Vladimir Devic and Marjan Tosic who was also a team leader.
-      `,
+    FashionPress is a stylish and creative WordPress fashion blog template packed with everything that you need to create a perfect personal fashion blog for you.<br />I was responsible for backend development and fulfilling Themeforest's WordPress theme submission requirements. WordPress theme supports WooCommerce and shop frontend coding was also my task. Nikola Randjelovic worked on backend, while Milos Ristic was responsible for frontend and some backend development. Design was done by Vladimir Devic and Marjan Tosic who was also a team leader.
+    `,
     },
     13: {
       id: 13,
       name: 'HotMag – WordPress News And Magazine Responsive Theme',
       dates: 'Jun 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/hotmag-wp/',
+      url: 'http://themeforest.net/item/hotmag-wordpress-news-magazine-responsive-theme/11657078',
       shortDescription: 'Hotmag is a responsive and retina ready news and magazine WordPress template.',
       description: `
-      Hotmag is a responsive and retina ready news and magazine WordPress template.
-      It is intuitive and friendly for beginners but it also allows professional users to create some amazing stuff.
-      `,
+    Hotmag is a responsive and retina ready news and magazine WordPress template. It is intuitive and friendly for beginners but it also allows professional users to create some amazing stuff.
+    `,
     },
     14: {
       id: 14,
-      name: 'Glyph - Responsive News, Blog & Magazine WP Theme',
-      dates: 'Apr 2015',
-      stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/glyph/',
-      shortDescription: 'Glyph is a clean WordPress premium theme perfect for news, blog or magazine.',
-      description: `
-      Thanks to Shindiri development team Glyph WordPress premium theme was created. I was in charge of backend development, colleague (Aleksandar Blagotic) took care of frontend part of the project.
-      Thanks to our Designer, Glyph look so great and clean perfect for news, blog or magazine theme.
-      `,
-    },
-    15: {
-      id: 15,
       name: 'Alfa - Responsive Parallax WordPress Theme',
       dates: 'Apr 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/alfa-wp/',
+      url: 'http://themeforest.net/item/alfa-responsive-parallax-wordpress-theme/10764656',
       shortDescription: 'Alfa is a clean and professional, responsive one-page portfolio WordPress theme.',
       description: `
-      As a part of backend development team I contributed publishing this project. Alfa is a clean and professional, responsive one-page portfolio
-      WordPress theme made for freelance web designers, freelancers, web agencies, artists and other creative entrepreneurs.
-      `,
+    As a part of backend development team I contributed publishing this project. Alfa is a clean and professional, responsive one-page portfolio WordPress theme made for freelance web designers, freelancers, web agencies, artists and other creative entrepreneurs.
+    `,
+    },
+    15: {
+      id: 15,
+      name: 'Glyph - Responsive News, Blog & Magazine WP Theme',
+      dates: 'Apr 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'http://themeforest.net/item/glyph-responsive-news-blog-magazine-wp-theme/11156144',
+      shortDescription: 'Glyph is a clean WordPress premium theme perfect for news, blog or magazine.',
+      description: `
+    Thanks to Shindiri development team Glyph WordPress premium theme was created. I was in charge of backend development, colleague (Aleksandar Blagotic) took care of frontend part of the project. Thanks to our Designer, Glyph look so great and clean perfect for news, blog or magazine theme.
+    `,
     },
     16: {
       id: 16,
@@ -199,23 +179,19 @@ export default {
       url: 'http://greencentar.com',
       shortDescription: 'Online WooCommerce shop development.',
       description: `
-      Online shop development. Shop is based on WooCommerce and WordPress. I was responsible for backend development and some frontend adjustments,
-      while collaborator (Nikola Mladenovic) was in charge for products pages design and site promotion.
-      `,
+    Online shop development. Shop is based on WooCommerce and WordPress. I was responsible for backend development and some frontend adjustments, while collaborator (Nikola Mladenovic) was in charge for products pages design and site promotion.
+    `,
     },
     17: {
       id: 17,
       name: 'Sierra - One Page Responsive WordPress Theme',
       dates: 'Dec 2014',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/sierra-wordpress/',
+      url: 'http://themeforest.net/item/sierra-one-page-responsive-wordpress-theme/10302986',
       shortDescription: 'One Page Responsive WordPress agency theme.',
       description: `
-      My first WP template published on themeforest.net. In Sierra project I developed whole backend of the WordPress theme. Our designer created theme design, colleague
-      frontend developer, created html theme and my task was converting the html theme into WordPress premium theme. Sierra One-Page Portfolio WordPress Theme is easy to use
-      one page wp template. With very little modification, this flexible, responsive WordPress theme can be used to create Agency website, Freelancer, Photography, Creative, Fashion,
-      Magazine or Blog website. Sierra WP theme uses Visual Composer packed with custom shortcodes designed for Sierra template.
-      `,
+    My first WP template published on themeforest.net. In Sierra project I developed whole backend of the WordPress theme. Our designer created theme design, colleague frontend developer, created html theme and my task was converting the html theme into WordPress premium theme. Sierra One-Page Portfolio WordPress Theme is easy to use one page wp template. With very little modification, this flexible, responsive WordPress theme can be used to create Agency website, Freelancer, Photography, Creative, Fashion, Magazine or Blog website. Sierra WP theme uses Visual Composer packed with custom shortcodes designed for Sierra template.
+    `,
     },
     18: {
       id: 18,
@@ -225,8 +201,8 @@ export default {
       url: 'http://www.jezdicrakija.com',
       shortDescription: 'Custom MVC framework development for an online shop.',
       description: `
-      In cooperation with company designer, who was responsible for fronted design, I developed an online shop site www.jezdicrakija.com using custom made MVC framework.
-      `,
+    In cooperation with company designer, who was responsible for fronted design, I developed an online shop site www.jezdicrakija.com using custom made MVC framework.
+    `,
     },
   },
   experience: {
