@@ -2,136 +2,95 @@ export default {
   basic: {
     name: 'Aleksandar',
     lastName: 'Predic',
-    email: 'info@acapredic.com',
-    position: 'PHP/ Web / WordPress Developer in WebPigment company. Co-founder of Nis WordPress community #WPNis, co-lead organizer of WordCamp Nis #WCNis.',
+    email: 'aleksandar.predic@gmail.com',
+    position: 'Senior Web Developer. PHP, WordPress, Laravel & JavaScript. Co-Founder of AlmaCore.',
   },
   projects: {
     1: {
       id: 1,
-      name: 'Backend development of an online shop',
-      dates: 'Dec 2013',
-      stack: 'PHP, HTML, CSS',
-      url: 'http://www.jezdicrakija.com',
-      shortDescription: 'Custom MVC framework development for an online shop.',
+      name: 'Crowdfunding Platform Automation & Secondary Market',
+      dates: '2021 – Present',
+      stack: 'WordPress, PHP, REST API',
+      url: '',
+      shortDescription: 'Automation, reporting tools, and a secondary market module for a crowdfunding platform.',
       description: `
-      In cooperation with company designer, who was responsible for fronted design, I developed an online shop site www.jezdicrakija.com using custom made MVC framework.
-      `,
+      Built automation and reporting tools for a crowdfunding platform, increasing operational efficiency by 20%. Developed a secondary market module for share trading among investors within the same platform.
+      `
     },
     2: {
       id: 2,
-      name: 'Sierra - One Page Responsive WordPress Theme',
-      dates: 'Dec 2014',
-      stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/sierra-wordpress/',
-      shortDescription: 'One Page Responsive WordPress agency theme.',
+      name: 'Laravel School Management Platform',
+      dates: '2021 – Present',
+      stack: 'Laravel, PHP, HTML, CSS',
+      url: '',
+      shortDescription: 'Custom Laravel-based school management platform for a learning center.',
       description: `
-      My first WP template published on themeforest.net. In Sierra project I developed whole backend of the WordPress theme. Our designer created theme design, colleague
-      frontend developer, created html theme and my task was converting the html theme into WordPress premium theme. Sierra One-Page Portfolio WordPress Theme is easy to use
-      one page wp template. With very little modification, this flexible, responsive WordPress theme can be used to create Agency website, Freelancer, Photography, Creative, Fashion,
-      Magazine or Blog website. Sierra WP theme uses Visual Composer packed with custom shortcodes designed for Sierra template.
-      `,
+      Developed a custom Laravel-based school management platform for a learning center, streamlining scheduling, student tracking, and daily operations.
+      `
     },
     3: {
       id: 3,
-      name: 'Online shop',
-      dates: 'Jan 2015',
-      stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://greencentar.com',
-      shortDescription: 'Online WooCommerce shop development.',
+      name: 'Reusable Gutenberg-based Component Platform',
+      dates: '2021',
+      stack: 'WordPress, React, JS, Gutenberg, PHP',
+      url: '',
+      shortDescription: 'A unified library of custom blocks ensuring consistent UI and UX across multiple sites.',
       description: `
-      Online shop development. Shop is based on WooCommerce and WordPress. I was responsible for backend development and some frontend adjustments,
-      while collaborator (Nikola Mladenovic) was in charge for products pages design and site promotion.
-      `,
+      Led the WordPress development team in building a reusable Gutenberg-based component platform, collaborating closely with designers and product owners to create a unified library of custom blocks, ensuring consistent UI and UX across multiple sites.
+      `
     },
     4: {
       id: 4,
-      name: 'Glyph - Responsive News, Blog & Magazine WP Theme',
-      dates: 'Apr 2015',
-      stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/glyph/',
-      shortDescription: 'Glyph is a clean WordPress premium theme perfect for news, blog or magazine.',
+      name: 'Flagship Multi-regional Affiliate Website Rebuild',
+      dates: '2021',
+      stack: 'WordPress, PHP, REST API',
+      url: '',
+      shortDescription: 'Complete rebuild of the company flagship multi-regional affiliate website.',
       description: `
-      Thanks to Shindiri development team Glyph WordPress premium theme was created. I was in charge of backend development, colleague (Aleksandar Blagotic) took care of frontend part of the project.
-      Thanks to our Designer, Glyph look so great and clean perfect for news, blog or magazine theme.
-      `,
+      Led the team through the complete rebuild of the company's flagship multi-regional affiliate website, achieving major improvements in performance, user experience, and editorial workflow. Also built the WordPress plugin API integration for affiliate data, enabling up-to-date product information.
+      `
     },
     5: {
       id: 5,
-      name: 'Alfa - Responsive Parallax WordPress Theme',
-      dates: 'Apr 2015',
+      name: 'Contributor orientation tool - WordPress plugin',
+      dates: 'Mar 2019 – Still in development',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/alfa-wp/',
-      shortDescription: 'Alfa is a clean and professional, responsive one-page portfolio WordPress theme.',
+      url: 'https://orientation.wp-europe.org',
+      shortDescription: 'An online tool, WordPress plugin, has been created by WordCamp Europe Organizers to help new contributors take part in building the WordPress platform.',
       description: `
-      As a part of backend development team I contributed publishing this project. Alfa is a clean and professional, responsive one-page portfolio
-      WordPress theme made for freelance web designers, freelancers, web agencies, artists and other creative entrepreneurs.
+      An online tool, WordPress plugin, has been created by WordCamp Europe Organizers to help new contributors take part in building the WordPress platform.<br />
+      GitHub: https://github.com/wceu/contributor-orientation-tool<br />
+      Read more: https://make.wordpress.org/community/2019/06/17/contributor-orientation-tool
       `,
     },
     6: {
       id: 6,
-      name: 'HotMag – WordPress News And Magazine Responsive Theme',
-      dates: 'Jun 2015',
-      stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/hotmag-wp/',
-      shortDescription: 'Hotmag is a responsive and retina ready news and magazine WordPress template.',
+      name: 'Laravel custom reservation system',
+      dates: 'Apr 2019 – Sep 2019',
+      stack: 'PHP, HTML, CSS, JS, Laravel',
+      url: '',
+      shortDescription: 'The custom reservation system, based on the Laravel framework, for managing events, reservations, users, email notifications, etc...',
       description: `
-      Hotmag is a responsive and retina ready news and magazine WordPress template.
-      It is intuitive and friendly for beginners but it also allows professional users to create some amazing stuff.
+      The custom reservation system, based on the Laravel framework, for managing events, reservations, users, email notifications, etc... The project was done while I was working in Shindiri Studio company. The system was designed to solve all requirements for Serbian National Driving Academy, NAVAK.
+      Development and wireframing were assigned to me and coleague developer Milan Arandjelović, design to our company designer Marjan Tosic, while the project management was done inside company by Milan Đorđević and Nemanja Djokić.
+      At the moment I'm not allowed to share the URL of the project.
       `,
     },
     7: {
       id: 7,
-      name: 'FashionPress - WordPress Theme for Fashion Bloggers',
-      dates: 'Oct 2015',
-      stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/themes/wordpress-templates/fashionpress-wp/',
-      shortDescription: 'FashionPress is a stylish and creative WordPress fashion blog template.',
+      name: 'WooCommerce external API integration - products import - custom WP plugin',
+      dates: 'Oct 2018 – Dec 2018',
+      stack: 'PHP, HTML, CSS, JS, REST API, WooCommerce, WordPress',
+      url: 'https://grafomis.rs',
+      shortDescription: 'WooCommerce was used as a base to import 6000+ products from external API.',
       description: `
-      FashionPress is a stylish and creative WordPress fashion blog template packed with everything that you need to create a perfect personal fashion blog for you.
-      <br />
-      I was responsible for backend development and fulfilling Themeforest's WordPress theme submission requirements. WordPress theme supports WooCommerce and shop frontend coding was also my task.
-      Nikola Randjelovic worked on backend, while Milos Ristic was responsible for frontend and some backend development. Design was done by Vladimir Devic and Marjan Tosic who was also a team leader.
+      WooCommerce was used as a base to import 6000+ products from external API. Custom WordPress plugin was created to handle authentication,
+      automatic import and synchronization of all data (taxonomies, post types, attributes...) for fully functional online shop.
+      Additionally, WooCommerce was customized on frontend to fit needs of printing company.
       `,
     },
     8: {
       id: 8,
-      name: 'WordPress Test HQ service',
-      dates: 'Feb 2016',
-      stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: '',
-      shortDescription: 'WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase.',
-      description: `
-      WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase.
-      It is built for premium theme and plugin developers and offer instant creation of demo site for limited time.
-      `,
-    },
-    9: {
-      id: 9,
-      name: 'Woo Shop Slider - WordPress plugin',
-      dates: 'Feb 2016',
-      stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://www.shindiristudio.com/plugins/wordpress-plugins/wooslider/',
-      shortDescription: 'With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles.',
-      description: `
-      With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles. Woo Shop Slider is slider for products, single product and categories from Your WooCommerce shop.
-      In this project I was in charge of both frontend and backend development following Marjan Tosic designs.
-      Free lite version of the plugin can be downloaded here: https://wordpress.org/plugins/woo-shop-slider-lite/
-      `,
-    },
-    10: {
-      id: 10,
-      name: 'WordPress Widget Builder Framework',
-      dates: 'Mar 2017',
-      stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://github.com/AleksandarPredic/WordPress-Widget-Builder',
-      shortDescription: 'The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.',
-      description: `
-      The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.
-      You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.
-      `,
-    },
-    11: {
-      id: 11,
       name: 'WordPress custom business solution',
       dates: 'Dec 2017 – Feb 2018',
       stack: 'PHP, HTML, CSS, JS, WordPress',
@@ -145,139 +104,180 @@ export default {
       Website description: Doctors and clinics listing using Google maps displaying results by distance from visitor location. Live search on Google maps for locations. Other common website pages are also implemented and designed.
       `,
     },
+    9: {
+      id: 9,
+      name: 'WordPress Widget Builder Framework',
+      dates: 'Mar 2017',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'https://github.com/AleksandarPredic/WordPress-Widget-Builder',
+      shortDescription: 'The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.',
+      description: `
+      The WordPress Widget Builder serves as a framework to quickly build your WordPress widgets.
+      You can make configuration array of desired widget name, description, fields... and the framework will create widget admin part for you. Leaving you to worry only about widget frontend output.
+      `,
+    },
+    10: {
+      id: 10,
+      name: 'Woo Shop Slider - WordPress plugin',
+      dates: 'Feb 2016',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'https://www.shindiristudio.com/plugins/wordpress-plugins/wooslider/',
+      shortDescription: 'With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles.',
+      description: `
+      With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles. Woo Shop Slider is slider for products, single product and categories from Your WooCommerce shop.
+      In this project I was in charge of both frontend and backend development following Marjan Tosic designs.
+      Free lite version of the plugin can be downloaded here: https://wordpress.org/plugins/woo-shop-slider-lite/
+      `,
+    },
+    11: {
+      id: 11,
+      name: 'WordPress Test HQ service',
+      dates: 'Feb 2016',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: '',
+      shortDescription: 'WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase.',
+      description: `
+      WordPress test headquarters is a service where clients can test any WordPress theme or plugin before purchase.
+      It is built for premium theme and plugin developers and offer instant creation of demo site for limited time.
+      `,
+    },
     12: {
       id: 12,
-      name: 'WooCommerce external API integration - products import - custom WP plugin',
-      dates: 'Oct 2018 – Dec 2018',
-      stack: 'PHP, HTML, CSS, JS, REST API, WooCommerce, WordPress',
-      url: 'https://grafomis.rs',
-      shortDescription: 'WooCommerce was used as a base to import 6000+ products from external API.',
+      name: 'FashionPress - WordPress Theme for Fashion Bloggers',
+      dates: 'Oct 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/fashionpress-wp/',
+      shortDescription: 'FashionPress is a stylish and creative WordPress fashion blog template.',
       description: `
-      WooCommerce was used as a base to import 6000+ products from external API. Custom WordPress plugin was created to handle authentication,
-      automatic import and synchronization of all data (taxonomies, post types, attributes...) for fully functional online shop.
-      Additionally, WooCommerce was customized on frontend to fit needs of printing company.
+      FashionPress is a stylish and creative WordPress fashion blog template packed with everything that you need to create a perfect personal fashion blog for you.
+      <br />
+      I was responsible for backend development and fulfilling Themeforest's WordPress theme submission requirements. WordPress theme supports WooCommerce and shop frontend coding was also my task.
+      Nikola Randjelovic worked on backend, while Milos Ristic was responsible for frontend and some backend development. Design was done by Vladimir Devic and Marjan Tosic who was also a team leader.
       `,
     },
     13: {
       id: 13,
-      name: 'Laravel custom reservation system',
-      dates: 'Apr 2019 – Sep 2019',
-      stack: 'PHP, HTML, CSS, JS, Laravel',
-      url: '',
-      shortDescription: 'The custom reservation system, based on the Laravel framework, for managing events, reservations, users, email notifications, etc...',
+      name: 'HotMag – WordPress News And Magazine Responsive Theme',
+      dates: 'Jun 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/hotmag-wp/',
+      shortDescription: 'Hotmag is a responsive and retina ready news and magazine WordPress template.',
       description: `
-      The custom reservation system, based on the Laravel framework, for managing events, reservations, users, email notifications, etc... The project was done while I was working in Shindiri Studio company. The system was designed to solve all requirements for Serbian National Driving Academy, NAVAK.
-      Development and wireframing were assigned to me and coleague developer Milan Arandjelović, design to our company designer Marjan Tosic, while the project management was done inside company by Milan Đorđević and Nemanja Djokić.
-      At the moment I'm not allowed to share the URL of the project.
+      Hotmag is a responsive and retina ready news and magazine WordPress template.
+      It is intuitive and friendly for beginners but it also allows professional users to create some amazing stuff.
       `,
     },
     14: {
       id: 14,
-      name: 'Contributor orientation tool - WordPress plugin',
-      dates: 'Mar 2019 – Still in development',
+      name: 'Glyph - Responsive News, Blog & Magazine WP Theme',
+      dates: 'Apr 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://orientation.wp-europe.org',
-      shortDescription: 'An online tool, WordPress plugin, has been created by WordCamp Europe Organizers to help new contributors take part in building the WordPress platform.',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/glyph/',
+      shortDescription: 'Glyph is a clean WordPress premium theme perfect for news, blog or magazine.',
       description: `
-      An online tool, WordPress plugin, has been created by WordCamp Europe Organizers to help new contributors take part in building the WordPress platform.<br />
-      GitHub: https://github.com/wceu/contributor-orientation-tool<br />
-      Read more: https://make.wordpress.org/community/2019/06/17/contributor-orientation-tool
+      Thanks to Shindiri development team Glyph WordPress premium theme was created. I was in charge of backend development, colleague (Aleksandar Blagotic) took care of frontend part of the project.
+      Thanks to our Designer, Glyph look so great and clean perfect for news, blog or magazine theme.
+      `,
+    },
+    15: {
+      id: 15,
+      name: 'Alfa - Responsive Parallax WordPress Theme',
+      dates: 'Apr 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/alfa-wp/',
+      shortDescription: 'Alfa is a clean and professional, responsive one-page portfolio WordPress theme.',
+      description: `
+      As a part of backend development team I contributed publishing this project. Alfa is a clean and professional, responsive one-page portfolio
+      WordPress theme made for freelance web designers, freelancers, web agencies, artists and other creative entrepreneurs.
+      `,
+    },
+    16: {
+      id: 16,
+      name: 'Online shop',
+      dates: 'Jan 2015',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'http://greencentar.com',
+      shortDescription: 'Online WooCommerce shop development.',
+      description: `
+      Online shop development. Shop is based on WooCommerce and WordPress. I was responsible for backend development and some frontend adjustments,
+      while collaborator (Nikola Mladenovic) was in charge for products pages design and site promotion.
+      `,
+    },
+    17: {
+      id: 17,
+      name: 'Sierra - One Page Responsive WordPress Theme',
+      dates: 'Dec 2014',
+      stack: 'PHP, HTML, CSS, JS, WordPress',
+      url: 'https://www.shindiristudio.com/themes/wordpress-templates/sierra-wordpress/',
+      shortDescription: 'One Page Responsive WordPress agency theme.',
+      description: `
+      My first WP template published on themeforest.net. In Sierra project I developed whole backend of the WordPress theme. Our designer created theme design, colleague
+      frontend developer, created html theme and my task was converting the html theme into WordPress premium theme. Sierra One-Page Portfolio WordPress Theme is easy to use
+      one page wp template. With very little modification, this flexible, responsive WordPress theme can be used to create Agency website, Freelancer, Photography, Creative, Fashion,
+      Magazine or Blog website. Sierra WP theme uses Visual Composer packed with custom shortcodes designed for Sierra template.
+      `,
+    },
+    18: {
+      id: 18,
+      name: 'Backend development of an online shop',
+      dates: 'Dec 2013',
+      stack: 'PHP, HTML, CSS',
+      url: 'http://www.jezdicrakija.com',
+      shortDescription: 'Custom MVC framework development for an online shop.',
+      description: `
+      In cooperation with company designer, who was responsible for fronted design, I developed an online shop site www.jezdicrakija.com using custom made MVC framework.
       `,
     },
   },
   experience: {
     1: {
       id: 1,
-      position: 'Administrator and content manager',
-      dates: 'Jul 2012 – May 2014',
-      companyName: 'Inter Casa Ambienta',
-      companyUrl: 'http://www.adriatiko.com/o-nama.htm',
+      position: 'Co-Founder',
+      dates: 'November 2021 – Present',
+      companyName: 'AlmaCore',
+      companyUrl: '',
       description: [
-        `Administration of high ranked web sites:
-        <ul>
-          <li><a href="https://www.tvarenasport.com" target="_blank" rel="nofollow">Arena sport</a></li>
-          <li><a href="https://www.aerogaga.com" target="_blank" rel="nofollow">Aerogaga</a></li>
-          <li><a href="https://www.stetoskop.info" target="_blank" rel="nofollow">Stetoskop</a></li>
-        </ul>`,
-        'Brand development, web site traffic growth, web site and advertising revenue.',
+        'Co-found and run a small web development agency with two developers, overseeing technical direction.',
+        'Actively develop and maintain custom WordPress-based solutions, including REST APIs, advanced integrations, and automation tools.',
+        'Lead technical architecture and code reviews, supervise developers, and provide mentorship.',
+        'Collaborate closely with clients to translate business requirements into robust technical solutions.',
+        'Refactored and optimized WordPress REST API powering native mobile apps.',
+        'Built automation and reporting tools for a crowdfunding platform, increasing operational efficiency by 20%.',
+        'Developed a custom Laravel-based school management platform for a learning center.',
       ],
     },
     2: {
       id: 2,
-      position: 'PHP / Web developer',
-      dates: 'May 2014 – Jul 2014',
-      companyName: 'Freelancer',
-      companyUrl: '',
+      position: 'Technical Consultant',
+      dates: 'November 2021 – April 2022',
+      companyName: 'Blexr',
+      companyUrl: 'https://www.blexr.com/',
       description: [
-        'Frontend Development - HTML, CSS, jQuery.',
-        'Backend Development PHP, MySQL.',
+        'WordPress development lead position recruitment.',
+        'Screening applicants CVs.',
+        'Handle the technical interview.',
+        'Handle the test task code review.',
       ],
     },
     3: {
       id: 3,
-      position: 'Web developer',
-      dates: 'Jul 2014 – Oct 2014',
-      companyName: 'ApexSQL',
-      companyUrl: 'https://www.apexsql.com',
+      position: 'WordPress Development Lead',
+      dates: 'January 2021 – November 2021',
+      companyName: 'Blexr',
+      companyUrl: 'https://www.blexr.com/',
       description: [
-        'Work within a small local team using Scrum software development methodologies.',
-        'Update and improve company website and internal web applications.',
-        'Maintain WordPress websites.',
+        'Owns the WordPress architecture and acts as a design authority throughout the lifecycle, driving technical decisions.',
+        'Contributes to and oversees architecture implementation, and helps define team standards for software engineering processes.',
+        'Liaises with Product Owners and stakeholders, negotiating requirements and proposing system behavior, including benefits, limitations, and risk mitigations.',
+        'Ensures that technical decisions related to our WordPress sites are aligned with the requirements of the business.',
+        'Leads the developers working on our WordPress websites, handling people management responsibilities such as recruitment, 1-1s, and performance feedback.',
+        'Key Achievement: Led the WP team in building a reusable Gutenberg-based component platform, ensuring consistent UI/UX across multiple sites.',
+        'Key Achievement: Led the complete rebuild of the company flagship multi-regional affiliate website.',
+        'Key Achievement: Built the WordPress plugin API integration for affiliate data.',
       ],
     },
     4: {
       id: 4,
-      position: 'WordPress course lecturer. Development of WordPress themes and plugins. PSD to WP.',
-      dates: 'Mar 2017 – Oct 2017',
-      companyName: 'IT Centar',
-      companyUrl: 'https://itcentar.rs',
-      description: [
-        'WordPress course. Development of WordPress themes and plugins. PSD to WP conversion.',
-      ],
-    },
-    5: {
-      id: 5,
-      position: 'PHP Web Developer, WordPress Developer',
-      dates: 'Oct 2014 – Oct 2017',
-      companyName: 'Shindiri Studio',
-      companyUrl: 'https://www.shindiristudio.com',
-      description: [
-        'HTML, CSS, JavaScript.',
-        'PHP, WordPress themes and plugin development.',
-        'WordPress design patterns.',
-        'Isolate and resolve current issues.',
-      ],
-    },
-    6: {
-      id: 6,
-      position: 'Web development team lead, lead WordPress developer',
-      dates: 'Oct 2017 – Dec 2019',
-      companyName: 'Shindiri Studio',
-      companyUrl: 'https://www.shindiristudio.com',
-      description: [
-        'Team lead of a small development team which consist of 4 developers.',
-        'PHP, HTML, CSS, JavaScript, WordPress themes and plugin development, Laravel.',
-        'Clients custom solutions development.',
-        'Estimate and support all tasks within the development team.',
-      ],
-    },
-    7: {
-      id: 7,
-      position: 'Senior Web Developer',
-      dates: 'Dec 2019 – September 2020',
-      companyName: 'Better Collective',
-      companyUrl: 'https://bettercollective.com',
-      description: [
-        'Convert PSD designs into websites.',
-        'Creation of new and updating of existing websites.',
-        'Miscellaneous debugging tasks.',
-        'Optimization of existing websites.',
-        'Plan and lead development on sets of related stories.',
-        'Responsibility for teaching the lower leveled web developers.',
-      ],
-    },
-    8: {
-      id: 8,
       position: 'Senior WordPress Developer',
       dates: 'September 2020 – January 2021',
       companyName: 'WebPigment',
@@ -297,51 +297,100 @@ export default {
         'Assist in the remediation, enhancement, and maintenance of client sites.',
       ],
     },
+    5: {
+      id: 5,
+      position: 'Senior Web Developer',
+      dates: 'Dec 2019 – September 2020',
+      companyName: 'Better Collective',
+      companyUrl: 'https://bettercollective.com',
+      description: [
+        'Convert PSD designs into websites.',
+        'Creation of new and updating of existing websites.',
+        'Miscellaneous debugging tasks.',
+        'Optimization of existing websites.',
+        'Plan and lead development on sets of related stories.',
+        'Responsibility for teaching the lower leveled web developers.',
+      ],
+    },
+    6: {
+      id: 6,
+      position: 'Web development team lead, lead WordPress developer',
+      dates: 'Oct 2017 – Dec 2019',
+      companyName: 'Shindiri Studio',
+      companyUrl: 'https://www.shindiristudio.com',
+      description: [
+        'Team lead of a small development team which consist of 4 developers.',
+        'PHP, HTML, CSS, JavaScript, WordPress themes and plugin development, Laravel.',
+        'Clients custom solutions development.',
+        'Estimate and support all tasks within the development team.',
+      ],
+    },
+    7: {
+      id: 7,
+      position: 'WordPress course lecturer. Development of WordPress themes and plugins. PSD to WP.',
+      dates: 'Mar 2017 – Oct 2017',
+      companyName: 'IT Centar',
+      companyUrl: 'https://itcentar.rs',
+      description: [
+        'WordPress course. Development of WordPress themes and plugins. PSD to WP conversion.',
+      ],
+    },
+    8: {
+      id: 8,
+      position: 'PHP Web Developer, WordPress Developer',
+      dates: 'Oct 2014 – Oct 2017',
+      companyName: 'Shindiri Studio',
+      companyUrl: 'https://www.shindiristudio.com',
+      description: [
+        'HTML, CSS, JavaScript.',
+        'PHP, WordPress themes and plugin development.',
+        'WordPress design patterns.',
+        'Isolate and resolve current issues.',
+      ],
+    },
     9: {
       id: 9,
-      position: 'WordPress Development Lead',
-      dates: 'January 2021 – November 2021',
-      companyName: 'Blexr',
-      companyUrl: 'https://www.blexr.com/',
+      position: 'Web developer',
+      dates: 'Jul 2014 – Oct 2014',
+      companyName: 'ApexSQL',
+      companyUrl: 'https://www.apexsql.com',
       description: [
-        'CDevelop complex WordPress plugins and/or themes primarily using PHP.Owns the WordPress architecture.',
-        'Acts as a design authority for the WordPress architecture through the entire lifecycle, driving technical decisions in collaboration with other developers and peer technology leaders.',
-        'Drives an architecture and long-term strategic approach which lend themselves to best agile and engineering practices, maintain technical debt at sustainable levels and enable test automation.',
-        'Actively contributes to and oversees implementation of the architecture, assists in the evaluation and establishment of team standards for software engineering processes and procedures.',
-        'Liaises with Product Owners and other stakeholders, negotiating requirements and outlining proposals for new system behavior, including benefits, limitations and risks, as well as mitigations for the latter.',
-        'Ensures that technical decisions related to our WordPress sites are aligned with the requirements of the business.',
-        'Leads the developers working on our WordPress websites, handling people management responsibilities such as recruitment for the teams, holding regular 1-1’s with individual team members, providing continuous performance feedback, and enabling team and individual growth from onboarding to ongoing learning and development.',
+        'Work within a small local team using Scrum software development methodologies.',
+        'Update and improve company website and internal web applications.',
+        'Maintain WordPress websites.',
       ],
     },
     10: {
       id: 10,
-      position: 'Technical Consultant',
-      dates: 'November 2021 – Current',
-      companyName: 'Blexr',
-      companyUrl: 'https://www.blexr.com/',
+      position: 'PHP / Web developer',
+      dates: 'May 2014 – Jul 2014',
+      companyName: 'Freelancer',
+      companyUrl: '',
       description: [
-        'WordPress development lead position recruitment:',
-        'Screening applicants CVs.',
-        'Handle the technical interview.',
-        'Handle the test task code review.',
+        'Frontend Development - HTML, CSS, jQuery.',
+        'Backend Development PHP, MySQL.',
+      ],
+    },
+    11: {
+      id: 11,
+      position: 'Administrator and content manager',
+      dates: 'Jul 2012 – May 2014',
+      companyName: 'Inter Casa Ambienta',
+      companyUrl: 'http://www.adriatiko.com/o-nama.htm',
+      description: [
+        `Administration of high ranked web sites:
+        <ul>
+          <li><a href="https://www.tvarenasport.com" target="_blank" rel="nofollow">Arena sport</a></li>
+          <li><a href="https://www.aerogaga.com" target="_blank" rel="nofollow">Aerogaga</a></li>
+          <li><a href="https://www.stetoskop.info" target="_blank" rel="nofollow">Stetoskop</a></li>
+        </ul>`,
+        'Brand development, web site traffic growth, web site and advertising revenue.',
       ],
     },
   },
   education: {
     1: {
       id: 1,
-      name: 'Management',
-      institution: 'Business School of Management “Megatrend”, Belgrade, Serbia',
-      dates: '2002 – 2004',
-    },
-    2: {
-      id: 2,
-      name: 'Banking and Finance Field Of StudyEconomics',
-      institution: 'Management Faculty ”Megatrend”, Zajecar, Serbia',
-      dates: '2013',
-    },
-    3: {
-      id: 3,
       name: 'Php web programming Field Of StudyPHP, MySql, OOP',
       institution: 'IT centar Niš',
       dates: 'year 2013',
@@ -357,9 +406,11 @@ export default {
       'SCSS',
       'LESS',
       'JS',
+      'React',
       'ECMAScript',
       'jQuery',
       'Webpack',
+      'Vite',
       'Gulp',
       'WordPress',
       'Composer',
@@ -370,6 +421,8 @@ export default {
       'Backend development',
       'Frontend development',
       'JIRA',
+      'Asana',
+      'Trello',
       'Basic photoshop',
     ],
   },
@@ -388,21 +441,39 @@ export default {
       ],
     },
     2: {
-      id: 3,
+      id: 2,
       name: 'WordCamps and community',
       company: 'WordPress',
       description: [
         {
-          name: 'WordCamp Belgrade, Serbia - #WCBDG 2017',
-          dates: 'May 2017',
-          url: 'https://2017.belgrade.wordcamp.org/speaker/aleksandar-predic',
+          name: 'WordCamp Vršac, Serbia',
+          dates: '2025',
+          url: '',
           description: 'Volunteer and speaker',
         },
         {
-          name: 'WordCamp Europe, Belgrade, Serbia - #WCEU 2018',
-          dates: 'June 2018',
-          url: 'https://2018.europe.wordcamp.org/organizers',
-          description: 'Organizer - local team',
+          name: 'WordCamp Skopje, North Macedonia',
+          dates: '2023',
+          url: '',
+          description: 'Speaker',
+        },
+        {
+          name: 'WordCamp Europe, Porto, Portugal - #WCEU 2022',
+          dates: 'June 2022',
+          url: 'https://europe.wordcamp.org/2022/organisers',
+          description: 'Organizer - attendee services team',
+        },
+        {
+          name: 'WordCamp Europe, Porto, Portugal - #WCEU 2020',
+          dates: 'June 2020',
+          url: 'https://2020.europe.wordcamp.org/organisers',
+          description: 'Organizer - contributing team',
+        },
+        {
+          name: 'WordCamp Skopje, Skopje, North Macedonia - #WCSkp 2019',
+          dates: 'October 2019',
+          url: 'https://2019.skopje.wordcamp.org/session/wp-themes-and-plugins-will-get-you-eventually',
+          description: 'Speaker',
         },
         {
           name: 'WordCamp Europe, Berlin, Germany - #WCEU 2019',
@@ -417,22 +488,16 @@ export default {
           description: 'Co-lead organizer',
         },
         {
-          name: 'WordCamp Skopje, Skopje, North Macedonia - #WCSkp 2019',
-          dates: 'October 2019',
-          url: 'https://2019.skopje.wordcamp.org/session/wp-themes-and-plugins-will-get-you-eventually',
-          description: 'Speaker',
+          name: 'WordCamp Europe, Belgrade, Serbia - #WCEU 2018',
+          dates: 'June 2018',
+          url: 'https://2018.europe.wordcamp.org/organizers',
+          description: 'Organizer - local team',
         },
         {
-          name: 'WordCamp Europe, Porto, Portugal - #WCEU 2020',
-          dates: 'June 2020',
-          url: 'https://2020.europe.wordcamp.org/organisers',
-          description: 'Organizer - contributing team',
-        },
-        {
-          name: 'WordCamp Europe, Porto, Portugal - #WCEU 2022',
-          dates: 'June 2022',
-          url: 'https://europe.wordcamp.org/2022/organisers',
-          description: 'Organizer - attendee services team',
+          name: 'WordCamp Belgrade, Serbia - #WCBDG 2017',
+          dates: 'May 2017',
+          url: 'https://2017.belgrade.wordcamp.org/speaker/aleksandar-predic',
+          description: 'Volunteer and speaker',
         },
       ],
     },
