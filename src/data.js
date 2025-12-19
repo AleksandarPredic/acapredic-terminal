@@ -11,7 +11,7 @@ export default {
       name: 'Mulberrys',
       dates: 'Nov 2021 - Present',
       stack: 'PHP, HTML, CSS, JS, WordPress, REST API',
-      url: '',
+      url: 'https://www.mulberryscleaners.com/',
       shortDescription: 'Full-stack development for a premium dry-cleaning and laundry platform (Associated with AlmaCore).',
       description: `
     Work as a full-stack developer on Mulberrys, a premium dry-cleaning and laundry platform operating in the San Francisco Bay Area, Minneapolis, and Washington D.C. Support the platform’s continuous growth while executing significant backend refactors to improve performance, stability, and maintainability. Refactored, enhanced with new endpoints, and optimized the WordPress REST API powering native mobile apps, unlocking higher speed and scalability. Develop and maintain frontend features to elevate the user experience across web and mobile. Build POS integrations, REST APIs for mobile platforms, and third-party service integrations to ensure seamless workflow across pickup, delivery, and customer management.
@@ -22,7 +22,7 @@ export default {
       name: 'CapitalCell',
       dates: 'Nov 2021 - Sep 2025',
       stack: 'PHP, HTML, CSS, JS, WordPress, WooCommerce',
-      url: '',
+      url: 'https://capitalcell.com/',
       shortDescription: 'Maintenance and enhancement of the leading health crowdfunding platform in Spain (Associated with AlmaCore).',
       description: `
     Work on enhancing and maintaining the Capitalcell crowdfunding platform, the leading health crowdfunding platform in Spain. Using WordPress and WooCommerce to support the platform’s growth, enabling it to handle over €15 million in investments per year. Developed several internal tools to streamline and speed up daily operations, improving efficiency for both the team and investors. Contributed to a complete site makeover with a new, modern design, enhancing usability and user experience. Also played a key role in scaling the platform internationally by implementing multilingual solutions and ensuring high performance and reliability across markets.
@@ -44,7 +44,7 @@ export default {
       name: 'Online Gambling Portal revamp',
       dates: 'Jun 2022 - Nov 2022',
       stack: 'PHP, HTML, CSS, JS, WordPress, Gutenberg',
-      url: '',
+      url: 'https://www.asiabet.org/',
       shortDescription: 'Complete revamp of a flagship WordPress affiliate website using custom Gutenberg blocks.',
       description: `
     As the Lead Software Engineer, I had the privilege of leading a talented team in the complete revamp of a flagship WordPress affiliate website for a prominent company (Associated with Blexr). Our collective efforts resulted in a remarkable transformation that significantly enhanced performance and user experience. With a diverse audience spanning 17 regions and languages, the website attracted significant traffic. Working closely with a skilled team comprising a Designer, a QA specialist, four developers, a Scrum Master, and a Product Owner, we fostered seamless collaboration. Our approach focused on leveraging Gutenberg as the foundation, augmenting its capabilities with custom Gutenberg blocks tailored to our specific needs. The successful launch of the revamped website marked a significant leap forward in performance and user-friendliness, empowering company employees and resulting in increased user conversions.
@@ -55,7 +55,7 @@ export default {
       name: 'Contributor orientation tool - WordPress plugin',
       dates: 'Mar 2019 – Still in development',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'https://orientation.wp-europe.org',
+      url: 'https://make.wordpress.org/community/2019/06/17/contributor-orientation-tool/',
       shortDescription: 'An online tool, WordPress plugin, has been created by WordCamp Europe Organizers to help new contributors take part in building the WordPress platform.',
       description: `
     An online tool, WordPress plugin, has been created by WordCamp Europe Organizers to help new contributors take part in building the WordPress platform.<br />GitHub: https://github.com/wceu/contributor-orientation-tool<br />Read more: https://make.wordpress.org/community/2019/06/17/contributor-orientation-tool
@@ -77,7 +77,7 @@ export default {
       name: 'WooCommerce external API integration - products import - custom WP plugin',
       dates: 'Oct 2018 – Dec 2018',
       stack: 'PHP, HTML, CSS, JS, REST API, WooCommerce, WordPress',
-      url: 'https://grafomis.rs',
+      url: 'https://promo-tech.rs/reklamni-materijali/',
       shortDescription: 'WooCommerce was used as a base to import 6000+ products from external API.',
       description: `
     WooCommerce was used as a base to import 6000+ products from external API. Custom WordPress plugin was created to handle authentication, automatic import and synchronization of all data (taxonomies, post types, attributes...) for fully functional online shop. Additionally, WooCommerce was customized on frontend to fit needs of printing company.
@@ -110,7 +110,7 @@ export default {
       name: 'Woo Shop Slider - WordPress plugin',
       dates: 'Feb 2016',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://codecanyon.net/item/woo-shop-slider-woocommerce-slider-for-products-single-product-and-categories/14840747',
+      url: '',
       shortDescription: 'With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles.',
       description: `
     With this WordPress plugin You can create amazing content with one of 8 totally different WooCommerce slider styles. Woo Shop Slider is slider for products, single product and categories from Your WooCommerce shop. In this project I was in charge of both frontend and backend development following Marjan Tosic designs. Free lite version of the plugin can be downloaded here: https://wordpress.org/plugins/woo-shop-slider-lite/
@@ -132,7 +132,7 @@ export default {
       name: 'FashionPress - WordPress Theme for Fashion Bloggers',
       dates: 'Oct 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/fashionpress-wordpress-theme-for-fashion-bloggers-responsive-and-creative-blog-template/13026365',
+      url: '',
       shortDescription: 'FashionPress is a stylish and creative WordPress fashion blog template.',
       description: `
     FashionPress is a stylish and creative WordPress fashion blog template packed with everything that you need to create a perfect personal fashion blog for you.<br />I was responsible for backend development and fulfilling Themeforest's WordPress theme submission requirements. WordPress theme supports WooCommerce and shop frontend coding was also my task. Nikola Randjelovic worked on backend, while Milos Ristic was responsible for frontend and some backend development. Design was done by Vladimir Devic and Marjan Tosic who was also a team leader.
@@ -143,7 +143,7 @@ export default {
       name: 'HotMag – WordPress News And Magazine Responsive Theme',
       dates: 'Jun 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/hotmag-wordpress-news-magazine-responsive-theme/11657078',
+      url: '',
       shortDescription: 'Hotmag is a responsive and retina ready news and magazine WordPress template.',
       description: `
     Hotmag is a responsive and retina ready news and magazine WordPress template. It is intuitive and friendly for beginners but it also allows professional users to create some amazing stuff.
@@ -154,7 +154,7 @@ export default {
       name: 'Alfa - Responsive Parallax WordPress Theme',
       dates: 'Apr 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/alfa-responsive-parallax-wordpress-theme/10764656',
+      url: '',
       shortDescription: 'Alfa is a clean and professional, responsive one-page portfolio WordPress theme.',
       description: `
     As a part of backend development team I contributed publishing this project. Alfa is a clean and professional, responsive one-page portfolio WordPress theme made for freelance web designers, freelancers, web agencies, artists and other creative entrepreneurs.
@@ -165,7 +165,7 @@ export default {
       name: 'Glyph - Responsive News, Blog & Magazine WP Theme',
       dates: 'Apr 2015',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/glyph-responsive-news-blog-magazine-wp-theme/11156144',
+      url: '',
       shortDescription: 'Glyph is a clean WordPress premium theme perfect for news, blog or magazine.',
       description: `
     Thanks to Shindiri development team Glyph WordPress premium theme was created. I was in charge of backend development, colleague (Aleksandar Blagotic) took care of frontend part of the project. Thanks to our Designer, Glyph look so great and clean perfect for news, blog or magazine theme.
@@ -187,7 +187,7 @@ export default {
       name: 'Sierra - One Page Responsive WordPress Theme',
       dates: 'Dec 2014',
       stack: 'PHP, HTML, CSS, JS, WordPress',
-      url: 'http://themeforest.net/item/sierra-one-page-responsive-wordpress-theme/10302986',
+      url: 'https://sierra.demo.acapredic.com/',
       shortDescription: 'One Page Responsive WordPress agency theme.',
       description: `
     My first WP template published on themeforest.net. In Sierra project I developed whole backend of the WordPress theme. Our designer created theme design, colleague frontend developer, created html theme and my task was converting the html theme into WordPress premium theme. Sierra One-Page Portfolio WordPress Theme is easy to use one page wp template. With very little modification, this flexible, responsive WordPress theme can be used to create Agency website, Freelancer, Photography, Creative, Fashion, Magazine or Blog website. Sierra WP theme uses Visual Composer packed with custom shortcodes designed for Sierra template.
@@ -198,7 +198,7 @@ export default {
       name: 'Backend development of an online shop',
       dates: 'Dec 2013',
       stack: 'PHP, HTML, CSS',
-      url: 'http://www.jezdicrakija.com',
+      url: 'https://www.jezdicrakija.com/',
       shortDescription: 'Custom MVC framework development for an online shop.',
       description: `
     In cooperation with company designer, who was responsible for fronted design, I developed an online shop site www.jezdicrakija.com using custom made MVC framework.
