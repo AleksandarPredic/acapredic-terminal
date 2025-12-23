@@ -73,15 +73,12 @@ Run `npm run prod`
 
 ### Return to the lastes node version
 
-Run `nvm use node`
+Return to the latest Node version: Run `nvm use node`.
+If you want your terminal to always start with the latest Node version, run `nvm alias default node`.
+To see all installed Node versions and switch, use `nvm list`.
 
-If you want that your tremina always start with the latest node version run the `nvm alias default node`
-
-To see all the node versions installed to switch to `nvm ls` but for this project use `node 14`
+**For this project, temporarily use Node 14 with `nvm use 14`.**
 
 ### Using nvm node version vs system version
 
-If you have node version installed via system and nvm, running `nvm use node` will return to the latest system version.
-In my case that was also 14, while my system version was 25.
-
-To go back to the system version run `nvm use system` and you will be back to this version.
+Using NVM Node version vs. system version: If you have Node installed via system and NVM, nvm use node switches to the latest version installed via NVM. To switch to the system version, run `nvm use system`.
